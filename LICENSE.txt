@@ -1,0 +1,6 @@
+Copyright (c) 2026 Oscar Riveros.
+All rights reserved.
+
+This source code and associated materials are proprietary.
+Unauthorized use, distribution, or modification is prohibited
+without explicit written permission from the copyright holder.

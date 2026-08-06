@@ -20,6 +20,10 @@ El espacio métrico en capas (LMS) y su cinemática cuántica con materializaci�
 ### Parte IV — Autorreferencia
 *El Pliegue Mínimo* — el umbral de dos variables binarias como condición necesaria y suficiente para la autorreferencia persistente, con el cálculo de pliegues (Φ-calculus) como modelo de computación autorreferencial — en composición tipográfica nativa; y la teoría abstracta de autorreferencia segura en familias dinámicas de estados, con sus teoremas de uniformidad, tubos seguros móviles y horizontes de no-retorno.
 
+## Ejercicios resueltos
+
+Como volumen complementario, se incluye **`riveros_obras_completas_ejercicios_resueltos.pdf`**, con los ejercicios resueltos de las obras del volumen principal.
+
 ## Obras excluidas
 
 De acuerdo con el criterio de excluir software y referencias técnicas, quedan fuera del volumen: `satx_technical_reference.tex` (referencia técnica/API de SATX), `satx.cas.tex` (manual del sistema de álgebra computacional), `GEG.epub` (manual de usuario de la biblioteca GEG v0.3.0), `autoreferencia-variables-binarias.epub` (duplicado de *El Pliegue Mínimo*), `the_sat_equation.py` (implementación en Python) y `extracted_texts/` (extracciones intermedias).

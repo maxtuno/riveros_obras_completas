@@ -1,12 +1,10 @@
 # Obras Completas — Oscar Riveros
 
-Compilación de las investigaciones completas de Oscar Riveros, reunidas en un único volumen tipográfico: **24 obras** (23 manuscritos integrados íntegramente desde PDF, más *El Pliegue Mínimo* en composición tipográfica nativa). Edición compilada — Agosto 2026.
+Compilación de las investigaciones completas de Oscar Riveros. El repositorio comprende el volumen tipográfico principal (24 obras), dos manuscritos complementarios y un volumen de ejercicios resueltos. Edición compilada — Agosto 2026.
 
-> Criterio de inclusión: *todo el conocimiento, nada de software.*
+## Volumen principal: `riveros_obras_completas.pdf`
 
-## Descripción
-
-El volumen reúne la totalidad de las investigaciones del autor disponibles en formato digital. Cada manuscrito se conserva completo, sin resúmenes ni reediciones, organizado en **cuatro partes temáticas** (con las obras en orden cronológico de composición dentro de cada parte):
+Reúne la totalidad de las investigaciones del autor disponibles en formato digital. Cada manuscrito se conserva completo, sin resúmenes ni reediciones, organizado en **cuatro partes temáticas** (con las obras en orden cronológico de composición dentro de cada parte):
 
 ### Parte I — Fundamentos de SAT, Compilación y Complejidad (pp. 13–255)
 
@@ -60,9 +58,9 @@ El espacio métrico en capas (LMS) y su cinemática cuántica con materializaci�
 
 *El Pliegue Mínimo* — el umbral de dos variables binarias como condición necesaria y suficiente para la autorreferencia persistente, con el cálculo de pliegues (Φ-calculus) como modelo de computación autorreferencial — en composición tipográfica nativa; y la teoría abstracta de autorreferencia segura en familias dinámicas de estados, con sus teoremas de uniformidad, tubos seguros móviles y horizontes de no-retorno.
 
-## Ejercicios resueltos
+## Volumen de ejercicios resueltos: `riveros_obras_completas_ejercicios_resueltos.pdf`
 
-Como volumen complementario, se incluye **`riveros_obras_completas_ejercicios_resueltos.pdf`** (60 páginas, **116 ejercicios resueltos**), organizado en las mismas cuatro partes temáticas que el volumen principal:
+Volumen complementario de 60 páginas con **116 ejercicios resueltos**, organizado en las mismas cuatro partes temáticas que el volumen principal:
 
 | Parte | Secciones | Ejercicios |
 |-------|-----------|-------------|
@@ -73,15 +71,22 @@ Como volumen complementario, se incluye **`riveros_obras_completas_ejercicios_re
 
 Cada sección contiene ejercicios diseñados para verificar y profundizar la comprensión de las obras correspondientes del volumen principal.
 
-## Obras excluidas
+## Manuscritos complementarios
 
-De acuerdo con el criterio de excluir software y referencias técnicas, quedan fuera del volumen: `satx_technical_reference.tex` (referencia técnica/API de SATX), `satx.cas.tex` (manual del sistema de álgebra computacional), `GEG.epub` (manual de usuario de la biblioteca GEG v0.3.0), `autoreferencia-variables-binarias.epub` (duplicado de *El Pliegue Mínimo*), `the_sat_equation.py` (implementación en Python) y `extracted_texts/` (extracciones intermedias).
+Dos manuscritos independientes que extienden líneas de investigación del corpus:
 
-## Notas de compilación
+| Archivo | Contenido | Páginas |
+|---------|-----------|----------|
+| `compilacion_subcubos_disjuntos_extension.pdf` | Extensiones al Marco de Compilación por Subcubos Disjuntos: Fragmentación, Resolución Arbórea, Espectro de Fourier y Representaciones Poliédricas | 6 |
+| `complejidad_entropica_curvatura_epistemica.pdf` | Complejidad Entrópica, Curvatura Epistémica y Problemas Abiertos de Teoría de Números en el Marco Riveriano | 11 |
 
-- Compilado con **XeLaTeX sobre TeX Live 2025**.
-- Tipografías: DejaVu Serif (texto) / DejaVu Sans Mono (código).
-- Ningún contenido ha sido alterado, resumido ni reeditado, salvo la conversión tipográfica de *El Pliegue Mínimo* desde su fuente Markdown a LaTeX nativo.
+### Extensiones al Marco de Compilación por Subcubos Disjuntos
+
+Extiende el marco COVERTRACE-SAT con tres resultados: (1) equivalencia entre partición de búsqueda y resolución arbórea, con fragmentación exponencial para instancias insatisfacibles; (2) cota espectral de Fourier–Walsh para el número de cobertura por subcubos disjuntos; (3) certificado poliédrico e inmersión TCOC, con equivalencia NP-completa para la optimización sobre el politopo resultante.
+
+### Complejidad Entrópica, Curvatura Epistémica y Problemas Abiertos de Teoría de Números
+
+Unifica dos líneas de investigación del corpus: la complejidad entrópica como reformulación termodinámica de la teoría de la complejidad computacional, y el análisis de tres problemas abiertos de teoría de números — Hipótesis de Riemann, conjetura de Collatz y conjetura de Goldbach — mediante las herramientas del marco riveriano: curvatura epistémica, Espacio Métrico en Capas (LMS), Flujo Coherente y compilación COVERTRACE-SAT. Incluye una sección de confrontación con la física y la metamatemática estándar.
 
 ## Licencia
 

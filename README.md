@@ -1,8 +1,8 @@
 # Obras Completas — Oscar Riveros / Complete Works — Oscar Riveros
 
-Compilación digital de las investigaciones de Oscar Riveros: cinco manuscritos originales, su revisión matemática por pares, el aviso del autor y la licencia. Edición compilada — Agosto 2026.
+Compilación digital de las investigaciones de Oscar Riveros: seis manuscritos originales, su revisión matemática por pares, el aviso del autor y la licencia. Edición compilada — Agosto 2026.
 
-Digital compilation of Oscar Riveros's research: five original manuscripts, their mathematical peer review, the author's disclaimer, and the license. Compiled edition — August 2026.
+Digital compilation of Oscar Riveros's research: six original manuscripts, their mathematical peer review, the author's disclaimer, and the license. Compiled edition — August 2026.
 
 ---
 
@@ -25,7 +25,8 @@ Digital compilation of Oscar Riveros's research: five original manuscripts, thei
 | `coherent_flow_companion.pdf` | Coherent Flow: A Companion Note to Epistemic Geometry |
 | `continuous_epistemic_geometry.pdf` | Continuous Epistemic Geometry: cGCNF, Disjoint Compilation, and Black-Hole Observables |
 | `Epistemic_Geometry_of_Closure - Riveros.pdf` | Epistemic Geometry of Closure: SCE-IM, Coherent Flow, and Operational Completeness |
-| `PEER_REVIEW.md` | Revisión matemática por pares de los cinco documentos |
+| `epistemic_geometry_riveros.pdf` | Epistemic Geometry: Finite Verification, Curvature, and Structural Obstructions Across Logic, Computation, and Physics |
+| `PEER_REVIEW.md` | Revisión matemática por pares de los seis documentos |
 | `DISCLAMER.md` | Aviso sobre la asistencia de IA (español e inglés) |
 | `LICENSE.txt` | Licencia |
 
@@ -46,9 +47,12 @@ Semántica continua para fórmulas CNF: apertura de los conjuntos de modelos, es
 **5. Epistemic Geometry of Closure: SCE-IM, Coherent Flow, and Operational Completeness**
 Sistema SCE-IM: curvatura epistémica con estabilidad Lipschitz e invariancia de signo, completitud operacional de zippers, completitud con recursos y estabilidad de la curvatura acotada; cierra el programa con las redes de cierre epistémico.
 
+**6. Epistemic Geometry: Finite Verification, Curvature, and Structural Obstructions Across Logic, Computation, and Physics**
+Marco unificador de la Geometría Epistémica sobre cinco líneas técnicas: física discreta verificable por SAT (GCNF, Gauss–Bonnet discreto, conos causales Booleanos), la ecuación SAT, compilación disjunta COVERTRACE con barrera de paridad y colapso PH condicional, curvatura epistémica con el principio de refinamiento derivacional (DRP) y la obstrucción gödeliana, Espacio Métrico en Capas (LMS), localidad y agencia, y los teoremas de unificación: el trilema de verificación física finita (Teo. 8.7) y la obstrucción unificada (Teo. 8.8).
+
 ### Revisión por pares — `PEER_REVIEW.md`
 
-Auditoría matemática exhaustiva de los cinco manuscritos: cada documento fue leído íntegramente y verificado teorema por teorema, definición por definición y prueba por prueba (sobre extracciones `pdftotext -layout -enc UTF-8` de los PDFs originales). Veredicto general: los cinco documentos son matemáticamente correctos y rigurosos, sin errores; se documentan únicamente defectos menores.
+Auditoría matemática exhaustiva de los seis manuscritos: cada documento fue leído íntegramente y verificado teorema por teorema, definición por definición y prueba por prueba (sobre extracciones `pdftotext -layout -enc UTF-8` de los PDFs originales). Veredicto general: los seis documentos son matemáticamente correctos y rigurosos, sin errores; se documentan únicamente defectos menores.
 
 ### Aviso — `DISCLAMER.md`
 
@@ -71,7 +75,8 @@ Declaración del autor sobre el papel de la IA en la redacción y la revisión d
 | `coherent_flow_companion.pdf` | Coherent Flow: A Companion Note to Epistemic Geometry |
 | `continuous_epistemic_geometry.pdf` | Continuous Epistemic Geometry: cGCNF, Disjoint Compilation, and Black-Hole Observables |
 | `Epistemic_Geometry_of_Closure - Riveros.pdf` | Epistemic Geometry of Closure: SCE-IM, Coherent Flow, and Operational Completeness |
-| `PEER_REVIEW.md` | Mathematical peer review of the five documents |
+| `epistemic_geometry_riveros.pdf` | Epistemic Geometry: Finite Verification, Curvature, and Structural Obstructions Across Logic, Computation, and Physics |
+| `PEER_REVIEW.md` | Mathematical peer review of the six documents |
 | `DISCLAMER.md` | Disclaimer on AI assistance (Spanish and English) |
 | `LICENSE.txt` | License |
 
@@ -92,9 +97,12 @@ Continuous semantics for CNF formulas: openness of model sets, Monte Carlo estim
 **5. Epistemic Geometry of Closure: SCE-IM, Coherent Flow, and Operational Completeness**
 The SCE-IM system: epistemic curvature with Lipschitz stability and sign invariance, operational zipper completeness, completeness with resources, and bounded curvature stability; closes the program with epistemic closure nets.
 
+**6. Epistemic Geometry: Finite Verification, Curvature, and Structural Obstructions Across Logic, Computation, and Physics**
+Unifying framework of Epistemic Geometry over five technical lines: SAT-verifiable discrete physics (GCNF, discrete Gauss–Bonnet, Boolean causal cones), the SAT equation, disjoint COVERTRACE compilation with parity barrier and conditional PH collapse, epistemic curvature with the derivational refinement principle (DRP) and the Gödelian obstruction, Layered Metric Space (LMS), locality and agency, and the unification theorems: the trilemma of finite physical verification (Thm. 8.7) and the unified obstruction theorem (Thm. 8.8).
+
 ### Peer review — `PEER_REVIEW.md`
 
-Exhaustive mathematical audit of the five manuscripts: each document was read in full and verified theorem by theorem, definition by definition, and proof by proof (on `pdftotext -layout -enc UTF-8` extractions of the original PDFs). Overall verdict: all five documents are mathematically correct and rigorous, without errors; only minor defects are documented.
+Exhaustive mathematical audit of the six manuscripts: each document was read in full and verified theorem by theorem, definition by definition, and proof by proof (on `pdftotext -layout -enc UTF-8` extractions of the original PDFs). Overall verdict: all six documents are mathematically correct and rigorous, without errors; only minor defects are documented.
 
 ### Disclaimer — `DISCLAMER.md`
 

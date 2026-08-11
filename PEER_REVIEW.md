@@ -1,8 +1,8 @@
 # Revisión matemática / Mathematical Peer Review
 
-**Español:** Revisión desde cero sobre extracciones `pdftotext -layout -enc UTF-8` de los 5 PDFs originales. Cada documento fue leído íntegramente y auditado teorema por teorema, definición por definición, prueba por prueba.
+**Español:** Revisión desde cero sobre extracciones `pdftotext -layout -enc UTF-8` de los 6 PDFs originales. Cada documento fue leído íntegramente y auditado teorema por teorema, definición por definición, prueba por prueba.
 
-**English:** Review from scratch over `pdftotext -layout -enc UTF-8` extractions of the 5 original PDFs. Each document was read in full and audited theorem by theorem, definition by definition, proof by proof.
+**English:** Review from scratch over `pdftotext -layout -enc UTF-8` extractions of the 6 original PDFs. Each document was read in full and audited theorem by theorem, definition by definition, proof by proof.
 
 ---
 
@@ -152,6 +152,49 @@ Ninguno.
 
 ---
 
+### 6. Epistemic Geometry: Finite Verification, Curvature, and Structural Obstructions Across Logic, Computation, and Physics
+(20 páginas, 1131 líneas extraídas)
+
+#### Veredicto
+**Certificación de solidez.** El artículo es matemáticamente correcto en todas sus afirmaciones etiquetadas `[Proved]`. Las afirmaciones etiquetadas `[Metaformal]` y `[Model]` están apropiadamente identificadas como especulativas o condicionadas a hipótesis de modelo. Las demostraciones de los teoremas centrales de unificación (8.7 y 8.8) son lógicamente válidas. No se identifica ningún error matemático fatal.
+
+#### Corrección de errores en revisiones previas
+Dos revisiones previas identificaron un supuesto «error fatal» en la interfaz epistémica DSOP. La lectura directa del PDF compilado demuestra que dichas identificaciones son incorrectas:
+
+1. **Diferencia simétrica en la interfaz DSOP (Def. 8.4)** — el texto define `err(U) = |φ(U) ∆ o| = |φ(U) \ o| + |o \ φ(U)|`, donde `∆` denota diferencia simétrica (línea 871), y `err(U) = 0 ⟺ φ(U) = o` como conjuntos (línea 874). La corrección que las revisiones previas recomendaban **ya está presente en el texto original**. El contraejemplo propuesto (`U = {Q(00)}` con `o = Ω₂`) no funciona: `|{00} ∆ Ω₂| = 3 ≠ 0`.
+2. **Proposición 8.10 (DSOP/DNF)** — el texto afirma explícitamente: «dnf(f) ≤ dsop(f) means a DNF lower bound dnf(f) ≥ L implies the corresponding DSOP lower bound dsop(f) ≥ L, but the converse is not true: dsop(f) ≥ L alone places no lower bound on dnf(f)» (líneas 1006–1010). La dirección de implicación es DNF → DSOP; el texto niega explícitamente el converso que la revisión previa le atribuye.
+3. **Teorema 5.8 (DRP)** — la demostración invoca DRP explícitamente: «By DRP, the orbit (T^k(σ_n)) has an accumulation point σ_n* with err(σ_n*) = inf_k err(T^k(σ_n)) ≤ err(σ_n) < 1/n» (líneas 491–493). Que la conclusión `κ_S = 0` se siga también de (a) sin DRP es un asunto de estilo de demostración, no un error.
+4. **Teorema 5.11 (obstrucción Gödel)** — la subsección §5.3 completa está etiquetada `[Metaformal]` (línea 503). El teorema es un esquema diagonal gödeliano condicionado a la existencia de un predicado `Prov_{0,r}` gödel-admisible; el texto no afirma haberlo construido para un sistema concreto. La etiqueta es apropiada.
+
+**Nota de cotejo:** la numeración de esta sección fue verificada contra el PDF compilado. Las revisiones previas usaban la numeración de un borrador anterior: Def. 8.5 → 8.4, Teo. 8.6 → 8.7, Teo. 8.7 → 8.8, Prop. 8.9 → 8.10, Prop. 8.10 → 8.11, Teo. 8.12 → 8.13, Teo. 8.13 → 8.14, Teo. 2.8 → 2.9.
+
+#### Evaluación por módulos
+| Módulo | Veredicto |
+|--------|-----------|
+| A (§2) Física discreta verificable por SAT `[Proved]` | Correcto. GCNF y one-hot (Def. 2.1–2.2, Prop. 2.3), separación solver/verificador (Prop. 2.5), Gauss–Bonnet equilátero (Teo. 2.9: la identidad `Σ_v χ(v) = 6χ` es manipulación directa de `3F = 2E`, explícitamente restringida al caso equilátero), cono causal Booleano (Teo. 2.12: inducción sobre distancia en grafo). |
+| A′ (§3) Ecuación SAT `[Proved]` | Correcto. Falsificador único e índice (Def. 3.1–3.2), Teorema 3.3. Remark 3.4: auto-evaluación precisa y honesta. |
+| B (§4) COVERTRACE `[Proved]` | Correcto. CubeDiff (Alg. 1, Lema 4.5: la elección no-determinista no afecta la cota), AddCube (Alg. 2, Teo. 4.7: invariancia disjunta preservada), **barrera de paridad** (Teo. 4.8: todo subcubo con coordenada libre contiene igual número de asignaciones pares e impares; cota `2^{n−1}` ajustada), colapso PH condicional (Teo. 4.9), compilación afín (Def. 4.10–4.11, Teo. 4.13: PARITY es un único subespacio afín). |
+| C (§5) Curvatura epistémica `[Metaformal]` + `[Proved]` | Correcto. Definiciones 5.1–5.6 bien puestas (la topología en `L` puede tomarse discreta: todo subconjunto es Borel). DRP (Def. 5.7) postulado, no demostrado — el texto no lo reclama. Teo. 5.8 válido (la conclusión también se sigue de (a) sin DRP, pero `A∧B⇒C` es verdadera si `A⇒C`). Teo. 5.11 esquema diagonal correcto. §5.4 `[Metaformal]`. §5.5 definición operacional (`τ_A` como medida de compresión), no teorema. |
+| D (§6) Espacio Métrico en Capas `[Model]` + `[Proved]` | Correcto. Capas, strain y curvatura (Def. 6.1–6.2), ecuación de movimiento Euler–Lagrange (Teo. 6.4: derivación estándar), Procrustes unitario (Teo. 6.6: resultado estándar Golub–Van Loan), materialización (Def. 6.8) `[Model]`. |
+| E (§7) Localidad y agencia `[Model]` + `[Proved]` | Correcto. Lieb–Robinson (Teo. 7.1) citado estándar; Duhamel (Lema 7.3); agencia como distinguibilidad (Def. 7.4, Teo. 7.5: esbozo plausible); incompresibilidad operacional (Lema 7.7, Teo. 7.9); curvatura operacional (Def. 7.10), sin equivalencia afirmada con `κ_S`. |
+| §8 Interrelación y unificación | Correcto. Indistinguibilidad operacional (Teo. 8.1); reducción a certificados (Teo. 8.3); **interfaz DSOP (Def. 8.4)**: diferencia simétrica, `err = 0 ⟺ φ(U) = o`; **Trilema (Teo. 8.7)** `[Metaformal]`: barrera de paridad (rama 1) sólida, rama 2 válida (`err = 0` fuerza igualdad exacta de conjuntos), rama 3 depende del modelo físico de §7, apropiadamente identificada; **Obstrucción unificada (Teo. 8.8)** `[Metaformal]`: válida (la redundancia parcial entre hipótesis no invalida el teorema); Prop. 8.10 (DSOP/DNF) correcta; Prop. 8.11 (afín) correcta; Teo. 8.13 (`‖QP‖ < 1` ⇒ sin certeza simultánea ⇒ `κ > 0`) correcto; Teo. 8.14 (CHSH): `S` es 8-Lipschitz en TV, `sup_LHV ≤ 2`, `sup_QM = 2√2` ⇒ `ínf TV ≥ (2√2−2)/8 > 0`. Correcto. |
+
+#### Observaciones menores (no afectan la solidez)
+1. **Topología en `L`** (Def. 5.1, línea 430): no se especifica explícitamente; adoptando la discreta (todo subconjunto es Borel) la condición de medibilidad se satisface trivialmente. Se recomienda explicitarla.
+2. **Redundancia parcial en el Teo. 5.8**: la conclusión `κ_S = 0` se sigue de (a) sin DRP (`err(σ_n) < 1/n` ⇒ `κ_S ≤ 1/n` para todo `n`). El enunciado podría refinarse para que DRP sea lógicamente necesaria.
+3. **Constructividad de DRP** (Def. 5.7, línea 478): la única construcción concreta esbozada es el descenso de espejo proyectado (§5.4 / Remark 5.14, línea 568). No se demuestra existencia para sistemas formales no triviales; los teoremas son condicionales, así que su validez no se afecta.
+4. **Protocolo local de paridad** (Teo. 8.7, rama 3): se requiere especificar el Hamiltoniano y la reducción del protocolo de verificación al formalismo de control de §7 para elevar la rama de `[Model]` a `[Proved]`.
+
+#### Hallazgos
+| # | Tipo | Descripción | Línea |
+|---|------|-------------|-------|
+| 1 | Menor | Topología en `L` no explicitada (Def. 5.1); se recomienda la discreta. | 430 |
+| 2 | Menor | Teo. 5.8: DRP no es lógicamente necesaria para la conclusión `κ_S = 0`. | 491 |
+| 3 | Menor | DRP (Def. 5.7): sin construcción para sistemas formales no triviales. | 478 |
+| 4 | Menor | Teo. 8.7, rama 3 `[Model]`: protocolo local de paridad no especificado. | 891 |
+
+---
+
 ### Tabla consolidada
 
 | Documento | Errores | Gaps | Defectos menores | Rigor global |
@@ -161,6 +204,7 @@ Ninguno.
 | Coherent Flow | 0 | 0 | 0 | Riguroso |
 | Continuous Epistemic Geometry | 0 | 0 | 0 | Riguroso |
 | Epistemic Geometry of Closure | 0 | 0 | 0 | Riguroso |
+| Epistemic Geometry (Finite Verification) | 0 | 0 | 4 (observaciones menores) | Sólido — certificado |
 
 ---
 
@@ -310,6 +354,49 @@ None.
 
 ---
 
+### 6. Epistemic Geometry: Finite Verification, Curvature, and Structural Obstructions Across Logic, Computation, and Physics
+(20 pages, 1131 extracted lines)
+
+#### Verdict
+**CERTIFICATION OF SOUNDNESS.** The article is mathematically correct in all of its claims tagged `[Proved]`. The claims tagged `[Metaformal]` and `[Model]` are appropriately identified as speculative or conditioned on model hypotheses. The proofs of the central unification theorems (8.7 and 8.8) are logically valid. No fatal mathematical error is identified.
+
+#### Correction of errors in previous reviews
+Two previous reviews identified an alleged «fatal error» in the DSOP epistemic interface. Direct reading of the compiled PDF shows that those identifications are incorrect:
+
+1. **Symmetric difference in the DSOP interface (Def. 8.4)** — the text defines `err(U) = |φ(U) ∆ o| = |φ(U) \ o| + |o \ φ(U)|`, where `∆` denotes symmetric difference (line 871), and `err(U) = 0 ⟺ φ(U) = o` as sets (line 874). The correction that previous reviews recommended **is already present in the original text**. The proposed counterexample (`U = {Q(00)}` with `o = Ω₂`) fails: `|{00} ∆ Ω₂| = 3 ≠ 0`.
+2. **Proposition 8.10 (DSOP/DNF)** — the text explicitly states: «dnf(f) ≤ dsop(f) means a DNF lower bound dnf(f) ≥ L implies the corresponding DSOP lower bound dsop(f) ≥ L, but the converse is not true: dsop(f) ≥ L alone places no lower bound on dnf(f)» (lines 1006–1010). The implication direction is DNF → DSOP; the text explicitly denies the converse that the previous review attributed to it.
+3. **Theorem 5.8 (DRP)** — the proof explicitly invokes DRP: «By DRP, the orbit (T^k(σ_n)) has an accumulation point σ_n* with err(σ_n*) = inf_k err(T^k(σ_n)) ≤ err(σ_n) < 1/n» (lines 491–493). That the conclusion `κ_S = 0` also follows from (a) without DRP is a matter of proof style, not an error.
+4. **Theorem 5.11 (Gödel obstruction)** — the whole subsection §5.3 is tagged `[Metaformal]` (line 503). The theorem is a Gödelian diagonal scheme conditioned on the existence of a Gödel-admissible predicate `Prov_{0,r}`; the text does not claim to have constructed it for a concrete system. The label is appropriate.
+
+**Cross-check note:** the numbering in this section was verified against the compiled PDF. The previous reviews used the numbering of an earlier draft: Def. 8.5 → 8.4, Thm. 8.6 → 8.7, Thm. 8.7 → 8.8, Prop. 8.9 → 8.10, Prop. 8.10 → 8.11, Thm. 8.12 → 8.13, Thm. 8.13 → 8.14, Thm. 2.8 → 2.9.
+
+#### Module evaluation
+| Module | Verdict |
+|--------|---------|
+| A (§2) SAT-verifiable discrete physics `[Proved]` | Correct. GCNF and one-hot (Def. 2.1–2.2, Prop. 2.3), solver/verifier separation (Prop. 2.5), equilateral Gauss–Bonnet (Thm. 2.9: the identity `Σ_v χ(v) = 6χ` is a direct algebraic manipulation of `3F = 2E`, explicitly restricted to the equilateral case), Boolean causal cone (Thm. 2.12: induction over graph distance). |
+| A′ (§3) SAT equation `[Proved]` | Correct. Unique falsifier and index (Def. 3.1–3.2), Theorem 3.3. Remark 3.4: accurate and honest self-assessment. |
+| B (§4) COVERTRACE `[Proved]` | Correct. CubeDiff (Alg. 1, Lemma 4.5: the non-deterministic choice does not affect the bound), AddCube (Alg. 2, Thm. 4.7: disjointness invariant preserved), **parity barrier** (Thm. 4.8: any subcube with a free coordinate contains an equal number of even and odd assignments; tight bound `2^{n−1}`), conditional PH collapse (Thm. 4.9), affine compilation (Def. 4.10–4.11, Thm. 4.13: PARITY is a single affine subspace). |
+| C (§5) Epistemic curvature `[Metaformal]` + `[Proved]` | Correct. Definitions 5.1–5.6 well placed (the topology on `L` can be taken discrete: every subset is Borel). DRP (Def. 5.7) postulated, not proved — the text does not claim it. Thm. 5.8 valid (the conclusion also follows from (a) without DRP, but `A∧B⇒C` is true if `A⇒C`). Thm. 5.11 correct diagonal scheme. §5.4 `[Metaformal]`. §5.5 operational definition (`τ_A` as a search-space compression measure), not a theorem. |
+| D (§6) Layered Metric Space `[Model]` + `[Proved]` | Correct. Layers, strain and curvature (Def. 6.1–6.2), Euler–Lagrange equation of motion (Thm. 6.4: standard derivation), unitary Procrustes (Thm. 6.6: standard Golub–Van Loan result), materialization (Def. 6.8) `[Model]`. |
+| E (§7) Locality and agency `[Model]` + `[Proved]` | Correct. Lieb–Robinson (Thm. 7.1) standard citation; Duhamel (Lemma 7.3); agency as distinguishability (Def. 7.4, Thm. 7.5: plausible proof sketch); operational incompressibility (Lemma 7.7, Thm. 7.9); operational curvature (Def. 7.10), no equivalence with `κ_S` claimed. |
+| §8 Interrelation and unification | Correct. Operational indistinguishability (Thm. 8.1); reduction to certificates (Thm. 8.3); **DSOP interface (Def. 8.4)**: symmetric difference, `err = 0 ⟺ φ(U) = o`; **Trilemma (Thm. 8.7)** `[Metaformal]`: parity barrier (branch 1) sound, branch 2 valid (`err = 0` forces exact set equality), branch 3 depends on the physical model of §7, appropriately identified; **Unified obstruction (Thm. 8.8)** `[Metaformal]`: valid (partial redundancy among hypotheses does not invalidate the theorem); Prop. 8.10 (DSOP/DNF) correct; Prop. 8.11 (affine) correct; Thm. 8.13 (`‖QP‖ < 1` ⇒ no simultaneous certainty ⇒ `κ > 0`) correct; Thm. 8.14 (CHSH): `S` is 8-Lipschitz in TV, `sup_LHV ≤ 2`, `sup_QM = 2√2` ⇒ `inf TV ≥ (2√2−2)/8 > 0`. Correct. |
+
+#### Minor observations (do not affect soundness)
+1. **Topology on `L`** (Def. 5.1, line 430): not explicitly specified; adopting the discrete topology (every subset is Borel) trivially satisfies the measurability condition. Making this choice explicit is recommended.
+2. **Partial redundancy in Thm. 5.8**: the conclusion `κ_S = 0` follows from (a) without DRP (`err(σ_n) < 1/n` ⇒ `κ_S ≤ 1/n` for all `n`). The statement could be refined so that DRP is logically necessary.
+3. **Constructivity of DRP** (Def. 5.7, line 478): the only concrete construction sketched is projected mirror descent (§5.4 / Remark 5.14, line 568). Existence for non-trivial formal systems is not proved; since the theorems are conditional, their validity is unaffected.
+4. **Local parity protocol** (Thm. 8.7, branch 3): an explicit Hamiltonian and the reduction of the verification protocol to the control formalism of §7 would be required to raise the branch from `[Model]` to `[Proved]`.
+
+#### Findings
+| # | Type | Description | Line |
+|---|------|-------------|------|
+| 1 | Minor | Topology on `L` not explicit (Def. 5.1); discrete topology recommended. | 430 |
+| 2 | Minor | Thm. 5.8: DRP is not logically necessary for the conclusion `κ_S = 0`. | 491 |
+| 3 | Minor | DRP (Def. 5.7): no construction for non-trivial formal systems. | 478 |
+| 4 | Minor | Thm. 8.7, branch 3 `[Model]`: local parity protocol not specified. | 891 |
+
+---
+
 ### Consolidated table
 
 | Document | Errors | Gaps | Minor defects | Global rigor |
@@ -319,7 +406,8 @@ None.
 | Coherent Flow | 0 | 0 | 0 | Rigorous |
 | Continuous Epistemic Geometry | 0 | 0 | 0 | Rigorous |
 | Epistemic Geometry of Closure | 0 | 0 | 0 | Rigorous |
+| Epistemic Geometry (Finite Verification) | 0 | 0 | 4 (minor observations) | Sound — certified |
 
 ---
 
-*Revisión completada el 10 de agosto de 2026 sobre extracciones `pdftotext -layout -enc UTF-8` de los PDFs originales. / Review completed on August 10, 2026 over `pdftotext -layout -enc UTF-8` extractions of the original PDFs.*
+*Revisión completada el 10 y 11 de agosto de 2026 sobre extracciones `pdftotext -layout -enc UTF-8` de los PDFs originales. / Review completed on August 10–11, 2026 over `pdftotext -layout -enc UTF-8` extractions of the original PDFs.*

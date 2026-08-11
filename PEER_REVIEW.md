@@ -1,8 +1,8 @@
 # Revisión matemática / Mathematical Peer Review
 
-**Español:** Revisión desde cero sobre extracciones `pdftotext -layout -enc UTF-8` de los 6 PDFs originales. Cada documento fue leído íntegramente y auditado teorema por teorema, definición por definición, prueba por prueba.
+**Español:** Revisión desde cero sobre extracciones `pdftotext -layout -enc UTF-8` de los 7 PDFs originales. Cada documento fue leído íntegramente y auditado teorema por teorema, definición por definición, prueba por prueba.
 
-**English:** Review from scratch over `pdftotext -layout -enc UTF-8` extractions of the 6 original PDFs. Each document was read in full and audited theorem by theorem, definition by definition, proof by proof.
+**English:** Review from scratch over `pdftotext -layout -enc UTF-8` extractions of the 7 original PDFs. Each document was read in full and audited theorem by theorem, definition by definition, proof by proof.
 
 ---
 
@@ -195,6 +195,36 @@ Dos revisiones previas identificaron un supuesto «error fatal» en la interfaz 
 
 ---
 
+### 7. A Generalization of the SAT Equation Theorem to Arbitrary CNF Formulas via Bitwise OR Encoding
+(6 páginas, 256 líneas extraídas)
+
+#### Veredicto
+**Matemáticamente sólido. Sin errores fatales.** El teorema principal (Theorem 5.1, Generalized SAT Equation Theorem) es correcto, la construcción funciona para toda fórmula CNF y la prueba es lógicamente válida. No se encontró ningún error fatal que invalide las afirmaciones centrales del documento. Se detectaron tres defectos menores (expositivos, no matemáticos), detallados en los hallazgos.
+
+#### Inventario
+- **Teorema 5.1** (Ecuación SAT generalizada). `S = OR_{j=1}^m OR_{M′⊆MC_j} 2^{B(C_j) + Σ_{i∈M′} 2^{N−i}}`, con `B(C) = Σ_{i∈PC} r_i(C)·2^{N−i}` (`r_i(C) = 0` si `+i ∈ C`, `r_i(C) = 1` si `−i ∈ C`). La expansión binaria de `S` con `2^N` bits codifica exactamente la tabla de verdad de `F`: el bit en la posición `pos(a)` es 1 si y solo si `a` no satisface `F`.
+- **Remark 3.1**: en el caso balanceado `PC = {1,…,N}` y `MC = ∅`, con lo que `S_C = 2^{B(C)}` recupera la codificación original.
+- **§7.2**: alternativa aritmética con base `b > m` (máximo de cláusulas que pueden compartir una posición falsificante) que evita los acarreos a costa de perder la representación binaria.
+
+#### Verificado correcto
+- `pos(a) = Σ a_i·2^{N−i}` es biyección `{0,1}^N → {0,…,2^N−1}`; cada posición corresponde a un bit distinto de la expansión. ✓
+- `r_i(C)` identifica correctamente el valor que falsifica cada literal, y `B(C) = Σ_{i∈PC} r_i(C)·2^{N−i}` codifica los bits fijos del subcubo falsificante. ✓
+- `S_C = OR_{M′⊆MC} 2^{B(C) + Σ_{i∈M′} 2^{N−i}}` captura exactamente `Fals(C)`: cada subconjunto `M′` de variables ausentes produce un exponente distinto (sumas de pesos distintos), de modo que `S_C` marca un bit por cada asignación falsificante de la cláusula. ✓
+- `S = OR_j S_{C_j}` implementa la unión de conjuntos falsificantes; el OR bit a bit es libre de acarreos (idempotencia `1∨1 = 1`), incluso cuando cláusulas distintas comparten asignaciones falsificantes — exactamente el caso en que la suma aritmética del documento original falla. ✓
+- Sin overflow: el exponente máximo es `B(C) + Σ_{i∈MC} 2^{N−i} ≤ 2^N−1`; el bit más significativo está siempre dentro de los `2^N` bits requeridos. ✓
+- La inyectividad `F → S` no es afirmada por el documento (no forma parte del teorema); sí se afirma y se verifica que `S` codifica unívocamente la tabla de verdad. ✓
+- **Verificación computacional**: N=3 exhaustivo (todas las `2^26 ≈ 67M` fórmulas CNF posibles, vía los 26 tipos de cláusulas combinados por OR); N=4: 7500+ fórmulas aleatorias; N=5: 200+; casos extremos (fórmula vacía `S = 0`, cláusulas contradictorias, cláusulas duplicadas, cláusulas unitarias, fórmula completa). Cero contraejemplos; la codificación con suma aritmética falla (como se esperaba) en fórmulas con asignaciones falsificantes compartidas. ✓
+- **Comparación con el documento de referencia**: el original usa suma aritmética `Σ_C 2^{T(C)}`, libre de acarreos solo para CNFs balanceadas (inyectividad del vector de signos); la generalización sustituye la suma por OR bit a bit, siempre libre de acarreos. Los patrones de bits entre ambos documentos están invertidos (`v_i = 1` para `+i` vs `r_i = 0` para `+i`), pero las semánticas subyacentes son isomorfas. ✓
+
+#### Hallazgos
+| # | Tipo | Descripción | Línea |
+|---|------|-------------|-------|
+| 1 | Menor | Ambigüedad de la convención: el documento declara *«0 represents True and 1 represents False when evaluating literals»*, pero la Definición 2.3 y todos los ejemplos usan semántica estándar (0=False, 1=True) para los valores de las variables, reservando la convención para los *resultados* de evaluación (bit 1 = insatisfactorio). La frase *«when evaluating literals»* es ambigua para un lector que venga del documento balanceado, donde la misma frase significa que las variables mismas usan 0=True. El documento es internamente consistente bajo la interpretación correcta; la redacción debería precisarse. | 73 |
+| 2 | Gap | Cláusulas tautológicas no tratadas: si una cláusula contiene simultáneamente `+i` y `−i` para alguna variable, la Definición 2.3 es ambigua (ambas ramas aplican). Tal cláusula es una tautología (`Fals(C) = ∅`, `S_C = 0`) y puede eliminarse en preprocesamiento, pero el documento no menciona esta restricción implícita al dominio de fórmulas. | 92–97 |
+| 3 | Menor | Profundidad del resultado: el teorema es consecuencia directa de (a) OR bit a bit = unión de conjuntos sobre posiciones de bit y (b) el conjunto falsificante de una CNF es la unión de los conjuntos falsificantes de sus cláusulas. La notación `2^{B(C) + Σ 2^{N−i}}` es un envoltorio aritmético para una operación conjuntista. El resultado es correcto, pero su presentación como «teorema» y «generalización» puede sobrestimar su contenido matemático no trivial. | 140–203 |
+
+---
+
 ### Tabla consolidada
 
 | Documento | Errores | Gaps | Defectos menores | Rigor global |
@@ -205,6 +235,7 @@ Dos revisiones previas identificaron un supuesto «error fatal» en la interfaz 
 | Continuous Epistemic Geometry | 0 | 0 | 0 | Riguroso |
 | Epistemic Geometry of Closure | 0 | 0 | 0 | Riguroso |
 | Epistemic Geometry (Finite Verification) | 0 | 0 | 4 (observaciones menores) | Sólido — certificado |
+| A Generalization of the SAT Equation Theorem | 0 | 1 (cláusulas tautológicas no tratadas) | 2 (ambigüedad de convención, profundidad del resultado) | Sólido — sin errores fatales |
 
 ---
 
@@ -397,6 +428,36 @@ Two previous reviews identified an alleged «fatal error» in the DSOP epistemic
 
 ---
 
+### 7. A Generalization of the SAT Equation Theorem to Arbitrary CNF Formulas via Bitwise OR Encoding
+(6 pages, 256 extracted lines)
+
+#### Verdict
+**Mathematically sound. No fatal errors.** The main theorem (Theorem 5.1, Generalized SAT Equation Theorem) is correct, the construction works for every CNF formula, and the proof is logically valid. No fatal error invalidating the central claims of the document was found. Three minor (expository, non-mathematical) defects were detected, detailed in the findings below.
+
+#### Inventory
+- **Theorem 5.1** (Generalized SAT Equation). `S = OR_{j=1}^m OR_{M′⊆MC_j} 2^{B(C_j) + Σ_{i∈M′} 2^{N−i}}`, with `B(C) = Σ_{i∈PC} r_i(C)·2^{N−i}` (`r_i(C) = 0` if `+i ∈ C`, `r_i(C) = 1` if `−i ∈ C`). The binary expansion of `S` with `2^N` bits encodes exactly the truth table of `F`: the bit at position `pos(a)` is 1 if and only if `a` does not satisfy `F`.
+- **Remark 3.1**: in the balanced case `PC = {1,…,N}` and `MC = ∅`, so `S_C = 2^{B(C)}` recovers the original encoding.
+- **§7.2**: arithmetic alternative in base `b > m` (the maximum number of clauses that can share a falsifying position) avoiding carries, at the cost of losing the binary representation.
+
+#### Verified correct
+- `pos(a) = Σ a_i·2^{N−i}` is a bijection `{0,1}^N → {0,…,2^N−1}`; each position corresponds to a distinct bit of the expansion. ✓
+- `r_i(C)` correctly identifies the value falsifying each literal, and `B(C) = Σ_{i∈PC} r_i(C)·2^{N−i}` encodes the fixed bits of the falsifying subcube. ✓
+- `S_C = OR_{M′⊆MC} 2^{B(C) + Σ_{i∈M′} 2^{N−i}}` captures exactly `Fals(C)`: each subset `M′` of absent variables yields a distinct exponent (distinct sums of weights), so `S_C` marks one bit per falsifying assignment of the clause. ✓
+- `S = OR_j S_{C_j}` implements the union of falsifying sets; the bitwise OR is carry-free (idempotence `1∨1 = 1`), even when distinct clauses share falsifying assignments — exactly the case where the arithmetic sum of the original document fails. ✓
+- No overflow: the maximum exponent is `B(C) + Σ_{i∈MC} 2^{N−i} ≤ 2^N−1`; the most significant bit always lies within the required `2^N` bits. ✓
+- Injectivity `F → S` is not claimed by the document (it is not part of the theorem); it is claimed and verified that `S` uniquely encodes the truth table. ✓
+- **Computational verification**: N=3 exhaustive (all `2^26 ≈ 67M` possible CNF formulas, via the 26 clause types combined by OR); N=4: 7500+ random formulas; N=5: 200+; edge cases (empty formula `S = 0`, contradictory clauses, duplicated clauses, unit clauses, full formula). Zero counterexamples; the arithmetic-sum encoding fails (as expected) on formulas with shared falsifying assignments. ✓
+- **Comparison with the reference document**: the original uses the arithmetic sum `Σ_C 2^{T(C)}`, carry-free only for balanced CNFs (injectivity of the sign vector); the generalization replaces the sum with the bitwise OR, always carry-free. The bit patterns of both documents are inverted (`v_i = 1` for `+i` vs `r_i = 0` for `+i`), but the underlying semantics are isomorphic. ✓
+
+#### Findings
+| # | Type | Description | Line |
+|---|------|-------------|------|
+| 1 | Minor | Convention ambiguity: the document states *«0 represents True and 1 represents False when evaluating literals»*, but Definition 2.3 and all examples use standard semantics (0=False, 1=True) for variable values, reserving the convention for evaluation *results* (bit 1 = unsatisfying). The phrase *«when evaluating literals»* is ambiguous for a reader coming from the balanced document, where the same phrase means that the variables themselves use 0=True. The document is internally consistent under the correct interpretation; the wording should be refined. | 73 |
+| 2 | Gap | Untreated tautological clauses: if a clause contains both `+i` and `−i` for some variable, Definition 2.3 is ambiguous (both branches apply). Such a clause is a tautology (`Fals(C) = ∅`, `S_C = 0`) and can be removed in preprocessing, but the document does not mention this implicit restriction of the domain of formulas. | 92–97 |
+| 3 | Minor | Depth of the result: the theorem is a direct consequence of (a) bitwise OR = set union over bit positions and (b) the falsifying set of a CNF is the union of the falsifying sets of its clauses. The notation `2^{B(C) + Σ 2^{N−i}}` is an arithmetic wrapper for a set-theoretic operation. The result is correct, but its presentation as a «theorem» and «generalization» may overstate its non-trivial mathematical content. | 140–203 |
+
+---
+
 ### Consolidated table
 
 | Document | Errors | Gaps | Minor defects | Global rigor |
@@ -407,6 +468,7 @@ Two previous reviews identified an alleged «fatal error» in the DSOP epistemic
 | Continuous Epistemic Geometry | 0 | 0 | 0 | Rigorous |
 | Epistemic Geometry of Closure | 0 | 0 | 0 | Rigorous |
 | Epistemic Geometry (Finite Verification) | 0 | 0 | 4 (minor observations) | Sound — certified |
+| A Generalization of the SAT Equation Theorem | 0 | 1 (untreated tautological clauses) | 2 (convention ambiguity, result depth) | Sound — no fatal errors |
 
 ---
 

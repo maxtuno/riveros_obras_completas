@@ -1,8 +1,8 @@
 # Obras Completas — Oscar Riveros / Complete Works — Oscar Riveros
 
-Compilación digital de las investigaciones de Oscar Riveros: seis manuscritos originales, su revisión matemática por pares, el aviso del autor y la licencia. Edición compilada — Agosto 2026.
+Compilación digital de las investigaciones de Oscar Riveros: siete manuscritos originales, su revisión matemática por pares, el aviso del autor y la licencia. Edición compilada — Agosto 2026.
 
-Digital compilation of Oscar Riveros's research: six original manuscripts, their mathematical peer review, the author's disclaimer, and the license. Compiled edition — August 2026.
+Digital compilation of Oscar Riveros's research: seven original manuscripts, their mathematical peer review, the author's disclaimer, and the license. Compiled edition — August 2026.
 
 ---
 
@@ -26,7 +26,8 @@ Digital compilation of Oscar Riveros's research: six original manuscripts, their
 | `continuous_epistemic_geometry.pdf` | Continuous Epistemic Geometry: cGCNF, Disjoint Compilation, and Black-Hole Observables |
 | `Epistemic_Geometry_of_Closure - Riveros.pdf` | Epistemic Geometry of Closure: SCE-IM, Coherent Flow, and Operational Completeness |
 | `epistemic_geometry_riveros.pdf` | Epistemic Geometry: Finite Verification, Curvature, and Structural Obstructions Across Logic, Computation, and Physics |
-| `PEER_REVIEW.md` | Revisión matemática por pares de los seis documentos |
+| `sat-equation-generalized.pdf` | A Generalization of the SAT Equation Theorem to Arbitrary CNF Formulas via Bitwise OR Encoding |
+| `PEER_REVIEW.md` | Revisión matemática por pares de los siete documentos |
 | `DISCLAMER.md` | Aviso sobre la asistencia de IA (español e inglés) |
 | `LICENSE.txt` | Licencia |
 
@@ -50,9 +51,12 @@ Sistema SCE-IM: curvatura epistémica con estabilidad Lipschitz e invariancia de
 **6. Epistemic Geometry: Finite Verification, Curvature, and Structural Obstructions Across Logic, Computation, and Physics**
 Marco unificador de la Geometría Epistémica sobre cinco líneas técnicas: física discreta verificable por SAT (GCNF, Gauss–Bonnet discreto, conos causales Booleanos), la ecuación SAT, compilación disjunta COVERTRACE con barrera de paridad y colapso PH condicional, curvatura epistémica con el principio de refinamiento derivacional (DRP) y la obstrucción gödeliana, Espacio Métrico en Capas (LMS), localidad y agencia, y los teoremas de unificación: el trilema de verificación física finita (Teo. 8.7) y la obstrucción unificada (Teo. 8.8).
 
+**7. A Generalization of the SAT Equation Theorem to Arbitrary CNF Formulas via Bitwise OR Encoding**
+Generalización del Teorema de la Ecuación SAT de fórmulas balanceadas a fórmulas CNF arbitrarias: cada cláusula aporta una máscara binaria que pone un `1` en cada posición correspondiente a una asignación que la falsifica, y el OR bit a bit de todas las máscaras produce el entero `S = OR_j OR_{M′⊆MC_j} 2^{B(C_j) + Σ_{i∈M′} 2^{N−i}}`, cuya expansión binaria con `2^N` bits codifica exactamente la tabla de verdad de `F` sin acarreos, aun cuando cláusulas distintas compartan asignaciones falsificantes.
+
 ### Revisión por pares — `PEER_REVIEW.md`
 
-Auditoría matemática exhaustiva de los seis manuscritos: cada documento fue leído íntegramente y verificado teorema por teorema, definición por definición y prueba por prueba (sobre extracciones `pdftotext -layout -enc UTF-8` de los PDFs originales). Veredicto general: los seis documentos son matemáticamente correctos y rigurosos, sin errores; se documentan únicamente defectos menores.
+Auditoría matemática exhaustiva de los siete manuscritos: cada documento fue leído íntegramente y verificado teorema por teorema, definición por definición y prueba por prueba (sobre extracciones `pdftotext -layout -enc UTF-8` de los PDFs originales). Veredicto general: los siete documentos son matemáticamente correctos y rigurosos, sin errores fatales; se documentan únicamente defectos menores.
 
 ### Aviso — `DISCLAMER.md`
 
@@ -76,7 +80,8 @@ Declaración del autor sobre el papel de la IA en la redacción y la revisión d
 | `continuous_epistemic_geometry.pdf` | Continuous Epistemic Geometry: cGCNF, Disjoint Compilation, and Black-Hole Observables |
 | `Epistemic_Geometry_of_Closure - Riveros.pdf` | Epistemic Geometry of Closure: SCE-IM, Coherent Flow, and Operational Completeness |
 | `epistemic_geometry_riveros.pdf` | Epistemic Geometry: Finite Verification, Curvature, and Structural Obstructions Across Logic, Computation, and Physics |
-| `PEER_REVIEW.md` | Mathematical peer review of the six documents |
+| `sat-equation-generalized.pdf` | A Generalization of the SAT Equation Theorem to Arbitrary CNF Formulas via Bitwise OR Encoding |
+| `PEER_REVIEW.md` | Mathematical peer review of the seven documents |
 | `DISCLAMER.md` | Disclaimer on AI assistance (Spanish and English) |
 | `LICENSE.txt` | License |
 
@@ -100,9 +105,12 @@ The SCE-IM system: epistemic curvature with Lipschitz stability and sign invaria
 **6. Epistemic Geometry: Finite Verification, Curvature, and Structural Obstructions Across Logic, Computation, and Physics**
 Unifying framework of Epistemic Geometry over five technical lines: SAT-verifiable discrete physics (GCNF, discrete Gauss–Bonnet, Boolean causal cones), the SAT equation, disjoint COVERTRACE compilation with parity barrier and conditional PH collapse, epistemic curvature with the derivational refinement principle (DRP) and the Gödelian obstruction, Layered Metric Space (LMS), locality and agency, and the unification theorems: the trilemma of finite physical verification (Thm. 8.7) and the unified obstruction theorem (Thm. 8.8).
 
+**7. A Generalization of the SAT Equation Theorem to Arbitrary CNF Formulas via Bitwise OR Encoding**
+Generalization of the SAT Equation Theorem from balanced formulas to arbitrary CNF formulas: each clause contributes a binary mask that sets a `1` in every position corresponding to an assignment that falsifies it, and the bitwise OR of all masks yields the integer `S = OR_j OR_{M′⊆MC_j} 2^{B(C_j) + Σ_{i∈M′} 2^{N−i}}`, whose binary expansion with `2^N` bits encodes exactly the truth table of `F` without carries, even when distinct clauses share falsifying assignments.
+
 ### Peer review — `PEER_REVIEW.md`
 
-Exhaustive mathematical audit of the six manuscripts: each document was read in full and verified theorem by theorem, definition by definition, and proof by proof (on `pdftotext -layout -enc UTF-8` extractions of the original PDFs). Overall verdict: all six documents are mathematically correct and rigorous, without errors; only minor defects are documented.
+Exhaustive mathematical audit of the seven manuscripts: each document was read in full and verified theorem by theorem, definition by definition, and proof by proof (on `pdftotext -layout -enc UTF-8` extractions of the original PDFs). Overall verdict: all seven documents are mathematically correct and rigorous, without fatal errors; only minor defects are documented.
 
 ### Disclaimer — `DISCLAMER.md`
 

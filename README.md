@@ -1,93 +1,105 @@
-# Obras Completas — Oscar Riveros
+# Obras Completas — Oscar Riveros / Complete Works — Oscar Riveros
 
-Compilación de las investigaciones completas de Oscar Riveros. El repositorio comprende el volumen tipográfico principal (24 obras), dos manuscritos complementarios y un volumen de ejercicios resueltos. Edición compilada — Agosto 2026.
+Compilación digital de las investigaciones de Oscar Riveros: cinco manuscritos originales, su revisión matemática por pares, el aviso del autor y la licencia. Edición compilada — Agosto 2026.
 
-## Volumen principal: `riveros_obras_completas.pdf`
+Digital compilation of Oscar Riveros's research: five original manuscripts, their mathematical peer review, the author's disclaimer, and the license. Compiled edition — August 2026.
 
-Reúne la totalidad de las investigaciones del autor disponibles en formato digital. Cada manuscrito se conserva completo, sin resúmenes ni reediciones, organizado en **cuatro partes temáticas** (con las obras en orden cronológico de composición dentro de cada parte):
+---
 
-### Parte I — Fundamentos de SAT, Compilación y Complejidad (pp. 13–255)
+## Estado del repositorio / Repository status
 
-| Obra | Páginas |
-|------|---------|
-| A Unique Encoding of Satisfying Assignments for Balanced CNFs | 3 |
-| A Generalization of the SAT Equation Theorem via Bitwise OR | 7 |
-| COVERTRACE-SAT as Disjoint-Subcube Knowledge Compilation | 15 |
-| SATX: Marco Semántico Unificado para SAT Exacto y #SAT | 9 |
-| Teoría de Conservación de Óptimos y Complejidad | 22 |
-| Meta-algoritmos de bifurcación y jerarquías de compilación | 32 |
-| Computación Clónica: Arquitectura, teoría, circuitos e ISA CCMASM | 153 |
+**Español:** Este repositorio contiene únicamente las obras que ya pasaron la revisión por pares: los manuscritos incluidos están libres de observaciones pendientes (solo se documentan defectos menores). El resto de las obras del autor —el volumen compilado completo, los manuscritos complementarios y los ejercicios resueltos— se encuentra en revisión. El repositorio se irá actualizando a medida que cada obra quede completamente libre de observaciones.
 
-La ecuación SAT (caso balanceado y generalización vía OR bit a bit), la compilación de conocimiento COVERTRACE-SAT con sus cotas inferiores de fragmentación y su conexión con la jerarquía polinomial, la publicación defensiva SATX que establece #SAT como operador semántico, la teoría de conservación de óptimos y complejidad (TCOC), los meta-algoritmos de bifurcación con jerarquías de compilación y el tratado de computación clónica que demuestra **CLONP = PSPACE**.
+**English:** This repository contains only the works that have already passed peer review: the included manuscripts are free of pending observations (only minor defects are documented). The rest of the author's works —the full compiled volume, the complementary manuscripts, and the solved exercises— is under review. The repository will be updated as each work becomes completely free of observations.
 
-### Parte II — Geometría Epistémica (pp. 256–462)
+---
 
-| Obra | Páginas |
-|------|---------|
-| Epistemic Curvature and the Structural Contingency of Undecidability | 7 |
-| General Epistemic Geometry | 93 |
-| Epistemic Geometry: Finite Verification, Curvature, and Obstructions | 19 |
-| Continuous Epistemic Geometry: cGCNF, Disjoint Compilation, and Black-Hole Observables | 14 |
-| Epistemic Geometry of Closure: SCE-IM, Coherent Flow, and Operational Completeness | 23 |
-| Epistemic Closure Nets: Curvature, Holonomy, and Meta-Closure | 23 |
-| Coherent Flow: A Companion Note to Epistemic Geometry | 8 |
-| Finite-Bank Certification: Gray-Zone Scaling and Epistemic Perihelion | 7 |
-| A Diagrammatic Language for Epistemic Geometry (EGDL) | 11 |
+## Español
 
-El libro canónico *General Epistemic Geometry* y los nueve manuscritos que definen y extienden el programa: curvatura epistémica con su conexión a RH y P vs. NP, la semántica continua cGCNF, el cierre SCE-IM con completitud operacional de zippers, las redes de cierre epistémico con holonomía de protocolo y de atlas, el flujo coherente determinista y estocástico, la certificación de bancos finitos con el perihelio epistémico, y el lenguaje diagramático EGDL.
+### Contenido del repositorio
 
-### Parte III — Física (pp. 463–611)
+| Archivo | Contenido |
+|---------|-----------|
+| `A_Unique_Encoding_of_Satisfying_Assignments.pdf` | A Unique Encoding of Satisfying Assignments for Balanced CNFs |
+| `Autorreferencia Segura - Riveros.pdf` | Autorreferencia Segura en Familias Dinámicas de Estados |
+| `coherent_flow_companion.pdf` | Coherent Flow: A Companion Note to Epistemic Geometry |
+| `continuous_epistemic_geometry.pdf` | Continuous Epistemic Geometry: cGCNF, Disjoint Compilation, and Black-Hole Observables |
+| `Epistemic_Geometry_of_Closure - Riveros.pdf` | Epistemic Geometry of Closure: SCE-IM, Coherent Flow, and Operational Completeness |
+| `PEER_REVIEW.md` | Revisión matemática por pares de los cinco documentos |
+| `DISCLAMER.md` | Aviso sobre la asistencia de IA (español e inglés) |
+| `LICENSE.txt` | Licencia |
 
-| Obra | Páginas |
-|------|---------|
-| The Layered Metric Space: Kinematical Foundations for Discrete Relational Geometry | 13 |
-| Locality, Soft Causal Cones, and Informational Limits of Agency | 11 |
-| SAT-Verified Discrete Physics: A Minimal, Auditable SAT Workflow | 10 |
-| Kinematic Foundations of Relational Geometry and Informational Limits | 12 |
-| Physical Observer Geometry: Protocol Holonomy and Spectral Obstructions | 23 |
-| Física Riveriana: geometría, espectro, fermiones, cosmología, renormalización | 78 |
+### Los documentos
 
-El espacio métrico en capas (LMS) y su cinemática cuántica con materialización, los conos causales suaves y los límites informacionales de la agencia, la física discreta verificada por SAT, los fundamentos cinemáticos de la geometría relacional, la geometría del observador físico con holonomía protocolar y reducción de Yang–Mills, y el tratado unificador *Física Riveriana*.
+**1. A Unique Encoding of Satisfying Assignments for Balanced CNFs**
+Teorema de la Ecuación SAT: toda fórmula CNF balanceada sobre `n` variables Booleanas queda caracterizada unívocamente por el número `S = Σ_C 2^{T(C)}`, donde `T(C)` es el número binario del vector de signos de la cláusula `C`. Escrito con al menos `2ⁿ` bits, la expansión binaria de `S` codifica exactamente la tabla de verdad de la fórmula: un `1` marca una asignación que no satisface `F` y un `0` una que sí la satisface.
 
-### Parte IV — Autorreferencia (pp. 612–684)
+**2. Autorreferencia Segura en Familias Dinámicas de Estados**
+Teoría axiomática de la autorreferencia segura: velocidad crítica local `ν_c` y su uniformidad, condiciones de divergencia global y alcanzable, invariancia de tubos seguros móviles bajo política ISS, estabilidad práctica exponencial y el criterio de no-retorno mediante conjuntos invariantes disjuntos del captor.
 
-| Obra | Páginas |
-|------|---------|
-| El Pliegue Mínimo | 40 |
-| Autorreferencia segura en familias dinámicas de estados | 31 |
+**3. Coherent Flow: A Companion Note to Epistemic Geometry**
+Nota complementaria del programa de Geometría Epistémica: islas coherentes y descenso determinista con terminación finita, balance detallado del kernel Metropolis–Hastings, curvatura epistémica KL con su caso separable `I(A;B)`, identidad exacta de Lyapunov para el flujo coherente y equilibrio único en la hoja de interfaz.
 
-*El Pliegue Mínimo* — el umbral de dos variables binarias como condición necesaria y suficiente para la autorreferencia persistente, con el cálculo de pliegues (Φ-calculus) como modelo de computación autorreferencial — en composición tipográfica nativa; y la teoría abstracta de autorreferencia segura en familias dinámicas de estados, con sus teoremas de uniformidad, tubos seguros móviles y horizontes de no-retorno.
+**4. Continuous Epistemic Geometry: cGCNF, Disjoint Compilation, and Black-Hole Observables**
+Semántica continua para fórmulas CNF: apertura de los conjuntos de modelos, estimación Monte Carlo con cotas de Hoeffding, compilación por subcubos disjuntos con su barrera de fragmentación `2ⁿ`, y transferencia por bancos finitos `ε-net` con margen.
 
-## Volumen de ejercicios resueltos: `riveros_obras_completas_ejercicios_resueltos.pdf`
+**5. Epistemic Geometry of Closure: SCE-IM, Coherent Flow, and Operational Completeness**
+Sistema SCE-IM: curvatura epistémica con estabilidad Lipschitz e invariancia de signo, completitud operacional de zippers, completitud con recursos y estabilidad de la curvatura acotada; cierra el programa con las redes de cierre epistémico.
 
-Volumen complementario de 60 páginas con **116 ejercicios resueltos**, organizado en las mismas cuatro partes temáticas que el volumen principal:
+### Revisión por pares — `PEER_REVIEW.md`
 
-| Parte | Secciones | Ejercicios |
-|-------|-----------|-------------|
-| I — Fundamentos de SAT, Compilación y Complejidad | Unique Encoding, Generalization SAT Equation, COVERTRACE-SAT, SATX, TCOC, Meta-algoritmos, Computación Clónica | — |
-| II — Geometría Epistémica | Curvatura del Espacio Epistémico, Compilación cGCNF, Cierre SCE-IM, Redes de Cierre, Flujo Coherente, Banco Finito, EGDL | — |
-| III — Física | Espacio Métrico en Capas (LMS), Localidad y Agencia, Física Verificada por SAT, Fundamentos Cinemáticos, Geometría del Observador, Física Riveriana | — |
-| IV — Autorreferencia | El Pliegue Mínimo, Φ-calculus, Autorreferencia Segura | — |
+Auditoría matemática exhaustiva de los cinco manuscritos: cada documento fue leído íntegramente y verificado teorema por teorema, definición por definición y prueba por prueba (sobre extracciones `pdftotext -layout -enc UTF-8` de los PDFs originales). Veredicto general: los cinco documentos son matemáticamente correctos y rigurosos, sin errores; se documentan únicamente defectos menores.
 
-Cada sección contiene ejercicios diseñados para verificar y profundizar la comprensión de las obras correspondientes del volumen principal.
+### Aviso — `DISCLAMER.md`
 
-## Manuscritos complementarios
+Declaración del autor sobre el papel de la IA en la redacción y la revisión de estas obras: la matemática como lenguaje falseable e independiente de la interpretación, la curvatura entre sintaxis y semántica que estudia la Geometría Epistémica, y el valor del conocimiento humano frente a la recombinación del corpus. Disponible en español e inglés.
 
-Dos manuscritos independientes que extienden líneas de investigación del corpus:
-
-| Archivo | Contenido | Páginas |
-|---------|-----------|----------|
-| `compilacion_subcubos_disjuntos_extension.pdf` | Extensiones al Marco de Compilación por Subcubos Disjuntos: Fragmentación, Resolución Arbórea, Espectro de Fourier y Representaciones Poliédricas | 6 |
-| `complejidad_entropica_curvatura_epistemica.pdf` | Complejidad Entrópica, Curvatura Epistémica y Problemas Abiertos de Teoría de Números en el Marco Riveriano | 11 |
-
-### Extensiones al Marco de Compilación por Subcubos Disjuntos
-
-Extiende el marco COVERTRACE-SAT con tres resultados: (1) equivalencia entre partición de búsqueda y resolución arbórea, con fragmentación exponencial para instancias insatisfacibles; (2) cota espectral de Fourier–Walsh para el número de cobertura por subcubos disjuntos; (3) certificado poliédrico e inmersión TCOC, con equivalencia NP-completa para la optimización sobre el politopo resultante.
-
-### Complejidad Entrópica, Curvatura Epistémica y Problemas Abiertos de Teoría de Números
-
-Unifica dos líneas de investigación del corpus: la complejidad entrópica como reformulación termodinámica de la teoría de la complejidad computacional, y el análisis de tres problemas abiertos de teoría de números — Hipótesis de Riemann, conjetura de Collatz y conjetura de Goldbach — mediante las herramientas del marco riveriano: curvatura epistémica, Espacio Métrico en Capas (LMS), Flujo Coherente y compilación COVERTRACE-SAT. Incluye una sección de confrontación con la física y la metamatemática estándar.
-
-## Licencia
+### Licencia
 
 © 2025–2026 Oscar Riveros. Todos los derechos reservados. Ver [LICENSE.txt](LICENSE.txt).
+
+---
+
+## English
+
+### Repository contents
+
+| File | Contents |
+|------|----------|
+| `A_Unique_Encoding_of_Satisfying_Assignments.pdf` | A Unique Encoding of Satisfying Assignments for Balanced CNFs |
+| `Autorreferencia Segura - Riveros.pdf` | Safe Self-Reference in Dynamic Families of States |
+| `coherent_flow_companion.pdf` | Coherent Flow: A Companion Note to Epistemic Geometry |
+| `continuous_epistemic_geometry.pdf` | Continuous Epistemic Geometry: cGCNF, Disjoint Compilation, and Black-Hole Observables |
+| `Epistemic_Geometry_of_Closure - Riveros.pdf` | Epistemic Geometry of Closure: SCE-IM, Coherent Flow, and Operational Completeness |
+| `PEER_REVIEW.md` | Mathematical peer review of the five documents |
+| `DISCLAMER.md` | Disclaimer on AI assistance (Spanish and English) |
+| `LICENSE.txt` | License |
+
+### The documents
+
+**1. A Unique Encoding of Satisfying Assignments for Balanced CNFs**
+The SAT Equation Theorem: every balanced CNF formula over `n` Boolean variables is uniquely characterized by the number `S = Σ_C 2^{T(C)}`, where `T(C)` is the binary number of clause `C`'s sign vector. Written with at least `2ⁿ` digits, the binary expansion of `S` encodes exactly the truth table of the formula: a `1` marks an assignment that does not satisfy `F` and a `0` one that does.
+
+**2. Safe Self-Reference in Dynamic Families of States**
+Axiomatic theory of safe self-reference: local critical velocity `ν_c` and its uniformity, global and reachable divergence conditions, invariance of safe moving tubes under an ISS policy, practical exponential stability, and the no-return criterion via invariant sets disjoint from the captor.
+
+**3. Coherent Flow: A Companion Note to Epistemic Geometry**
+Companion note to the Epistemic Geometry program: coherent islands and deterministic descent with finite termination, detailed balance of the Metropolis–Hastings kernel, KL epistemic curvature with its separable case `I(A;B)`, exact Lyapunov identity for the coherent flow, and unique equilibrium on the interface leaf.
+
+**4. Continuous Epistemic Geometry: cGCNF, Disjoint Compilation, and Black-Hole Observables**
+Continuous semantics for CNF formulas: openness of model sets, Monte Carlo estimation with Hoeffding bounds, disjoint-subcube compilation with its `2ⁿ` fragmentation barrier, and finite `ε-net` bank transfer with margin.
+
+**5. Epistemic Geometry of Closure: SCE-IM, Coherent Flow, and Operational Completeness**
+The SCE-IM system: epistemic curvature with Lipschitz stability and sign invariance, operational zipper completeness, completeness with resources, and bounded curvature stability; closes the program with epistemic closure nets.
+
+### Peer review — `PEER_REVIEW.md`
+
+Exhaustive mathematical audit of the five manuscripts: each document was read in full and verified theorem by theorem, definition by definition, and proof by proof (on `pdftotext -layout -enc UTF-8` extractions of the original PDFs). Overall verdict: all five documents are mathematically correct and rigorous, without errors; only minor defects are documented.
+
+### Disclaimer — `DISCLAMER.md`
+
+The author's statement on the role of AI in writing and reviewing these works: mathematics as a falsifiable language independent of interpretation, the syntax–semantics curvature studied by Epistemic Geometry, and the value of human knowledge against the recombination of the corpus. Available in Spanish and English.
+
+### License
+
+© 2025–2026 Oscar Riveros. All rights reserved. See [LICENSE.txt](LICENSE.txt).

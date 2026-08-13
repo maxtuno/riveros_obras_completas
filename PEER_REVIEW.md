@@ -1,8 +1,8 @@
 # Revisión matemática / Mathematical Peer Review
 
-**Español:** Revisión desde cero sobre extracciones `pdftotext -layout -enc UTF-8` de los 7 PDFs originales. Cada documento fue leído íntegramente y auditado teorema por teorema, definición por definición, prueba por prueba.
+**Español:** Revisión desde cero sobre extracciones `pdftotext -layout -enc UTF-8` de los 8 PDFs originales. Cada documento fue leído íntegramente y auditado teorema por teorema, definición por definición, prueba por prueba. La revisión del octavo documento (Locality, Soft Causal Cones, and Informational Limits of Agency) incluye además verificación numérica independiente y auditoría adversarial.
 
-**English:** Review from scratch over `pdftotext -layout -enc UTF-8` extractions of the 7 original PDFs. Each document was read in full and audited theorem by theorem, definition by definition, proof by proof.
+**English:** Review from scratch over `pdftotext -layout -enc UTF-8` extractions of the 8 original PDFs. Each document was read in full and audited theorem by theorem, definition by definition, proof by proof. The review of the eighth document (Locality, Soft Causal Cones, and Informational Limits of Agency) also includes independent numerical verification and adversarial auditing.
 
 ---
 
@@ -225,6 +225,63 @@ Dos revisiones previas identificaron un supuesto «error fatal» en la interfaz 
 
 ---
 
+### 8. Locality, Soft Causal Cones, and Informational Limits of Agency. An axiomatic skeleton (nonlinear development) for local control and remote indistinguishability
+(10 páginas · manuscrito del 25 de diciembre de 2025 · revisión del 12 de agosto de 2026)
+
+#### Veredicto
+**Matemáticamente sólido: certificación condicionada a correcciones editoriales obligatorias.** Todas las afirmaciones centrales (cota de Lieb–Robinson de doble suma, refinamiento geométrico `K_µ`, identidad de Duhamel a dos tiempos con flujo causal en el tiempo restante `T−s`, cota de influencia/agencia exponencialmente suprimida fuera del cono, y cierre de capacidad vía Holevo + Fannes–Audenaert) fueron verificadas de forma independiente — algebraica y numéricamente — y sobreviven a una auditoría adversarial dedicada. No se encontró ningún error algebraico, hipótesis oculta que invalide una afirmación principal ni contraejemplo que rompa las cotas.
+
+**El manuscrito NO es aceptable en su forma actual por razones de integridad y precisión de atribución, no de matemática:**
+1. El Apéndice C presenta opiniones de asistentes de IA (Gemini, Claude, Grok, GPT-5.2) como «reviews» y «editorial assessments», y contiene un «Final verdict: Accepted for publication / finalization» sin revista, editor ni revisor humano. Endoso editorial fabricado que debe eliminarse o re-etiquetarse explícitamente.
+2. Atribución imprecisa de la Proposición 4.1: Barthel–Kliesch [5] cubre dinámica **Lindbladiana**, no el caso unitario; el caso unitario dependiente del tiempo lo cubre Kliesch–Gogolin–Eisert [6] (Thm. 1), cuyos coautores el manuscrito omite.
+3. Autodescripciones infladas (Remark 4.1, C.2) y deficiencias menores de presentación.
+
+En términos binarios: certificación de solidez matemática, condicionada a las correcciones editoriales obligatorias 1–3. El veredicto es independiente del «Accepted for publication» auto-otorgado en el Apéndice C del propio manuscrito; la matemática se verificó desde cero.
+
+#### Inventario de afirmaciones principales
+1. **C1 (LR).** Para interacción exponencialmente local (Supuesto 2.1), vale la cota de Lieb–Robinson de doble suma con parte positiva `e^{−µ[d(x,y)−v|t|]_+}` (Teorema 2.1) y su especialización volumétrica (Corolario 2.1).
+2. **C2 (Geometría).** Refinamiento geométrico con constante explícita `K_µ = 1 + ∆e^{−µ}/(1−(∆−1)e^{−µ})` y escalado `min(|X|,|Y|)` (Proposición 2.1).
+3. **C3 (Duhamel).** Identidad exacta a dos tiempos: `τ(c)_{T,0}(B) − τ(c′)_{T,0}(B) = i∫₀^T τ(c)_{s,0}([∆H(s), τ(c′)_{T,s}(B)])ds` (Lema 4.1), con flujo causal en el tiempo restante `T−s`.
+4. **C4 (Influencia remota).** Control local acotado ⇒ influencia remota exponencialmente suprimida fuera del cono: si `d(C,R) > v′T + ℓ`, entonces `Ag_R(c,c′;T) ≤ K′_A|C||R| e^{−µℓ} ∫₀^T‖∆H(s)‖ds` (Teorema 4.1 → Corolario 4.1; Corolario 6.1 análogo para `Infl_R`).
+5. **C5 (Capacidad).** Indistinguibilidad geométrica ⇒ cierre de capacidad: `I(M;Z) ≤ χ ≤ 2ε log(d_R−1) + h(2ε)` con `ε = O(e^{−µℓ})` (Teorema 5.1 + Proposición 5.1).
+6. **C6 (Cono duro clásico).** Un autómata celular local tiene cono causal duro (influencia exactamente cero fuera) (Proposición 7.1).
+7. **C7 (Operacional).** Las reglas de agencia/responsabilidad remota deben respetar los límites causales blandos salvo control «efectivamente omnipotente» (Definición 6.2, sección 6).
+
+#### Verificado correcto
+- **Definiciones (1.1–1.5, 4.1–4.4, 5.1–5.2):** estándar y correctas. Única observación: `ρ₀` se usa (Def. 4.4, Def. 6.1) sin definirse explícitamente (implícito en Def. 1.4) — laguna benigna. ✓
+- **Teorema 2.1 / Corolario 2.1:** forma de doble suma estándar (Nachtergaele–Sims); la truncación con `[·]_+` es consecuencia trivial de la forma no truncada; Remark 2.2 honesto (dentro del cono la cota es no informativa). Normalización `v_LR ≲ 2J_µ/µ` correcta en la convención BHV. ✓
+- **Proposición 2.1 (`K_µ`):** conteo de esferas `|S_n| ≤ ∆(∆−1)^{n−1}` y serie geométrica correctos, válida sii `µ > log(∆−1)` (condición impuesta por el enunciado). **Verificada numéricamente:** camino de 100 nodos, µ=1: `K_µ = 2.1639534…` coincide con `max_x Σ_y e^{−µd(x,y)}` a precisión de máquina (la cota es *tight* en el centro); caso asimétrico |X|=5, |Y|=100: simetría verificada. ✓
+- **Proposición 4.1 (LR dependiente del tiempo):** etiquetada «(referenced)» honestamente; es teorema **verdadero y establecido** — Kliesch–Gogolin–Eisert (arXiv:1306.0716, Thm. 1) cubre el caso unitario dependiente del tiempo (el caso Hamiltoniano unitario es caso especial explícito), con el empaquetado estándar `min(1, e^{v|t−s|−µd}) ≤ 2e^{−µ[d−v′|t−s|]_+}` y cotas instantáneas `sup_t J_µ(t) ≤ J_µ + κe^{µ diam(C)} < ∞` con la misma µ. ✓ (enunciado) — ⚠ **atribución imprecisa** (Barthel–Kliesch trata Lindbladianos); faltan ~2 páginas de prueba para autocontención.
+- **Lema 4.1 (Duhamel a dos tiempos):** verificado término a término (los 4 términos de `dF/ds` suman exactamente `i Uc(s,0)†[∆H(s), Uc′(T,s)†BUc′(T,s)]Uc(s,0)`; sin error de signo) y **numéricamente** (2 qubits, error máx ~10⁻⁵ con `dt = 2.5·10⁻⁵`, escalando linealmente con `dt`). La identidad es exacta, incluido el signo `+i` y el flujo `τ(c′)_{T,s}` en el tiempo restante. ✓
+- **Teorema 4.1 (flujo causal T−s):** identidad de conjugación `[A, U†BU] = U†[UAU†, B]U` correcta. Nota de precisión (no es error): estrictamente la conjugación aterriza en el flujo **retrógrado** `τ(c′)_{s,T}`; conclusión idéntica (la cota LR vale en ambas direcciones con las mismas constantes y el intervalo mide `|T−s|`). ✓
+- **Corolarios 4.1 / 6.1:** dualidad traza–norma (Lema 4.2, Helstrom) y factor ½ correctos (`K′_A = K_A/2`); condición del cono `d(C,R) > v′T + ℓ` verificada para todo `s ∈ [0,T]` (exponente ≤ `e^{−µℓ}`). ✓
+- **Teorema 5.1 / Proposición 5.1:** cadena triangular `‖ρm−ρ̄‖₁ ≤ 4ε` y Fannes–Audenaert con parámetro `2ε` bajo `2ε ≤ 1−1/d_R` correctos (la restricción es conservadora respecto del teorema de Audenaert 2007, que vale para todo `δ ∈ [0,1]`; la conclusión asintótica no se afecta). Presupuesto `B ≤ 2κT` automático; `I(M;Z) ≤ χ` (Holevo) correctamente aplicado. ✓
+- **Apéndice A / Proposición 7.1:** `J_µ^eff ≤ J_µ + κe^{µ diam(C)}` ✓ (verificado numéricamente por agente: igualdad exacta en cadena de 6 sitios); Remark A.1 honesto. Cono duro del autómata celular correcto y estándar; contraste blando/duro honesto. ✓
+
+#### Verificaciones numéricas independientes (revisor)
+| Verificación | Resultado |
+|---|---|
+| Lema 4.1 (Duhamel), 2 qubits, T=1, dt=2.5·10⁻⁵, 3 observables | error máx elemento ~3.7–9.7·10⁻⁶ (O(dt)) — **exacto** |
+| Fannes–Audenaert, 3000 pares aleatorios, d=3 y d=5 | sin violaciones (peor margen −0.198 / −0.748) — **vale** |
+| Teorema 5.1 (concentración + Holevo), d=4, ε=0.05 | ½‖ρm−ρ̄‖ ≤ 0.0104 ≤ 2ε; χ = 0.000878 ≤ 0.627 — **vale** |
+| Prop 2.1, camino 100 nodos, µ=1 | K_µ = 2.1639534 = máx Σ_y e^{−µd} (tight); desigualdad con r=3 vale (799.06 ≤ 4346.42) — **vale** |
+
+(Agente adversarial: Duhamel con controles aleatorios y escalado dt→dt/2 reduce el error exactamente a la mitad — consistente con discretización de primer orden, no con un error en la identidad.)
+
+#### Auditoría adversarial (resumen)
+9 ataques intentados contra el veredicto de solidez — todos refutados: aplicación de Prop 4.1 en Teo 4.1 (conjugación exacta); cota de volumen `|C||R|` (monotonía de `[·]_+`); factor ½ y condición del cono; Teorema 5.1 (cadena triangular + FA); hipótesis ocultas Ruta A→B (centro válido, presupuesto automático); signo/flujo del Duhamel (numérico); tesis operacional C7 (estipulación definicional, no teorema); estatus de Prop 4.1 (teorema establecido); Apéndice C (problema de integridad, no de matemática). **Contraejemplos buscados y no encontrados:** entrelazamiento inicial no rompe la cota (norma de operadores, independiente de `ρ₀`); crecimiento de `|C|,|R|` con ℓ degrada la cota pero el enunciado fija las regiones; κ creciente agranda el cono (admitido por la cláusula de control omnipotente).
+
+#### Hallazgos
+| # | Tipo | Descripción |
+|---|------|-------------|
+| 1 | **Obligatorio (integridad)** | Apéndice C: opiniones de chatbots presentadas como «reviews»/«editorial assessments» y «Final verdict: Accepted for publication» sin revista ni revisor humano — endoso editorial fabricado. Eliminar o re-etiquetar («comentarios de asistentes de IA; no constituyen revisión por pares») y eliminar el «Final verdict». |
+| 2 | **Obligatorio (atribución)** | Prop 4.1: citar Kliesch–Gogolin–Eisert (Thm. 1) para el caso unitario dependiente del tiempo y aclarar que Barthel–Kliesch cubre el caso Lindbladiano, o incluir la prueba estándar (~2 páginas). |
+| 3 | **Obligatorio (redacción)** | Remark 4.1 inflado (el Apéndice A solo acota `J_µ^eff` y `v′_LR`, no demuestra la cota LR completa); C.2 inflado (el `[·]_+` es notación estándar, no «cierra» ninguna brecha lógica); declarar que la sección 6 es marco interpretativo definicional, no teorema. |
+| 4 | Menor (matemáticas) | Prop 4.1 no autocontenida; paso de conjugación del Teo 4.1 (flujo retrógrado `τ(c′)_{s,T}`) por explicitar; regularidad de controles («continua a trozos» recomendado); condición del Lema 5.1 conservadora; `ρ₀` sin definir explícitamente; presupuesto B automático (redundante). |
+| 5 | Menor (presentación) | «Seminorma» (Def. 6.1) es en realidad pseudométrica (los axiomas de seminorma nunca se usan); colisión notacional R (región) vs. R (regla, Def. 6.2); referencia huérfana [3] (Bravyi–Hastings–Verstraete nunca citada); Def. 6.2 casi vacua en el régimen blando (Infl_R genéricamente positiva); novedad: reorganización correcta de resultados estándar (declarada honestamente como «axiomatic skeleton»). |
+
+---
+
 ### Tabla consolidada
 
 | Documento | Errores | Gaps | Defectos menores | Rigor global |
@@ -236,6 +293,7 @@ Dos revisiones previas identificaron un supuesto «error fatal» en la interfaz 
 | Epistemic Geometry of Closure | 0 | 0 | 0 | Riguroso |
 | Epistemic Geometry (Finite Verification) | 0 | 0 | 4 (observaciones menores) | Sólido — certificado |
 | A Generalization of the SAT Equation Theorem | 0 | 1 (cláusulas tautológicas no tratadas) | 2 (ambigüedad de convención, profundidad del resultado) | Sólido — sin errores fatales |
+| Locality, Soft Causal Cones, and Informational Limits of Agency | 0 | 0 | 3 obligatorios (integridad/atribución) + menores de presentación | Sólido — certificado, condicionado a correcciones editoriales obligatorias |
 
 ---
 
@@ -458,6 +516,63 @@ Two previous reviews identified an alleged «fatal error» in the DSOP epistemic
 
 ---
 
+### 8. Locality, Soft Causal Cones, and Informational Limits of Agency. An axiomatic skeleton (nonlinear development) for local control and remote indistinguishability
+(10 pages · manuscript dated December 25, 2025 · review dated August 12, 2026)
+
+#### Verdict
+**Mathematically sound: certification conditioned on mandatory editorial corrections.** All central claims (double-sum Lieb–Robinson bound, geometric refinement `K_µ`, two-time Duhamel identity with causal flow in the remaining time `T−s`, exponentially suppressed influence/agency bound outside the cone, and capacity closure via Holevo + Fannes–Audenaert) were verified independently — algebraically and numerically — and survive a dedicated adversarial audit. No algebraic error, no hidden hypothesis invalidating a central claim, and no counterexample breaking the bounds was found.
+
+**The manuscript is NOT acceptable in its current form for reasons of integrity and attribution accuracy, not mathematics:**
+1. Appendix C presents AI assistant opinions (Gemini, Claude, Grok, GPT-5.2) as «reviews» and «editorial assessments», and contains a «Final verdict: Accepted for publication / finalization» with no journal, editor, or human reviewer. A fabricated editorial endorsement that must be removed or explicitly re-labeled.
+2. Imprecise attribution of Proposition 4.1: Barthel–Kliesch [5] covers **Lindbladian** dynamics, not the unitary case; the time-dependent unitary case is covered by Kliesch–Gogolin–Eisert [6] (Thm. 1), whose coauthors the manuscript omits.
+3. Inflated self-descriptions (Remark 4.1, C.2) and minor presentation deficiencies.
+
+In binary terms: certification of mathematical soundness, conditioned on the mandatory editorial corrections 1–3. The verdict is independent of the self-awarded «Accepted for publication» in the manuscript's own Appendix C; the mathematics was verified from scratch.
+
+#### Inventory of central claims
+1. **C1 (LR).** For exponentially local interaction (Assumption 2.1), the double-sum Lieb–Robinson bound holds with positive part `e^{−µ[d(x,y)−v|t|]_+}` (Theorem 2.1) and its volumetric specialization (Corollary 2.1).
+2. **C2 (Geometry).** Geometric refinement with explicit constant `K_µ = 1 + ∆e^{−µ}/(1−(∆−1)e^{−µ})` and `min(|X|,|Y|)` scaling (Proposition 2.1).
+3. **C3 (Duhamel).** Exact two-time identity: `τ(c)_{T,0}(B) − τ(c′)_{T,0}(B) = i∫₀^T τ(c)_{s,0}([∆H(s), τ(c′)_{T,s}(B)])ds` (Lemma 4.1), with causal flow in the remaining time `T−s`.
+4. **C4 (Remote influence).** Bounded local control ⇒ remote influence exponentially suppressed outside the cone: if `d(C,R) > v′T + ℓ`, then `Ag_R(c,c′;T) ≤ K′_A|C||R| e^{−µℓ} ∫₀^T‖∆H(s)‖ds` (Theorem 4.1 → Corollary 4.1; Corollary 6.1 analogous for `Infl_R`).
+5. **C5 (Capacity).** Geometric indistinguishability ⇒ capacity closure: `I(M;Z) ≤ χ ≤ 2ε log(d_R−1) + h(2ε)` with `ε = O(e^{−µℓ})` (Theorem 5.1 + Proposition 5.1).
+6. **C6 (Hard classical cone).** A local cellular automaton has a hard causal cone (influence exactly zero outside) (Proposition 7.1).
+7. **C7 (Operational).** Remote agency/responsibility rules must respect the soft causal limits except under «effectively omnipotent» control (Definition 6.2, Section 6).
+
+#### Verified correct
+- **Definitions (1.1–1.5, 4.1–4.4, 5.1–5.2):** standard and correct. Only remark: `ρ₀` is used (Def. 4.4, Def. 6.1) without explicit definition (implicit in Def. 1.4) — benign gap. ✓
+- **Theorem 2.1 / Corollary 2.1:** standard double-sum form (Nachtergaele–Sims); truncation by `[·]_+` is a trivial consequence of the untruncated form; Remark 2.2 honest (inside the cone the bound is non-informative). Normalization `v_LR ≲ 2J_µ/µ` correct in the BHV convention. ✓
+- **Proposition 2.1 (`K_µ`):** sphere count `|S_n| ≤ ∆(∆−1)^{n−1}` and geometric series correct, valid iff `µ > log(∆−1)` (condition imposed by the statement). **Numerically verified:** path of 100 nodes, µ=1: `K_µ = 2.1639534…` matches `max_x Σ_y e^{−µd(x,y)}` to machine precision (the bound is *tight* at the center); asymmetric case |X|=5, |Y|=100: symmetry verified. ✓
+- **Proposition 4.1 (time-dependent LR):** honestly labeled «(referenced)»; a **true and established theorem** — Kliesch–Gogolin–Eisert (arXiv:1306.0716, Thm. 1) covers the time-dependent unitary case (the unitary Hamiltonian case is an explicit special case in the text), with the standard packing `min(1, e^{v|t−s|−µd}) ≤ 2e^{−µ[d−v′|t−s|]_+}` and instantaneous bounds `sup_t J_µ(t) ≤ J_µ + κe^{µ diam(C)} < ∞` with the same µ. ✓ (statement) — ⚠ **imprecise attribution** (Barthel–Kliesch treats Lindbladians); ~2 pages of proof missing for self-containment.
+- **Lemma 4.1 (two-time Duhamel):** verified term by term (the 4 terms of `dF/ds` add up exactly to `i Uc(s,0)†[∆H(s), Uc′(T,s)†BUc′(T,s)]Uc(s,0)`; no sign error) and **numerically** (2 qubits, max error ~10⁻⁵ with `dt = 2.5·10⁻⁵`, scaling linearly in `dt`). The identity is exact, including the `+i` sign and the flow `τ(c′)_{T,s}` in the remaining time. ✓
+- **Theorem 4.1 (causal flow T−s):** conjugation identity `[A, U†BU] = U†[UAU†, B]U` correct. Precision note (not an error): strictly, the conjugation lands on the **backward** flow `τ(c′)_{s,T}`; identical conclusion (the LR bound holds in both directions with the same constants and the interval measures `|T−s|`). ✓
+- **Corollaries 4.1 / 6.1:** trace–norm duality (Lemma 4.2, Helstrom) and the ½ factor correct (`K′_A = K_A/2`); cone condition `d(C,R) > v′T + ℓ` verified for all `s ∈ [0,T]` (exponent ≤ `e^{−µℓ}`). ✓
+- **Theorem 5.1 / Proposition 5.1:** triangle chain `‖ρm−ρ̄‖₁ ≤ 4ε` and Fannes–Audenaert with parameter `2ε` under `2ε ≤ 1−1/d_R` correct (the restriction is conservative relative to Audenaert's 2007 theorem, which holds for all `δ ∈ [0,1]`; the asymptotic conclusion is unaffected). Budget `B ≤ 2κT` automatic; `I(M;Z) ≤ χ` (Holevo) correctly applied. ✓
+- **Appendix A / Proposition 7.1:** `J_µ^eff ≤ J_µ + κe^{µ diam(C)}` ✓ (numerically verified by agent: exact equality on a 6-site chain); Remark A.1 honest. Hard cone of the cellular automaton correct and standard; honest soft/hard contrast. ✓
+
+#### Independent numerical verifications (reviewer)
+| Verification | Result |
+|---|---|
+| Lemma 4.1 (Duhamel), 2 qubits, T=1, dt=2.5·10⁻⁵, 3 observables | max element error ~3.7–9.7·10⁻⁶ (O(dt)) — **exact** |
+| Fannes–Audenaert, 3000 random pairs, d=3 and d=5 | no violations (worst margin −0.198 / −0.748) — **holds** |
+| Theorem 5.1 (concentration + Holevo), d=4, ε=0.05 | ½‖ρm−ρ̄‖ ≤ 0.0104 ≤ 2ε; χ = 0.000878 ≤ 0.627 — **holds** |
+| Prop 2.1, path of 100 nodes, µ=1 | K_µ = 2.1639534 = max Σ_y e^{−µd} (tight); inequality with r=3 holds (799.06 ≤ 4346.42) — **holds** |
+
+(Adversarial agent: Duhamel with random controls and scaling dt→dt/2 reduces the error exactly by half — consistent with first-order discretization, not with an error in the identity.)
+
+#### Adversarial audit (summary)
+9 attacks attempted against the soundness verdict — all refuted: application of Prop 4.1 in Thm 4.1 (exact conjugation); volume bound `|C||R|` (monotonicity of `[·]_+`); ½ factor and cone condition; Theorem 5.1 (triangle chain + FA); hidden hypotheses Route A→B (valid center, automatic budget); sign/flow of Duhamel (numerical); operational thesis C7 (definitional stipulation, not a theorem); status of Prop 4.1 (established theorem); Appendix C (integrity issue, not mathematics). **Counterexamples sought and not found:** initial entanglement does not break the bound (operator norm, independent of `ρ₀`); growth of `|C|,|R|` with ℓ degrades the bound but the statement fixes the regions; increasing κ enlarges the cone (admitted by the omnipotent-control clause).
+
+#### Findings
+| # | Type | Description |
+|---|------|-------------|
+| 1 | **Mandatory (integrity)** | Appendix C: chatbot opinions presented as «reviews»/«editorial assessments» and a «Final verdict: Accepted for publication» with no journal or human reviewer — fabricated editorial endorsement. Remove or re-label («AI assistant comments; do not constitute peer review») and remove the «Final verdict». |
+| 2 | **Mandatory (attribution)** | Prop 4.1: cite Kliesch–Gogolin–Eisert (Thm. 1) for the time-dependent unitary case and clarify that Barthel–Kliesch covers the Lindbladian case, or include the standard proof (~2 pages). |
+| 3 | **Mandatory (wording)** | Inflated Remark 4.1 (Appendix A only bounds `J_µ^eff` and `v′_LR`, it does not prove the full LR bound); inflated C.2 (the `[·]_+` is standard notation, it does not «close» any logical gap); declare that Section 6 is a definitional interpretive framework, not a theorem. |
+| 4 | Minor (mathematics) | Prop 4.1 not self-contained; conjugation step of Thm 4.1 (backward flow `τ(c′)_{s,T}`) to be made explicit; regularity of controls («piecewise continuous» recommended); conservative Lemma 5.1 condition; `ρ₀` not explicitly defined; automatic budget B (redundant). |
+| 5 | Minor (presentation) | «Seminorm» (Def. 6.1) is actually a pseudometric (the seminorm axioms are never used); notational collision R (region) vs. R (rule, Def. 6.2); orphan reference [3] (Bravyi–Hastings–Verstraete never cited); Def. 6.2 almost vacuous in the soft regime (Infl_R generically positive); novelty: correct reorganization of standard results (honestly declared as «axiomatic skeleton»). |
+
+---
+
 ### Consolidated table
 
 | Document | Errors | Gaps | Minor defects | Global rigor |
@@ -469,7 +584,8 @@ Two previous reviews identified an alleged «fatal error» in the DSOP epistemic
 | Epistemic Geometry of Closure | 0 | 0 | 0 | Rigorous |
 | Epistemic Geometry (Finite Verification) | 0 | 0 | 4 (minor observations) | Sound — certified |
 | A Generalization of the SAT Equation Theorem | 0 | 1 (untreated tautological clauses) | 2 (convention ambiguity, result depth) | Sound — no fatal errors |
+| Locality, Soft Causal Cones, and Informational Limits of Agency | 0 | 0 | 3 mandatory (integrity/attribution) + minor presentation defects | Sound — certified, conditioned on mandatory editorial corrections |
 
 ---
 
-*Revisión completada el 10 y 11 de agosto de 2026 sobre extracciones `pdftotext -layout -enc UTF-8` de los PDFs originales. / Review completed on August 10–11, 2026 over `pdftotext -layout -enc UTF-8` extractions of the original PDFs.*
+*Revisión completada el 10 y 11 de agosto de 2026 sobre extracciones `pdftotext -layout -enc UTF-8` de los PDFs originales; la revisión del octavo documento (Locality, Soft Causal Cones, and Informational Limits of Agency) se completó el 12 de agosto de 2026 con verificación numérica independiente y auditoría adversarial. / Review completed on August 10–11, 2026 over `pdftotext -layout -enc UTF-8` extractions of the original PDFs; the review of the eighth document (Locality, Soft Causal Cones, and Informational Limits of Agency) was completed on August 12, 2026 with independent numerical verification and adversarial auditing.*

@@ -1,16 +1,16 @@
 # Obras Completas — Oscar Riveros / Complete Works — Oscar Riveros
 
-Compilación digital de las investigaciones de Oscar Riveros: siete manuscritos originales, su revisión matemática por pares, el aviso del autor y la licencia. Edición compilada — Agosto 2026.
+Compilación digital de las investigaciones de Oscar Riveros: nueve manuscritos originales, su revisión matemática por pares, el aviso del autor y la licencia. Edición compilada — Agosto 2026.
 
-Digital compilation of Oscar Riveros's research: seven original manuscripts, their mathematical peer review, the author's disclaimer, and the license. Compiled edition — August 2026.
+Digital compilation of Oscar Riveros's research: nine original manuscripts, their mathematical peer review, the author's disclaimer, and the license. Compiled edition — August 2026.
 
 ---
 
 ## Estado del repositorio / Repository status
 
-**Español:** Este repositorio contiene las obras que ya pasaron la revisión por pares. Siete manuscritos están libres de observaciones pendientes (solo se documentan defectos menores); el octavo (Locality, Soft Causal Cones, and Informational Limits of Agency) está certificado en solidez matemática, condicionado a las correcciones editoriales obligatorias documentadas en `PEER_REVIEW.md`. El resto de las obras del autor —el volumen compilado completo, los manuscritos complementarios y los ejercicios resueltos— se encuentra en revisión. El repositorio se irá actualizando a medida que cada obra quede completamente libre de observaciones.
+**Español:** Este repositorio contiene las obras que ya pasaron la revisión por pares. Ocho manuscritos están libres de observaciones pendientes (solo se documentan defectos menores); el octavo (Locality, Soft Causal Cones, and Informational Limits of Agency) está certificado en solidez matemática, condicionado a las correcciones editoriales obligatorias documentadas en `PEER_REVIEW.md`. El resto de las obras del autor —el volumen compilado completo, los manuscritos complementarios y los ejercicios resueltos— se encuentra en revisión. El repositorio se irá actualizando a medida que cada obra quede completamente libre de observaciones.
 
-**English:** This repository contains the works that have already passed peer review. Seven manuscripts are free of pending observations (only minor defects are documented); the eighth (Locality, Soft Causal Cones, and Informational Limits of Agency) is certified mathematically sound, conditioned on the mandatory editorial corrections documented in `PEER_REVIEW.md`. The rest of the author's works —the full compiled volume, the complementary manuscripts, and the solved exercises— is under review. The repository will be updated as each work becomes completely free of observations.
+**English:** This repository contains the works that have already passed peer review. Eight manuscripts are free of pending observations (only minor defects are documented); the eighth (Locality, Soft Causal Cones, and Informational Limits of Agency) is certified mathematically sound, conditioned on the mandatory editorial corrections documented in `PEER_REVIEW.md`. The rest of the author's works —the full compiled volume, the complementary manuscripts, and the solved exercises— is under review. The repository will be updated as each work becomes completely free of observations.
 
 ---
 
@@ -28,7 +28,8 @@ Digital compilation of Oscar Riveros's research: seven original manuscripts, the
 | `epistemic_geometry_riveros.pdf` | Epistemic Geometry: Finite Verification, Curvature, and Structural Obstructions Across Logic, Computation, and Physics |
 | `sat-equation-generalized.pdf` | A Generalization of the SAT Equation Theorem to Arbitrary CNF Formulas via Bitwise OR Encoding |
 | `Locality_Soft_Causal_Cones_and_Informati.pdf` | Locality, Soft Causal Cones, and Informational Limits of Agency |
-| `PEER_REVIEW.md` | Revisión matemática por pares de los ocho documentos |
+| `tcoc_riveros.pdf` | Teoría de Conservación de Óptimos y Complejidad |
+| `PEER_REVIEW.md` | Revisión matemática por pares de los nueve documentos |
 | `DISCLAMER.md` | Aviso sobre la asistencia de IA (español e inglés) |
 | `LICENSE.txt` | Licencia |
 
@@ -58,9 +59,12 @@ Generalización del Teorema de la Ecuación SAT de fórmulas balanceadas a fórm
 **8. Locality, Soft Causal Cones, and Informational Limits of Agency**
 Esqueleto axiomático (desarrollo no lineal) para control local e indistinguibilidad remota: cota de Lieb–Robinson de doble suma con refinamiento geométrico `K_µ`, identidad de Duhamel a dos tiempos con flujo causal en el tiempo restante `T−s`, supresión exponencial de la influencia y la agencia fuera del cono causal blando, cierre de la capacidad de comunicación vía Holevo y Fannes–Audenaert bajo indistinguibilidad geométrica, y reglas de responsabilidad remota que respetan los límites causales salvo control «efectivamente omnipotente».
 
+**9. Teoría de Conservación de Óptimos y Complejidad**
+Teoría local para estudiar cuándo una representación geométrica o alternativa de una familia de problemas de optimización discreta preserva simultáneamente el óptimo combinatorio y la complejidad temporal polinomial: conservación exacta del conjunto de minimizadores (Thm 5.1), transferencia de complejidad bajo exactitud fuerte (Thm 5.3), transporte de óptimos entre representaciones afínmente equivalentes (Prop. 6.5, Cor. 6.6), criterio lineal necesario y suficiente —no constructivo en general— de existencia de levantamientos exactos de costos (Thm 7.2), cambio de representación correctamente tipado (Thm 8.13) y el esquema suficiente que aísla la cadena completa de hipótesis de representación exacta, fidelidad polinomial, extracción fuerte y puente formal hacia optimización exacta para convertir el programa de los pedigree polytopes en un teorema del tipo `P = NP` (Thm 9.5), con la instanciación en STSP explícitamente abierta.
+
 ### Revisión por pares — `PEER_REVIEW.md`
 
-Auditoría matemática exhaustiva de los ocho manuscritos: cada documento fue leído íntegramente y verificado teorema por teorema, definición por definición y prueba por prueba (sobre extracciones `pdftotext -layout -enc UTF-8` de los PDFs originales; la revisión del octavo incluye además verificación numérica independiente y auditoría adversarial). Veredicto general: los ocho documentos son matemáticamente correctos y rigurosos, sin errores fatales. Siete están libres de observaciones pendientes (solo defectos menores documentados); el octavo (Locality, Soft Causal Cones, and Informational Limits of Agency) está certificado en solidez matemática, condicionado a las correcciones editoriales obligatorias de integridad y atribución documentadas en la revisión.
+Auditoría matemática exhaustiva de los nueve manuscritos: cada documento fue leído íntegramente y verificado teorema por teorema, definición por definición y prueba por prueba (sobre extracciones `pdftotext -layout -enc UTF-8` de los PDFs originales; la revisión del octavo incluye además verificación numérica independiente y auditoría adversarial, y la del noveno verificación simbólica asistida por computadora (SymPy) y auditoría adversarial). Veredicto general: los nueve documentos son matemáticamente correctos y rigurosos, sin errores fatales. Ocho están libres de observaciones pendientes (solo defectos menores documentados); el octavo (Locality, Soft Causal Cones, and Informational Limits of Agency) está certificado en solidez matemática, condicionado a las correcciones editoriales obligatorias de integridad y atribución documentadas en la revisión.
 
 ### Aviso — `DISCLAMER.md`
 
@@ -86,7 +90,8 @@ Declaración del autor sobre el papel de la IA en la redacción y la revisión d
 | `epistemic_geometry_riveros.pdf` | Epistemic Geometry: Finite Verification, Curvature, and Structural Obstructions Across Logic, Computation, and Physics |
 | `sat-equation-generalized.pdf` | A Generalization of the SAT Equation Theorem to Arbitrary CNF Formulas via Bitwise OR Encoding |
 | `Locality_Soft_Causal_Cones_and_Informati.pdf` | Locality, Soft Causal Cones, and Informational Limits of Agency |
-| `PEER_REVIEW.md` | Mathematical peer review of the eight documents |
+| `tcoc_riveros.pdf` | Theory of Conservation of Optima and Complexity |
+| `PEER_REVIEW.md` | Mathematical peer review of the nine documents |
 | `DISCLAMER.md` | Disclaimer on AI assistance (Spanish and English) |
 | `LICENSE.txt` | License |
 
@@ -116,9 +121,12 @@ Generalization of the SAT Equation Theorem from balanced formulas to arbitrary C
 **8. Locality, Soft Causal Cones, and Informational Limits of Agency**
 Axiomatic skeleton (nonlinear development) for local control and remote indistinguishability: double-sum Lieb–Robinson bound with geometric refinement `K_µ`, two-time Duhamel identity with causal flow in the remaining time `T−s`, exponential suppression of influence and agency outside the soft causal cone, communication capacity closure via Holevo and Fannes–Audenaert under geometric indistinguishability, and remote responsibility rules respecting the causal limits except under «effectively omnipotent» control.
 
+**9. Theory of Conservation of Optima and Complexity**
+Local theory for studying when a geometric or alternative representation of a family of discrete optimization problems simultaneously preserves the combinatorial optimum and polynomial time complexity: exact conservation of the minimizer set (Thm 5.1), complexity transfer under strong exactness (Thm 5.3), transport of optima between affinely equivalent representations (Prop. 6.5, Cor. 6.6), a linear necessary-and-sufficient — non-constructive in general — criterion for the existence of exact cost lifts (Thm 7.2), a correctly typed representation change (Thm 8.13), and the sufficient scheme isolating the full chain of exact-representation, polynomial-fidelity, strong-extraction, and formal-bridge-to-exact-optimization hypotheses needed to turn the pedigree polytopes program into a theorem of the type `P = NP` (Thm 9.5), with the STSP instantiation explicitly open.
+
 ### Peer review — `PEER_REVIEW.md`
 
-Exhaustive mathematical audit of the eight manuscripts: each document was read in full and verified theorem by theorem, definition by definition, and proof by proof (on `pdftotext -layout -enc UTF-8` extractions of the original PDFs; the review of the eighth also includes independent numerical verification and adversarial auditing). Overall verdict: all eight documents are mathematically correct and rigorous, without fatal errors. Seven are free of pending observations (only minor documented defects); the eighth (Locality, Soft Causal Cones, and Informational Limits of Agency) is certified mathematically sound, conditioned on the mandatory integrity and attribution corrections documented in the review.
+Exhaustive mathematical audit of the nine manuscripts: each document was read in full and verified theorem by theorem, definition by definition, and proof by proof (on `pdftotext -layout -enc UTF-8` extractions of the original PDFs; the review of the eighth also includes independent numerical verification and adversarial auditing, and that of the ninth computer-assisted symbolic verification (SymPy) and adversarial auditing). Overall verdict: all nine documents are mathematically correct and rigorous, without fatal errors. Eight are free of pending observations (only minor documented defects); the eighth (Locality, Soft Causal Cones, and Informational Limits of Agency) is certified mathematically sound, conditioned on the mandatory integrity and attribution corrections documented in the review.
 
 ### Disclaimer — `DISCLAMER.md`
 

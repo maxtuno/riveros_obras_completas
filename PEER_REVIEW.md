@@ -1,8 +1,8 @@
 # Revisión matemática / Mathematical Peer Review
 
-**Español:** Revisión desde cero sobre extracciones `pdftotext -layout -enc UTF-8` de los 8 PDFs originales. Cada documento fue leído íntegramente y auditado teorema por teorema, definición por definición, prueba por prueba. La revisión del octavo documento (Locality, Soft Causal Cones, and Informational Limits of Agency) incluye además verificación numérica independiente y auditoría adversarial.
+**Español:** Revisión desde cero sobre extracciones `pdftotext -layout -enc UTF-8` de los 9 PDFs originales. Cada documento fue leído íntegramente y auditado teorema por teorema, definición por definición, prueba por prueba. La revisión del octavo documento (Locality, Soft Causal Cones, and Informational Limits of Agency) incluye además verificación numérica independiente y auditoría adversarial. La revisión del noveno documento (Teoría de Conservación de Óptimos y Complejidad) incluye además verificación simbólica asistida por computadora (SymPy) y auditoría adversarial.
 
-**English:** Review from scratch over `pdftotext -layout -enc UTF-8` extractions of the 8 original PDFs. Each document was read in full and audited theorem by theorem, definition by definition, proof by proof. The review of the eighth document (Locality, Soft Causal Cones, and Informational Limits of Agency) also includes independent numerical verification and adversarial auditing.
+**English:** Review from scratch over `pdftotext -layout -enc UTF-8` extractions of the 9 original PDFs. Each document was read in full and audited theorem by theorem, definition by definition, proof by proof. The review of the eighth document (Locality, Soft Causal Cones, and Informational Limits of Agency) also includes independent numerical verification and adversarial auditing. The review of the ninth document (Theory of Conservation of Optima and Complexity) also includes computer-assisted symbolic verification (SymPy) and adversarial auditing.
 
 ---
 
@@ -282,6 +282,44 @@ En términos binarios: certificación de solidez matemática, condicionada a las
 
 ---
 
+### 9. Teoría de Conservación de Óptimos y Complejidad
+(manuscrito del 7 de abril de 2026 · revisión del 14 de agosto de 2026 — segunda ronda, versión corregida)
+
+#### Veredicto
+**Certificación de solidez. Recomendación: ACEPTAR, con correcciones menores obligatorias de precisión formal (D1–D5), ninguna de las cuales altera el contenido matemático.**
+
+La versión corregida implementa de manera completa y correcta las cuatro correcciones obligatorias de la ronda anterior (aplicaciones del Lema 8.12 en Thm 5.3 y Thm 9.5; cuantificador de uniformidad en Def. 4.6; recuantificación de Prop. 7.5(a); citas en texto de las referencias [2]–[5]). Ningún resultado numerado — Teoremas 5.1, 5.3, 7.2, 8.13, 9.5; Proposición 6.5; Corolarios 5.2, 6.6, 7.3, 8.14, 8.16, 9.7; Proposiciones 10.1–10.6 — falla bajo una instanciación legítima de sus hipótesis. No se encontró error fatal alguno; los defectos residuales son exclusivamente de precisión formal (D1–D5). La ronda de cierre verificó la implementación de D1–D7 y re-atacó los ocho puntos F1–F8 sin lagunas formales nuevas: **ACEPTADO SIN CORRECCIONES PENDIENTES**.
+
+#### Inventario de resultados principales
+1. **Teorema 5.1 / Corolario 5.2** — Conservación exacta del conjunto de minimizadores bajo transformaciones afines de costo (`ω_n(c,s) = ρ_n(c)·φ_n(s) + σ_n(c)`, `σ_n` independiente de `s`, `φ_n` biyectiva); igualdad de mínimos bajo hipótesis de soporte óptimo correcto.
+2. **Teorema 5.3** — Transferencia de complejidad bajo exactitud fuerte: un resolvedor polinomial para `D_n` produce uno polinomial para `Q_n`, uniformemente en la familia.
+3. **Teorema 7.2 / Corolario 7.3** — Criterio lineal necesario y suficiente de existencia de levantamientos exactos de costos: `K_n(C_n) ⊆ Col(M_n)` (`B_n = M_nz`, sección lineal sobre ℚ); no constructivo en general.
+4. **Proposición 6.5 / Corolario 6.6** — Transporte de óptimos entre representaciones afínmente equivalentes; extractor transportado `E'_n(c,x⋆) = Ψ_n(E_n(c,Φ_n(x⋆)))`.
+5. **Teorema 8.13 / Corolarios 8.14, 8.16** — Transporte de complejidad por cambio de representación tipado (decodificación, recodificación final y crecimiento representacional explícitos en la cota temporal).
+6. **Teorema 9.5** — Esquema suficiente: bajo las hipótesis (1)–(5), el programa de los pedigree polytopes implica `P = NP`; condicional honesto con la instanciación en STSP explícitamente abierta (Problemas 11.5–11.6).
+7. **Proposiciones 7.4, 7.5 y 10.1–10.6** — Barrera de materialización `Ω(N)`; polinomialidad de la sección vía eliminación gaussiana exacta libre de fracciones (Bareiss); contrapositivas y delimitaciones definicionales.
+
+#### Verificado correcto
+- **Thm 5.1**: equivalencia de minimizadores vía conservación exacta de valor y biyectividad de `φ_n`; `min Q_n = min D_n` justificada término a término; la necesidad del soporte óptimo queda instanciada por contraejemplo concreto. ✓
+- **Thm 7.2**: dirección (⇒) con `B_n = (ρ_n,σ_n)`; dirección (⇐) con sección lineal racional por reducción de filas. **Verificación simbólica (SymPy)**: consistencia e inconsistencia de `M_nz = K_n(c)`, contenido de `Col(M_n)` y sección `R = (MᵀM)⁻¹Mᵀ` racional, verificados numéricamente. ✓
+- **Prop. 6.5 / Cor. 6.6**: cadena de optimalidad con ambas identidades de Def. 6.3(3) sobre todo `Q_n, Q'_n`; contraejemplo 2D confirma la necesidad de la compatibilidad total (Obs. 6.4). Cadena de cotas polinomiales verificada; la Def. 4.6 uniforme se satisface por composición de polinomios únicos. ✓
+- **Thm 8.13**: optimalidad vía `η_x ∘ ξ_x = ident` + monotonía estricta de `T_x`; cota temporal con `|z| ≤ T̄(g_f(n))` legítima por cuantificación universal de `D(n,ℓ)`. Ataques adversariales (`T_x` decreciente; compatibilidad parcial; `g_f` superpolinomial) confirman la necesidad de cada hipótesis (Obs. 8.7, 8.15). ✓
+- **Thm 9.5**: cadena completa de cotas `poly(|u|)` verificada línea a línea, con todas las aplicaciones del Lema 8.12 explícitas; uso de las cinco hipótesis auditado — ninguna sin uso, sin circularidad. ✓
+- **Prop. 7.5(a)**: variante libre de fracciones (Bareiss) con cota bit-compleja polinomial; sección fija `R_n` por reducción de filas ⇒ linealidad en `c`. ✓
+- **Auditoría hostil C1–C7**: ningún ataque colapsa un resultado numerado; los que sostienen son defectos de declaración formal (D1–D5), no errores matemáticos. ✓
+
+#### Hallazgos
+| # | Tipo | Descripción |
+|---|------|-------------|
+| 1 | Menor (obligatoria — convenciones) | D1: declarar determinismo de los algoritmos y codificación binaria estándar de salidas racionales; aplicada en la Obs. 2.2 («Convenciones del modelo computacional») y verificada. |
+| 2 | Menor (obligatoria — redacción) | D2: Lema 8.12 extendido a la codificación posicional estándar y a naturales/tuplas mixtas; aplicada y verificada. |
+| 3 | Menor (obligatoria — tipográfica) | D3: tipo de `Q'_n` declarado (`⊆ ℝ^{d'(n)}`) en Def. 6.3 y usado en el Cor. 6.6; aplicada y verificada. |
+| 4 | Menor (obligatoria — prueba) | D4: especificar Bareiss y construir la sección fija `R_n` en Prop. 7.5(a); aplicada y verificada. |
+| 5 | Menor (obligatoria — 1 palabra) | D5: cuantificar «para el costo unitario c = 1» en Obs. 7.6; aplicada y verificada. |
+| 6 | Recomendadas (cosméticas) | D6/D7: remisión a la Def. 4.1 en Def. 3.6; expansión de «STSP» en su primera aparición; aplicadas. |
+
+---
+
 ### Tabla consolidada
 
 | Documento | Errores | Gaps | Defectos menores | Rigor global |
@@ -294,6 +332,7 @@ En términos binarios: certificación de solidez matemática, condicionada a las
 | Epistemic Geometry (Finite Verification) | 0 | 0 | 4 (observaciones menores) | Sólido — certificado |
 | A Generalization of the SAT Equation Theorem | 0 | 1 (cláusulas tautológicas no tratadas) | 2 (ambigüedad de convención, profundidad del resultado) | Sólido — sin errores fatales |
 | Locality, Soft Causal Cones, and Informational Limits of Agency | 0 | 0 | 3 obligatorios (integridad/atribución) + menores de presentación | Sólido — certificado, condicionado a correcciones editoriales obligatorias |
+| Teoría de Conservación de Óptimos y Complejidad | 0 | 0 | 5 obligatorias de precisión formal (D1–D5) + 2 recomendadas (D6–D7), todas implementadas | Sólido — certificado, aceptado sin correcciones pendientes |
 
 ---
 
@@ -573,6 +612,44 @@ In binary terms: certification of mathematical soundness, conditioned on the man
 
 ---
 
+### 9. Theory of Conservation of Optima and Complexity
+(manuscript dated April 7, 2026 · review dated August 14, 2026 — second round, corrected version)
+
+#### Verdict
+**Certification of soundness. Recommendation: ACCEPT, with mandatory minor formal-precision corrections (D1–D5), none of which alters the mathematical content.**
+
+The corrected version fully and correctly implements the four mandatory corrections of the previous round (applications of Lemma 8.12 in Thm 5.3 and Thm 9.5; uniformity quantifier in Def. 4.6; requantification of Prop. 7.5(a); in-text citations of references [2]–[5]). No numbered result — Theorems 5.1, 5.3, 7.2, 8.13, 9.5; Proposition 6.5; Corollaries 5.2, 6.6, 7.3, 8.14, 8.16, 9.7; Propositions 10.1–10.6 — fails under a legitimate instantiation of its hypotheses. No fatal error was found; the residual defects are exclusively formal-precision issues (D1–D5). The closing round verified the implementation of D1–D7 and re-attacked the eight points F1–F8 without new formal gaps: **ACCEPTED WITH NO PENDING CORRECTIONS**.
+
+#### Inventory of main results
+1. **Theorem 5.1 / Corollary 5.2** — Exact conservation of the minimizer set under affine cost transformations (`ω_n(c,s) = ρ_n(c)·φ_n(s) + σ_n(c)`, `σ_n` independent of `s`, `φ_n` bijective); equality of minima under the correct-optimal-support hypothesis.
+2. **Theorem 5.3** — Complexity transfer under strong exactness: a polynomial solver for `D_n` yields a polynomial solver for `Q_n`, uniformly over the family.
+3. **Theorem 7.2 / Corollary 7.3** — Necessary-and-sufficient linear criterion for the existence of exact cost lifts: `K_n(C_n) ⊆ Col(M_n)` (`B_n = M_nz`, linear section over ℚ); non-constructive in general.
+4. **Proposition 6.5 / Corollary 6.6** — Transport of optima between affinely equivalent representations; transported extractor `E'_n(c,x⋆) = Ψ_n(E_n(c,Φ_n(x⋆)))`.
+5. **Theorem 8.13 / Corollaries 8.14, 8.16** — Complexity transport by typed representation change (decoding, final recoding, and representational growth explicit in the time bound).
+6. **Theorem 9.5** — Sufficient scheme: under hypotheses (1)–(5), the pedigree polytopes program implies `P = NP`; honest conditional with the STSP instantiation explicitly open (Problems 11.5–11.6).
+7. **Propositions 7.4, 7.5 and 10.1–10.6** — Materialization barrier `Ω(N)`; polynomiality of the section via exact fraction-free Gaussian elimination (Bareiss); contrapositives and definitional delimitations.
+
+#### Verified correct
+- **Thm 5.1**: minimizer equivalence via exact value conservation and bijectivity of `φ_n`; `min Q_n = min D_n` justified term by term; the necessity of the optimal support is instantiated by a concrete counterexample. ✓
+- **Thm 7.2**: direction (⇒) with `B_n = (ρ_n,σ_n)`; direction (⇐) with a rational linear section by row reduction. **Symbolic verification (SymPy)**: consistency and inconsistency of `M_nz = K_n(c)`, membership in `Col(M_n)`, and rational section `R = (MᵀM)⁻¹Mᵀ`, verified numerically. ✓
+- **Prop. 6.5 / Cor. 6.6**: optimality chain with both identities of Def. 6.3(3) over all `Q_n, Q'_n`; the 2D counterexample confirms the necessity of total compatibility (Obs. 6.4). Polynomial bound chain verified; the uniform Def. 4.6 is satisfied by composition of single polynomials. ✓
+- **Thm 8.13**: optimality via `η_x ∘ ξ_x = ident` + strict monotonicity of `T_x`; time bound with `|z| ≤ T̄(g_f(n))` legitimate by universal quantification of `D(n,ℓ)`. Adversarial attacks (`T_x` decreasing; partial compatibility; superpolynomial `g_f`) confirm the necessity of each hypothesis (Obs. 8.7, 8.15). ✓
+- **Thm 9.5**: full `poly(|u|)` bound chain verified line by line, with all applications of Lemma 8.12 explicit; use of the five hypotheses audited — none unused, no circularity. ✓
+- **Prop. 7.5(a)**: fraction-free variant (Bareiss) with polynomial bit-complexity bound; fixed section `R_n` by row reduction ⇒ linearity in `c`. ✓
+- **Hostile audit C1–C7**: no attack collapses a numbered result; those that hold are formal-declaration defects (D1–D5), not mathematical errors. ✓
+
+#### Findings
+| # | Type | Description |
+|---|------|-------------|
+| 1 | Minor (mandatory — conventions) | D1: declare determinism of the algorithms and the standard binary encoding of rational outputs; applied in Obs. 2.2 («Conventions of the computational model») and verified. |
+| 2 | Minor (mandatory — wording) | D2: Lemma 8.12 extended to the standard positional encoding and to naturals/mixed tuples; applied and verified. |
+| 3 | Minor (mandatory — typographic) | D3: type of `Q'_n` declared (`⊆ ℝ^{d'(n)}`) in Def. 6.3 and used in Cor. 6.6; applied and verified. |
+| 4 | Minor (mandatory — proof) | D4: specify Bareiss and build the fixed section `R_n` in Prop. 7.5(a); applied and verified. |
+| 5 | Minor (mandatory — one word) | D5: quantify «for the unit cost c = 1» in Obs. 7.6; applied and verified. |
+| 6 | Recommended (cosmetic) | D6/D7: reference to Def. 4.1 in Def. 3.6; expansion of «STSP» at its first occurrence; applied. |
+
+---
+
 ### Consolidated table
 
 | Document | Errors | Gaps | Minor defects | Global rigor |
@@ -585,7 +662,8 @@ In binary terms: certification of mathematical soundness, conditioned on the man
 | Epistemic Geometry (Finite Verification) | 0 | 0 | 4 (minor observations) | Sound — certified |
 | A Generalization of the SAT Equation Theorem | 0 | 1 (untreated tautological clauses) | 2 (convention ambiguity, result depth) | Sound — no fatal errors |
 | Locality, Soft Causal Cones, and Informational Limits of Agency | 0 | 0 | 3 mandatory (integrity/attribution) + minor presentation defects | Sound — certified, conditioned on mandatory editorial corrections |
+| Theory of Conservation of Optima and Complexity | 0 | 0 | 5 mandatory formal-precision (D1–D5) + 2 recommended (D6–D7), all implemented | Sound — certified, accepted with no pending corrections |
 
 ---
 
-*Revisión completada el 10 y 11 de agosto de 2026 sobre extracciones `pdftotext -layout -enc UTF-8` de los PDFs originales; la revisión del octavo documento (Locality, Soft Causal Cones, and Informational Limits of Agency) se completó el 12 de agosto de 2026 con verificación numérica independiente y auditoría adversarial. / Review completed on August 10–11, 2026 over `pdftotext -layout -enc UTF-8` extractions of the original PDFs; the review of the eighth document (Locality, Soft Causal Cones, and Informational Limits of Agency) was completed on August 12, 2026 with independent numerical verification and adversarial auditing.*
+*Revisión completada el 10 y 11 de agosto de 2026 sobre extracciones `pdftotext -layout -enc UTF-8` de los PDFs originales; la revisión del octavo documento (Locality, Soft Causal Cones, and Informational Limits of Agency) se completó el 12 de agosto de 2026 con verificación numérica independiente y auditoría adversarial; la revisión del noveno documento (Teoría de Conservación de Óptimos y Complejidad) se completó el 14 de agosto de 2026 con verificación simbólica asistida por computadora (SymPy) y auditoría adversarial. / Review completed on August 10–11, 2026 over `pdftotext -layout -enc UTF-8` extractions of the original PDFs; the review of the eighth document (Locality, Soft Causal Cones, and Informational Limits of Agency) was completed on August 12, 2026 with independent numerical verification and adversarial auditing; the review of the ninth document (Theory of Conservation of Optima and Complexity) was completed on August 14, 2026 with computer-assisted symbolic verification (SymPy) and adversarial auditing.*

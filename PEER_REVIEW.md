@@ -1,8 +1,8 @@
 # Revisión matemática / Mathematical Peer Review
 
-**Español:** Revisión desde cero sobre extracciones `pdftotext -layout -enc UTF-8` de los 10 PDFs originales. Cada documento fue leído íntegramente y auditado teorema por teorema, definición por definición, prueba por prueba. La revisión del octavo documento (Locality, Soft Causal Cones, and Informational Limits of Agency) incluye además verificación numérica independiente y auditoría adversarial. La revisión del noveno documento (Teoría de Conservación de Óptimos y Complejidad) incluye además verificación simbólica asistida por computadora (SymPy) y auditoría adversarial. La revisión del décimo documento (COVERTRACE-SAT como Compilación de Conocimiento por Subcubos Disjuntos, documento unificado del Vol. I) incluye además revisión multiagente, verificación computacional independiente (Python 3.13) y auditorías adversariales.
+**Español:** Revisión desde cero sobre extracciones `pdftotext -layout -enc UTF-8` de los 10 PDFs originales y de la versión corregida del undécimo documento. Cada documento fue leído íntegramente y auditado teorema por teorema, definición por definición, prueba por prueba. La revisión del octavo documento (Locality, Soft Causal Cones, and Informational Limits of Agency) incluye además verificación numérica independiente y auditoría adversarial. La revisión del noveno documento (Teoría de Conservación de Óptimos y Complejidad) incluye además verificación simbólica asistida por computadora (SymPy) y auditoría adversarial. La revisión del décimo documento (COVERTRACE-SAT como Compilación de Conocimiento por Subcubos Disjuntos, documento unificado del Vol. I) incluye además revisión multiagente, verificación computacional independiente (Python 3.13) y auditorías adversariales. La revisión del undécimo documento (nota unificadora Conexiones entre el Teorema de la Ecuación SAT y COVERTRACE-SAT, versión corregida) incluye además segunda ronda de revisión por pares con re-verificación computacional independiente de todas las identidades (aritmética exacta).
 
-**English:** Review from scratch over `pdftotext -layout -enc UTF-8` extractions of the 10 original PDFs. Each document was read in full and audited theorem by theorem, definition by definition, proof by proof. The review of the eighth document (Locality, Soft Causal Cones, and Informational Limits of Agency) also includes independent numerical verification and adversarial auditing. The review of the ninth document (Theory of Conservation of Optima and Complexity) also includes computer-assisted symbolic verification (SymPy) and adversarial auditing. The review of the tenth document (COVERTRACE-SAT as Disjoint-Subcube Knowledge Compilation, unified document of Vol. I) also includes multi-agent review, independent computational verification (Python 3.13), and adversarial audits.
+**English:** Review from scratch over `pdftotext -layout -enc UTF-8` extractions of the 10 original PDFs and of the corrected version of the eleventh document. Each document was read in full and audited theorem by theorem, definition by definition, proof by proof. The review of the eighth document (Locality, Soft Causal Cones, and Informational Limits of Agency) also includes independent numerical verification and adversarial auditing. The review of the ninth document (Theory of Conservation of Optima and Complexity) also includes computer-assisted symbolic verification (SymPy) and adversarial auditing. The review of the tenth document (COVERTRACE-SAT as Disjoint-Subcube Knowledge Compilation, unified document of Vol. I) also includes multi-agent review, independent computational verification (Python 3.13), and adversarial audits. The review of the eleventh document (unifying note Connections between the SAT Equation Theorem and COVERTRACE-SAT, corrected version) also includes a second peer-review round with independent computational re-verification of all identities (exact arithmetic).
 
 ---
 
@@ -364,6 +364,48 @@ La versión corregida implementa de manera completa y correcta las cuatro correc
 
 ---
 
+### 11. Conexiones entre el Teorema de la Ecuación SAT y COVERTRACE-SAT (Nota Unificadora)
+(11 páginas, 8 referencias · nota del 15 de agosto de 2026 · segunda ronda de revisión, versión corregida · `Conexiones_SAT_Equation_COVERTRACE_ES.tex`)
+
+#### Veredicto
+**ACEPTADO (CERTIFICACIÓN).** La versión corregida pasa la revisión por pares. Todas las correcciones obligatorias (C1–C4) y recomendadas (C5–C6) del informe anterior fueron aplicadas, y el defecto fatal (el lema de volteo falso) quedó eliminado: el lema ahora enuncia la identidad correcta de volteo (XOR), con prueba válida y un párrafo que documenta explícitamente la diferencia con la suma aritmética. La verificación computacional independiente se repitió por completo: **todas las afirmaciones del documento corregido se verifican exactas** (0 fallos en cada suite), y el documento compila sin errores ni referencias sin resolver.
+
+#### Inventario de resultados principales
+1. **Identidad fundamental:** `popcnt(S(F)) = |U(F)| = Σ_{u∈U} vol(u)` — la bitmask entera densa de `2ⁿ` bits (Ecuación SAT) y la familia disjunta de subcubos (DSOP de ¬F, COVERTRACE) codifican el mismo objeto: la región prohibida `U(F) ⊆ Ω_n`.
+2. **Dualidad acarreo–disyunción:** los acarreos de la suma aritmética son exactamente los solapamientos que el invariante disjunto de COVERTRACE elimina; el OR bit a bit es su idempotización.
+3. **Lema de volteo (XOR):** `t(k⊕2^j) = 1 − t(k)` para todo k,j, probado vía la paridad de `popcnt`; el texto advierte explícitamente que la versión de adición `t(k+2^j) = 1 − t(k)` es falsa (30,9 % de contraejemplos).
+4. **Paridad como número de Thue–Morse:** el entero de la Ecuación SAT de la paridad es el número de Thue–Morse: su expansión binaria es la palabra de Thue–Morse de longitud `2ⁿ`; `popcnt(S_n) = 2^(n−1) = χ_⊔(O_n)`, igualando también la cota espectral de Fourier–Walsh de la Parte II.
+5. **Forma cerrada:** `S_C = 2^B · Π(1 + 2^{2^(n−i)})`; dualidad (c): OR = AddCube bit a bit; multiplicidades en base b.
+6. **Corolario de la representación densa:** el mayor subcubo en `O_n` tiene tamaño 1 → cobertura óptima por singletons, `χ_⊔(O_n) = 2^(n−1)`.
+7. **Comparación densa–dispersa** (conteo, pertenencia, extracción de testigos, actualización) y reformulación de los problemas abiertos del corpus en el lenguaje de la bitmask.
+
+#### Verificado correcto (aritmética exacta, re-verificación independiente)
+- **Lema de volteo XOR** `t(k⊕2^j) = 1−t(k)`, n=1..10: 0 fallos; contraste con la identidad de adición `t(k+2^j) = 1−t(k)`, k<2^10: 2845/9217 fallos = 30,9 % (coincide con el texto). ✓
+- **Corolario:** mayor subcubo en `O_n`, n=1..4: tamaño 1 (cobertura óptima por singletons). ✓
+- **Forma cerrada** `S_C = 2^B·Π(1+2^{2^(n−i)})`: cláusula unitaria 15, balanceada 12, vacía 255, mixta 20560 — todas iguales al OR directo. ✓
+- **Thue–Morse:** recursión = fórmula producto, n=0..8: `S_1=2, S_2=6, S_3=150, S_4=27030, S_5=2523490710, S_6=7608434000728254870`; `popcnt(S_n)=2^(n−1)`, n=1..8: 1,2,4,8,16,32,64,128; morfismo `W_(n+1)=W_n·W̄_n` y `μ⁴(0)=W_4=0110100110010110`. ✓
+- **Factorización de Walsh:** todo `α⊆[n]`, n=1..7: 254/254 casos. ✓
+- **Cota espectral:** `F̂f([n])=−½`, `2^n·|F̂|=2^(n−1)`, n=1..9: −1/2; 1,2,4,…,256. ✓
+- **Identidad fundamental (CubeDiff/AddCube):** 200 CNFs, 0 fallos (disyuntividad, cobertura bit a bit, popcnt=Σvol). **Dualidad (c):** OR = AddCube bit a bit, 200 CNFs, 0 fallos. **Multiplicidades base b:** 50 CNFs, 0 fallos. ✓
+- **Contraejemplo de la Parte II:** UNSAT, S(F)=65535, certificado de 6 cubos (vol. 16), árbol de 7 hojas; `S_part = 6 < 7 = S_tr`. **Convenciones:** `T(C)+B(C)=2^n−1`. ✓
+
+#### Hallazgos
+Todas las correcciones de la primera ronda fueron aplicadas y verificadas en la versión corregida:
+
+| # | Tipo | Descripción | Estado |
+|---|------|-------------|--------|
+| C1–C2 | Obligatoria (matemática) | Lema de volteo: `+` → `⊕`, prueba corregida («voltear el bit j cambia popcnt(k) en ±1») | Aplicada (líneas 224–234) |
+| — | Aclaratoria | Párrafo que documenta el contraejemplo 3+2=5 y la condición exacta de la identidad de adición | Añadido (línea 236) |
+| C3 | Obligatoria | Justificación del Corolario reparada (lema corregido + derivación alternativa: cota espectral + cobertura trivial de singletons) | Aplicada (línea 260) |
+| C4/C4b | Obligatoria | «Todas las identidades…» cualificada a la lista efectivamente verificada; 4 nuevos ítems de verificación añadidos | Aplicada (líneas 399–417) |
+| C5 | Obligatoria (citación) | `\cite` para las 8 entradas bibliográficas; autores de `kmr15` corregidos (Kothari–Racicot-Desloges–Santha) | Aplicada |
+| C6 | Obligatoria | Prop. Sección 8.1: O(mn) precisado (forma de patrón; materializar cuesta 2ⁿ bits) | Aplicada (línea 359) |
+| M1–M7 | Menores | Notación prestada definida; «fragmentación es nula» → «lineal en el número de cláusulas»; convención MSB/LSB aclarada; hipótesis no tautológica reemplazada; alcance del acarreo cualificado; sondas de palabra; exponente base b | Aplicadas |
+
+**Estado del documento:** compila con `pdftotext`-verificado `pdflatex` (3 pasadas) sin errores, sin advertencias de referencias sin resolver ni citas sin definir; 11 páginas; las 8 entradas bibliográficas quedan citadas en el cuerpo. **Sin regresiones:** las verificaciones de los resultados no tocados (Thue–Morse, Walsh, espectral, identidad fundamental, base b, contraejemplo de la Parte II) se repitieron y pasaron íntegras.
+
+---
+
 ### Tabla consolidada
 
 | Documento | Errores | Gaps | Defectos menores | Rigor global |
@@ -378,6 +420,7 @@ La versión corregida implementa de manera completa y correcta las cuatro correc
 | Locality, Soft Causal Cones, and Informational Limits of Agency | 0 | 0 | 3 obligatorios (integridad/atribución) + menores de presentación | Sólido — certificado, condicionado a correcciones editoriales obligatorias |
 | Teoría de Conservación de Óptimos y Complejidad | 0 | 0 | 5 obligatorias de precisión formal (D1–D5) + 2 recomendadas (D6–D7), todas implementadas | Sólido — certificado, aceptado sin correcciones pendientes |
 | COVERTRACE-SAT (Documento Unificado, Vol. I) | 0 | 0 | 5 obligatorias (citación) + menores de presentación | Sólido — certificado, condicionado a correcciones obligatorias de citación |
+| Conexiones SAT–COVERTRACE (nota unificadora) | 0 | 0 | Todas las correcciones de ambas rondas aplicadas (C1–C6, M1–M7) | Sólido — certificado, aceptado en segunda ronda |
 
 ---
 
@@ -739,6 +782,48 @@ The corrected version fully and correctly implements the four mandatory correcti
 
 ---
 
+### 11. Connections between the SAT Equation Theorem and COVERTRACE-SAT (Unifying Note)
+(11 pages, 8 references · note dated August 15, 2026 · second review round, corrected version · `Conexiones_SAT_Equation_COVERTRACE_ES.tex`)
+
+#### Verdict
+**ACCEPTED (CERTIFICATION).** The corrected version passes peer review. All mandatory (C1–C4) and recommended (C5–C6) corrections from the previous report were applied, and the fatal defect (the false flipping lemma) was eliminated: the lemma now states the correct flipping identity (XOR), with a valid proof and a paragraph explicitly documenting the difference from arithmetic addition. The independent computational verification was repeated in full: **all claims of the corrected document verify exactly** (0 failures in every suite), and the document compiles without errors or unresolved references.
+
+#### Inventory of main results
+1. **Fundamental identity:** `popcnt(S(F)) = |U(F)| = Σ_{u∈U} vol(u)` — the dense integer bitmask of `2ⁿ` bits (SAT Equation) and the disjoint family of subcubes (DSOP of ¬F, COVERTRACE) encode the same object: the forbidden region `U(F) ⊆ Ω_n`.
+2. **Carry–disjunction duality:** the carries of the arithmetic sum are exactly the overlaps that COVERTRACE's disjointness invariant removes; the bitwise OR is their idempotization.
+3. **Flipping lemma (XOR):** `t(k⊕2^j) = 1 − t(k)` for all k,j, proved via the parity of `popcnt`; the text explicitly warns that the addition version `t(k+2^j) = 1 − t(k)` is false (30.9 % counterexamples).
+4. **Parity as the Thue–Morse number:** the SAT Equation integer of parity is the Thue–Morse number: its binary expansion is the Thue–Morse word of length `2ⁿ`; `popcnt(S_n) = 2^(n−1) = χ_⊔(O_n)`, also matching the Fourier–Walsh spectral bound of Part II.
+5. **Closed form:** `S_C = 2^B · Π(1 + 2^{2^(n−i)})`; duality (c): OR = AddCube bit by bit; base-b multiplicities.
+6. **Corollary of the dense representation:** the largest subcube in `O_n` has size 1 → optimal singleton coverage, `χ_⊔(O_n) = 2^(n−1)`.
+7. **Dense–sparse comparison** (counting, membership, witness extraction, updates) and reformulation of the corpus's open problems in bitmask language.
+
+#### Verified correct (exact arithmetic, independent re-verification)
+- **XOR flipping lemma** `t(k⊕2^j) = 1−t(k)`, n=1..10: 0 failures; contrast with the addition identity `t(k+2^j) = 1−t(k)`, k<2^10: 2845/9217 failures = 30.9 % (matches the text). ✓
+- **Corollary:** largest subcube in `O_n`, n=1..4: size 1 (optimal singleton coverage). ✓
+- **Closed form** `S_C = 2^B·Π(1+2^{2^(n−i)})`: unit clause 15, balanced 12, empty 255, mixed 20560 — all equal to the direct OR. ✓
+- **Thue–Morse:** recursion = product formula, n=0..8: `S_1=2, S_2=6, S_3=150, S_4=27030, S_5=2523490710, S_6=7608434000728254870`; `popcnt(S_n)=2^(n−1)`, n=1..8: 1,2,4,8,16,32,64,128; morphism `W_(n+1)=W_n·W̄_n` and `μ⁴(0)=W_4=0110100110010110`. ✓
+- **Walsh factorization:** all `α⊆[n]`, n=1..7: 254/254 cases. ✓
+- **Spectral bound:** `F̂f([n])=−½`, `2^n·|F̂|=2^(n−1)`, n=1..9: −1/2; 1,2,4,…,256. ✓
+- **Fundamental identity (CubeDiff/AddCube):** 200 CNFs, 0 failures (disjointness, bit-by-bit coverage, popcnt=Σvol). **Duality (c):** OR = AddCube bit by bit, 200 CNFs, 0 failures. **Base-b multiplicities:** 50 CNFs, 0 failures. ✓
+- **Part II counterexample:** UNSAT, S(F)=65535, certificate of 6 cubes (vol. 16), tree of 7 leaves; `S_part = 6 < 7 = S_tr`. **Conventions:** `T(C)+B(C)=2^n−1`. ✓
+
+#### Findings
+All first-round corrections were applied and verified in the corrected version:
+
+| # | Type | Description | Status |
+|---|------|-------------|--------|
+| C1–C2 | Mandatory (mathematics) | Flipping lemma: `+` → `⊕`, proof corrected («flipping bit j changes popcnt(k) by ±1») | Applied (lines 224–234) |
+| — | Clarification | Paragraph documenting the counterexample 3+2=5 and the exact condition of the addition identity | Added (line 236) |
+| C3 | Mandatory | Corollary justification repaired (corrected lemma + alternative derivation: spectral bound + trivial singleton coverage) | Applied (line 260) |
+| C4/C4b | Mandatory | «All identities…» qualified to the actually verified list; 4 new verification items added | Applied (lines 399–417) |
+| C5 | Mandatory (citation) | `\cite` for the 8 bibliographic entries; `kmr15` authors corrected (Kothari–Racicot-Desloges–Santha) | Applied |
+| C6 | Mandatory | Prop. Section 8.1: O(mn) clarified (pattern form; materializing costs 2ⁿ bits) | Applied (line 359) |
+| M1–M7 | Minor | Borrowed notation defined; «fragmentation is null» → «linear in the number of clauses»; MSB/LSB convention clarified; non-tautological hypothesis replaced; carry scope qualified; word probes; base-b exponent | Applied |
+
+**Document status:** compiles with `pdflatex` (3 passes) without errors, without unresolved-reference warnings or undefined citations; 11 pages; all 8 bibliographic entries cited in the body. **No regressions:** the verifications of untouched results (Thue–Morse, Walsh, spectral, fundamental identity, base b, Part II counterexample) were repeated and passed in full.
+
+---
+
 ### Consolidated table
 
 | Document | Errors | Gaps | Minor defects | Global rigor |
@@ -753,7 +838,8 @@ The corrected version fully and correctly implements the four mandatory correcti
 | Locality, Soft Causal Cones, and Informational Limits of Agency | 0 | 0 | 3 mandatory (integrity/attribution) + minor presentation defects | Sound — certified, conditioned on mandatory editorial corrections |
 | Theory of Conservation of Optima and Complexity | 0 | 0 | 5 mandatory formal-precision (D1–D5) + 2 recommended (D6–D7), all implemented | Sound — certified, accepted with no pending corrections |
 | COVERTRACE-SAT (Unified Document, Vol. I) | 0 | 0 | 5 mandatory (citation) + minor presentation defects | Sound — certified, conditioned on mandatory citation corrections |
+| Connections SAT–COVERTRACE (unifying note) | 0 | 0 | All corrections of both rounds applied (C1–C6, M1–M7) | Sound — certified, accepted in second round |
 
 ---
 
-*Revisión completada el 10 y 11 de agosto de 2026 sobre extracciones `pdftotext -layout -enc UTF-8` de los PDFs originales; la revisión del octavo documento (Locality, Soft Causal Cones, and Informational Limits of Agency) se completó el 12 de agosto de 2026 con verificación numérica independiente y auditoría adversarial; la revisión del noveno documento (Teoría de Conservación de Óptimos y Complejidad) se completó el 14 de agosto de 2026 con verificación simbólica asistida por computadora (SymPy) y auditoría adversarial; la revisión del décimo documento (COVERTRACE-SAT como Compilación de Conocimiento por Subcubos Disjuntos, documento unificado del Vol. I) se completó el 14 de agosto de 2026 con revisión multiagente, verificación computacional independiente (Python 3.13) y auditorías adversariales. / Review completed on August 10–11, 2026 over `pdftotext -layout -enc UTF-8` extractions of the original PDFs; the review of the eighth document (Locality, Soft Causal Cones, and Informational Limits of Agency) was completed on August 12, 2026 with independent numerical verification and adversarial auditing; the review of the ninth document (Theory of Conservation of Optima and Complexity) was completed on August 14, 2026 with computer-assisted symbolic verification (SymPy) and adversarial auditing; the review of the tenth document (COVERTRACE-SAT as Disjoint-Subcube Knowledge Compilation, unified document of Vol. I) was completed on August 14, 2026 with multi-agent review, independent computational verification (Python 3.13), and adversarial audits.*
+*Revisión completada el 10 y 11 de agosto de 2026 sobre extracciones `pdftotext -layout -enc UTF-8` de los PDFs originales; la revisión del octavo documento (Locality, Soft Causal Cones, and Informational Limits of Agency) se completó el 12 de agosto de 2026 con verificación numérica independiente y auditoría adversarial; la revisión del noveno documento (Teoría de Conservación de Óptimos y Complejidad) se completó el 14 de agosto de 2026 con verificación simbólica asistida por computadora (SymPy) y auditoría adversarial; la revisión del décimo documento (COVERTRACE-SAT como Compilación de Conocimiento por Subcubos Disjuntos, documento unificado del Vol. I) se completó el 14 de agosto de 2026 con revisión multiagente, verificación computacional independiente (Python 3.13) y auditorías adversariales. / Review completed on August 10–11, 2026 over `pdftotext -layout -enc UTF-8` extractions of the original PDFs; the review of the eighth document (Locality, Soft Causal Cones, and Informational Limits of Agency) was completed on August 12, 2026 with independent numerical verification and adversarial auditing; the review of the ninth document (Theory of Conservation of Optima and Complexity) was completed on August 14, 2026 with computer-assisted symbolic verification (SymPy) and adversarial auditing; the review of the tenth document (COVERTRACE-SAT as Disjoint-Subcube Knowledge Compilation, unified document of Vol. I) was completed on August 14, 2026 with multi-agent review, independent computational verification (Python 3.13), and adversarial audits; la revisión del undécimo documento (nota unificadora Conexiones entre el Teorema de la Ecuación SAT y COVERTRACE-SAT, versión corregida) se completó el 15 de agosto de 2026 en dos rondas con re-verificación computacional independiente de todas las identidades (aritmética exacta). / the review of the eleventh document (unifying note Connections between the SAT Equation Theorem and COVERTRACE-SAT, corrected version) was completed on August 15, 2026 in two rounds with independent computational re-verification of all identities (exact arithmetic).*

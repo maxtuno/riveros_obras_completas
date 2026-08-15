@@ -1,8 +1,8 @@
 # Revisión matemática / Mathematical Peer Review
 
-**Español:** Revisión desde cero sobre extracciones `pdftotext -layout -enc UTF-8` de los 9 PDFs originales. Cada documento fue leído íntegramente y auditado teorema por teorema, definición por definición, prueba por prueba. La revisión del octavo documento (Locality, Soft Causal Cones, and Informational Limits of Agency) incluye además verificación numérica independiente y auditoría adversarial. La revisión del noveno documento (Teoría de Conservación de Óptimos y Complejidad) incluye además verificación simbólica asistida por computadora (SymPy) y auditoría adversarial.
+**Español:** Revisión desde cero sobre extracciones `pdftotext -layout -enc UTF-8` de los 10 PDFs originales. Cada documento fue leído íntegramente y auditado teorema por teorema, definición por definición, prueba por prueba. La revisión del octavo documento (Locality, Soft Causal Cones, and Informational Limits of Agency) incluye además verificación numérica independiente y auditoría adversarial. La revisión del noveno documento (Teoría de Conservación de Óptimos y Complejidad) incluye además verificación simbólica asistida por computadora (SymPy) y auditoría adversarial. La revisión del décimo documento (COVERTRACE-SAT como Compilación de Conocimiento por Subcubos Disjuntos, documento unificado del Vol. I) incluye además revisión multiagente, verificación computacional independiente (Python 3.13) y auditorías adversariales.
 
-**English:** Review from scratch over `pdftotext -layout -enc UTF-8` extractions of the 9 original PDFs. Each document was read in full and audited theorem by theorem, definition by definition, proof by proof. The review of the eighth document (Locality, Soft Causal Cones, and Informational Limits of Agency) also includes independent numerical verification and adversarial auditing. The review of the ninth document (Theory of Conservation of Optima and Complexity) also includes computer-assisted symbolic verification (SymPy) and adversarial auditing.
+**English:** Review from scratch over `pdftotext -layout -enc UTF-8` extractions of the 10 original PDFs. Each document was read in full and audited theorem by theorem, definition by definition, proof by proof. The review of the eighth document (Locality, Soft Causal Cones, and Informational Limits of Agency) also includes independent numerical verification and adversarial auditing. The review of the ninth document (Theory of Conservation of Optima and Complexity) also includes computer-assisted symbolic verification (SymPy) and adversarial auditing. The review of the tenth document (COVERTRACE-SAT as Disjoint-Subcube Knowledge Compilation, unified document of Vol. I) also includes multi-agent review, independent computational verification (Python 3.13), and adversarial audits.
 
 ---
 
@@ -320,6 +320,50 @@ La versión corregida implementa de manera completa y correcta las cuatro correc
 
 ---
 
+### 10. COVERTRACE-SAT como Compilación de Conocimiento por Subcubos Disjuntos (Documento Unificado, Vol. I)
+(Parte I en inglés, enero de 2026, y Parte II en español, versión corregida · revisión del 14 de agosto de 2026 · `COVERTRACE_SAT_Disjoint_Subcube_Unificado.tex`, 1061 líneas)
+
+#### Veredicto
+**CERTIFICADO COMO MATEMÁTICAMENTE SÓLIDO — no se encontró falla fatal.** Todas las afirmaciones centrales de ambas partes fueron verificadas por reconstrucción formal de las pruebas desde primeros principios, verificación computacional exhaustiva e independiente (Python 3.13) y auditorías adversariales orientadas a refutar cada cota, desigualdad e invariante, sin contraejemplos. Los defectos encontrados son exclusivamente de citación, notación y presentación y **no invalidan ninguna afirmación matemática**. La certificación se emite con la condición de corregir las citas (hallazgos 1–5) antes de publicación: defectos bibliográficos, no matemáticos.
+
+#### Inventario de resultados principales
+**Parte I (inglés):**
+1. **COVERTRACE** (CubeDiff/AddCube): compilación de ¬F en subcubos disjuntos con conteo exacto #SAT y extracción de testigos (Teo. 4.1, Prop. 4.2); cota `O((T+m)·c(n))` (Prop. 5.1).
+2. **Cota inferior de paridad:** `χ(O_n) = 2^{n−1}` (Lema 6.1 / Teo. 6.2).
+3. **Compilación DSOP y colapso condicional:** compilador polinomial con codificación polinomial ⇒ `PH = P` (Teo. 7.4); certificados UNSAT verificables en polinomio ⇒ `NP = coNP` (§7.5).
+4. **Extensión afín** (cosetos de ker A) con compresión exponencial de paridad (Sección 8).
+5. **Lema volumétrico 9.2** y **cota por influencia** (Cor. 9.5) para χ; Problema 9.6 declarado abierto; punto de vista GCT (Sección 10).
+
+**Parte II (español):**
+6. **Lema del invariante de contención** de COVERTRACE.
+7. **Desigualdad `S_part(F) ≤ S_tr(F)`** para toda F insatisfacible (Teo. 2.1) y **contraejemplo explícito verificado `S_part = 6 < 7 = S_tr`** (Prop. 2.2); degradación honesta de PHP a problema abierto con cota 4 (Cor. 2.6).
+8. **Cota espectral de Fourier–Walsh:** `χ(S) ≥ 2^d · max_{|α|=d} |f̂(α)|` (Sección 3).
+9. **Certificado poliédrico y codificación exacta** `φ_n`/`κ_n` (Sección 4).
+10. **Delimitación del Problema 9.6** (Sección 5) y nota de corrección del 14 de agosto verificada contra el cuerpo.
+
+#### Verificado correcto
+- **Algoritmos nucleares:** los tres casos de CubeDiff son exhaustivos y mutuamente excluyentes; terminación por decrecimiento estricto. **Exhaustivo n=4 (6561 pares) y n=5 (59049 pares): 0 fallos.** Lema 3.2 verificado bajo sus hipótesis (la cota incondicional falla y el lema la excluye). COVERTRACE: 500 CNFs n=4 y 200 n=5 verificadas tras cada cláusula por fuerza bruta: 0 fallos. Testigos: 259/259 válidos. ✓
+- **Cota de paridad:** `χ(O_n) = 2, 4, 8` para n=2,3,4 por DP exacto; ajustada. ✓
+- **Colapso condicional:** cada implicación (Valiant, Toda) verificada; el carácter condicional está declarado; §7.5 sólido y completo con verificabilidad `O(K²n + Kmn)`. ✓
+- **Lema 9.2:** los 255 subconjuntos no vacíos de {0,1}³, 0 violaciones (87 ajustados). **Cor. 9.5:** 254 exhaustivos n=3 + 200 muestrales n=4: 0 violaciones. ✓
+- **Desigualdad `S_part ≤ S_tr`:** 34.071 CNFs insatisfacibles n=3 (≤5 cláusulas) + 254 n=4: 0 violaciones. **Prop. 2.2 (6<7):** confirmada por tres implementaciones independientes, DP de recubrimiento exacto sobre los 2^16 subconjuntos, punto fijo de resolución arbórea `D(⊥) = 7` (equivalencia BKPS en 61 instancias, 0 discrepancias) y **enumeración exhaustiva de todos los árboles con ≤6 hojas sobre 4 variables (26.657 propios + 46.949 con reconsultas: 0 refutantes)**. ✓
+- **Cota espectral:** 256×4 desigualdades n=3, 0 fallos, ajustada; ejemplos paridad y mayoría verificados numéricamente. ✓
+- **Certificado poliédrico y codificación:** verificación punto a punto (n=4, 16 puntos); contraejemplo fraccional verificado; restricción a integralidad necesaria y declarada en el texto. ✓
+- **Auditorías adversariales:** ninguna hipótesis de refutación (error algebraico, conclusión que no se sigue, contraejemplos a cotas o invariantes) sobrevivió a su propio escrutinio. ✓
+
+#### Hallazgos
+| # | Tipo | Descripción |
+|---|------|-------------|
+| 1 | **Obligatoria (citación)** | `kmr15`: los autores impresos (Kothari, Meka, Raghavendra) no corresponden al artículo citado; el real es Kothari–Racicot-Desloges–Santha, *Separating Decision Tree Complexity from Subcube Partition Complexity*, APPROX/RANDOM 2015, LIPIcs 40:915–930. |
+| 2 | **Obligatoria (citación)** | `hegyvari24` no existe como está impresa (revista y título erróneos); el real es N. Hegyvári, *The complexity of subcube partition relates to the additive structure of the support*, Information and Computation 299:105170 (2024). |
+| 3 | **Obligatoria (citación)** | `koriche13`: título mal citado (real: *Knowledge Compilation for Model Counting: Affine Decision Trees*, IJCAI 2013); además nunca se invoca en el texto. |
+| 4 | **Obligatoria (citación)** | Falta la entrada de Valiant para la #P-completitud de #SAT, invocada en la prueba del Teo. 7.4. |
+| 5 | **Obligatoria (citación)** | Ningún `\cite` en todo el documento; varias entradas nunca mencionadas en el texto (ms01, ms08, bi25, dip19, lucas14, bbbv97, koriche13, hegyvari24, Ben-Sasson–Wigderson 2001). |
+| 6 | Menor (presentación) | «Teoremas 4.1–4.3» incluye la Observación 4.2 en el rango; el resumen dice generalizar la Prop. 9.4 cuando corresponde al Cor. 9.5; hipótesis del Lema 3.2 elididas en el resumen; Remark 4.3 de la Parte I con redacción laxa; cobro esquemático en Prop. 5.1 (explicitar el conteo ≤ T+m); anotación de Urquhart 1987 que menciona PHP (corresponde a Haken 1985/folclore); notación x_0..x_3 vs x_1..x_n; índice de «bi25» sin número de artículo; costo de suma de volúmenes O(K) a nivel de palabra (O(Kn) a nivel de bits, sigue polinomial). |
+| 7 | Observación de originalidad | `S_part ≤ S_tr` es consecuencia directa de la equivalencia clásica resolución arbórea ↔ árboles de decisión (Beame–Karp–Pitassi–Saks 2002, citada) y `χ(O_n) = 2^{n−1}` es folclórica; la novedad genuina reside en el contraejemplo explícito verificado (6<7), las cotas espectrales ajustadas y la delimitación honesta del Problema 9.6. |
+
+---
+
 ### Tabla consolidada
 
 | Documento | Errores | Gaps | Defectos menores | Rigor global |
@@ -333,6 +377,7 @@ La versión corregida implementa de manera completa y correcta las cuatro correc
 | A Generalization of the SAT Equation Theorem | 0 | 1 (cláusulas tautológicas no tratadas) | 2 (ambigüedad de convención, profundidad del resultado) | Sólido — sin errores fatales |
 | Locality, Soft Causal Cones, and Informational Limits of Agency | 0 | 0 | 3 obligatorios (integridad/atribución) + menores de presentación | Sólido — certificado, condicionado a correcciones editoriales obligatorias |
 | Teoría de Conservación de Óptimos y Complejidad | 0 | 0 | 5 obligatorias de precisión formal (D1–D5) + 2 recomendadas (D6–D7), todas implementadas | Sólido — certificado, aceptado sin correcciones pendientes |
+| COVERTRACE-SAT (Documento Unificado, Vol. I) | 0 | 0 | 5 obligatorias (citación) + menores de presentación | Sólido — certificado, condicionado a correcciones obligatorias de citación |
 
 ---
 
@@ -650,6 +695,50 @@ The corrected version fully and correctly implements the four mandatory correcti
 
 ---
 
+### 10. COVERTRACE-SAT as Disjoint-Subcube Knowledge Compilation (Unified Document, Vol. I)
+(Part I in English, January 2026, and Part II in Spanish, corrected version · review dated August 14, 2026 · `COVERTRACE_SAT_Disjoint_Subcube_Unificado.tex`, 1061 lines)
+
+#### Verdict
+**CERTIFIED AS MATHEMATICALLY SOUND — no fatal flaw found.** All central claims of both parts were verified by formal reconstruction of the proofs from first principles, exhaustive independent computational verification (Python 3.13), and adversarial audits aimed at refuting every bound, inequality and invariant, with no counterexamples. The defects found are exclusively of citation, notation and presentation and **do not invalidate any mathematical claim**. The certification is issued on condition that the citations (findings 1–5) be corrected before publication: bibliographic, not mathematical, defects.
+
+#### Inventory of main results
+**Part I (English):**
+1. **COVERTRACE** (CubeDiff/AddCube): compilation of ¬F into disjoint subcubes with exact #SAT counting and witness extraction (Thm. 4.1, Prop. 4.2); `O((T+m)·c(n))` bound (Prop. 5.1).
+2. **Parity lower bound:** `χ(O_n) = 2^{n−1}` (Lemma 6.1 / Thm. 6.2).
+3. **DSOP compilation and conditional collapse:** polynomial compiler with polynomial encoding ⇒ `PH = P` (Thm. 7.4); polynomial-verifiable UNSAT certificates ⇒ `NP = coNP` (§7.5).
+4. **Affine extension** (cosets of ker A) with exponential parity compression (Section 8).
+5. **Volumetric Lemma 9.2** and **influence bound** (Cor. 9.5) for χ; Problem 9.6 declared open; GCT viewpoint (Section 10).
+
+**Part II (Spanish):**
+6. **Containment-invariant lemma** of COVERTRACE.
+7. **Inequality `S_part(F) ≤ S_tr(F)`** for every unsatisfiable F (Thm. 2.1) and **explicit verified counterexample `S_part = 6 < 7 = S_tr`** (Prop. 2.2); honest degradation of PHP to an open problem with bound 4 (Cor. 2.6).
+8. **Fourier–Walsh spectral bound:** `χ(S) ≥ 2^d · max_{|α|=d} |f̂(α)|` (Section 3).
+9. **Polyhedral certificate and exact encoding** `φ_n`/`κ_n` (Section 4).
+10. **Delimitation of Problem 9.6** (Section 5) and the August 14 correction note verified against the body.
+
+#### Verified correct
+- **Core algorithms:** the three CubeDiff cases are exhaustive and mutually exclusive; termination by strict decrease. **Exhaustive n=4 (6561 pairs) and n=5 (59049 pairs): 0 failures.** Lemma 3.2 verified under its hypotheses (the unconditional bound fails and the lemma excludes it). COVERTRACE: 500 CNFs n=4 and 200 n=5 verified after every clause by brute force: 0 failures. Witnesses: 259/259 valid. ✓
+- **Parity bound:** `χ(O_n) = 2, 4, 8` for n=2,3,4 by exact DP; tight. ✓
+- **Conditional collapse:** every implication (Valiant, Toda) verified; the conditional character is declared; §7.5 sound and complete with `O(K²n + Kmn)` verifiability. ✓
+- **Lemma 9.2:** all 255 non-empty subsets of {0,1}³, 0 violations (87 tight). **Cor. 9.5:** 254 exhaustive n=3 + 200 sampled n=4: 0 violations. ✓
+- **Inequality `S_part ≤ S_tr`:** 34,071 unsatisfiable CNFs n=3 (≤5 clauses) + 254 n=4: 0 violations. **Prop. 2.2 (6<7):** confirmed by three independent implementations, exact-cover DP over the 2^16 subsets, tree-resolution fixed point `D(⊥) = 7` (BKPS equivalence on 61 instances, 0 discrepancies), and **exhaustive enumeration of all decision trees with ≤6 leaves over 4 variables (26,657 proper + 46,949 with re-queries: 0 refuting)**. ✓
+- **Spectral bound:** 256×4 inequalities n=3, 0 failures, tight; parity and majority examples verified numerically. ✓
+- **Polyhedral certificate and encoding:** point-by-point verification (n=4, 16 points); fractional counterexample verified; integrality restriction necessary and declared in the text. ✓
+- **Adversarial audits:** no refutation hypothesis (algebraic error, non-sequitur conclusion, counterexamples to bounds or invariants) survived its own scrutiny. ✓
+
+#### Findings
+| # | Type | Description |
+|---|------|-------------|
+| 1 | **Mandatory (citation)** | `kmr15`: the printed authors (Kothari, Meka, Raghavendra) do not correspond to the cited article; the real one is Kothari–Racicot-Desloges–Santha, *Separating Decision Tree Complexity from Subcube Partition Complexity*, APPROX/RANDOM 2015, LIPIcs 40:915–930. |
+| 2 | **Mandatory (citation)** | `hegyvari24` does not exist as printed (wrong journal and title); the real one is N. Hegyvári, *The complexity of subcube partition relates to the additive structure of the support*, Information and Computation 299:105170 (2024). |
+| 3 | **Mandatory (citation)** | `koriche13`: miscited title (real: *Knowledge Compilation for Model Counting: Affine Decision Trees*, IJCAI 2013); also never invoked in the text. |
+| 4 | **Mandatory (citation)** | Missing Valiant entry for the #P-completeness of #SAT, invoked in the proof of Thm. 7.4. |
+| 5 | **Mandatory (citation)** | No `\cite` anywhere in the document; several entries never mentioned in the text (ms01, ms08, bi25, dip19, lucas14, bbbv97, koriche13, hegyvari24, Ben-Sasson–Wigderson 2001). |
+| 6 | Minor (presentation) | «Theorems 4.1–4.3» includes Observation 4.2 in the range; the abstract says it generalizes Prop. 9.4 when it corresponds to Cor. 9.5; Lemma 3.2 hypotheses elided in the abstract; lax wording of Remark 4.3 in Part I; schematic charging in Prop. 5.1 (make the ≤ T+m count explicit); Urquhart 1987 annotation mentions PHP (belongs to Haken 1985/folklore); notation x_0..x_3 vs x_1..x_n; «bi25» index without article number; volume-sum cost O(K) at word level (O(Kn) at bit level, still polynomial). |
+| 7 | Originality remark | `S_part ≤ S_tr` is a direct consequence of the classical tree-resolution ↔ decision-tree equivalence (Beame–Karp–Pitassi–Saks 2002, cited) and `χ(O_n) = 2^{n−1}` is folklore; the genuine novelty lies in the explicit verified counterexample (6<7), the tight spectral bounds, and the honest delimitation of Problem 9.6. |
+
+---
+
 ### Consolidated table
 
 | Document | Errors | Gaps | Minor defects | Global rigor |
@@ -663,7 +752,8 @@ The corrected version fully and correctly implements the four mandatory correcti
 | A Generalization of the SAT Equation Theorem | 0 | 1 (untreated tautological clauses) | 2 (convention ambiguity, result depth) | Sound — no fatal errors |
 | Locality, Soft Causal Cones, and Informational Limits of Agency | 0 | 0 | 3 mandatory (integrity/attribution) + minor presentation defects | Sound — certified, conditioned on mandatory editorial corrections |
 | Theory of Conservation of Optima and Complexity | 0 | 0 | 5 mandatory formal-precision (D1–D5) + 2 recommended (D6–D7), all implemented | Sound — certified, accepted with no pending corrections |
+| COVERTRACE-SAT (Unified Document, Vol. I) | 0 | 0 | 5 mandatory (citation) + minor presentation defects | Sound — certified, conditioned on mandatory citation corrections |
 
 ---
 
-*Revisión completada el 10 y 11 de agosto de 2026 sobre extracciones `pdftotext -layout -enc UTF-8` de los PDFs originales; la revisión del octavo documento (Locality, Soft Causal Cones, and Informational Limits of Agency) se completó el 12 de agosto de 2026 con verificación numérica independiente y auditoría adversarial; la revisión del noveno documento (Teoría de Conservación de Óptimos y Complejidad) se completó el 14 de agosto de 2026 con verificación simbólica asistida por computadora (SymPy) y auditoría adversarial. / Review completed on August 10–11, 2026 over `pdftotext -layout -enc UTF-8` extractions of the original PDFs; the review of the eighth document (Locality, Soft Causal Cones, and Informational Limits of Agency) was completed on August 12, 2026 with independent numerical verification and adversarial auditing; the review of the ninth document (Theory of Conservation of Optima and Complexity) was completed on August 14, 2026 with computer-assisted symbolic verification (SymPy) and adversarial auditing.*
+*Revisión completada el 10 y 11 de agosto de 2026 sobre extracciones `pdftotext -layout -enc UTF-8` de los PDFs originales; la revisión del octavo documento (Locality, Soft Causal Cones, and Informational Limits of Agency) se completó el 12 de agosto de 2026 con verificación numérica independiente y auditoría adversarial; la revisión del noveno documento (Teoría de Conservación de Óptimos y Complejidad) se completó el 14 de agosto de 2026 con verificación simbólica asistida por computadora (SymPy) y auditoría adversarial; la revisión del décimo documento (COVERTRACE-SAT como Compilación de Conocimiento por Subcubos Disjuntos, documento unificado del Vol. I) se completó el 14 de agosto de 2026 con revisión multiagente, verificación computacional independiente (Python 3.13) y auditorías adversariales. / Review completed on August 10–11, 2026 over `pdftotext -layout -enc UTF-8` extractions of the original PDFs; the review of the eighth document (Locality, Soft Causal Cones, and Informational Limits of Agency) was completed on August 12, 2026 with independent numerical verification and adversarial auditing; the review of the ninth document (Theory of Conservation of Optima and Complexity) was completed on August 14, 2026 with computer-assisted symbolic verification (SymPy) and adversarial auditing; the review of the tenth document (COVERTRACE-SAT as Disjoint-Subcube Knowledge Compilation, unified document of Vol. I) was completed on August 14, 2026 with multi-agent review, independent computational verification (Python 3.13), and adversarial audits.*

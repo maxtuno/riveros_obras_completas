@@ -83,8 +83,8 @@ The paper on queries to the SAT Equation and the note on representation complexi
 | `Physical_Observer_Geometry_LaTeX_v2.pdf` | Physical Observer Geometry. Holonomía de protocolo, orden por no-clausura, obstrucciones espectrales y reducción Yang–Mills condicional. | Certificado |
 | `Consultas_Comprimidas_Ecuacion_SAT.pdf` | Consultas comprimidas sobre la Ecuación SAT. Versión final en español del manuscrito de trabajo. | Trabajo |
 | `Compressed_Queries_on_the_SAT_Equation.pdf` | Compressed Queries on the SAT Equation. Final English edition of the working paper. | Working paper |
-| `Complejidad_Representaciones_Ecuacion_SAT.pdf` | Complejidad de representaciones para la Ecuación SAT. Cotas superiores, inferiores y compilación híbrida. | Trabajo |
-| `Representation_Complexity_SAT_Equation.pdf` | Representation Complexity of the SAT Equation. Upper bounds, lower bounds, and hybrid compilation. | Working paper |
+| `Complejidad_Representaciones_Ecuacion_SAT.pdf` | Complejidad de representaciones para la Ecuación SAT. Paisaje de DSOP, ADSOP, ZDD y Fourier, composición por regiones, cotas por puertas traseras y treewidth, y corrección del bucle CEGAR. | Trabajo |
+| `Representation_Complexity_SAT_Equation.pdf` | Representation Complexity of the SAT Equation. Landscape of DSOP, ADSOP, ZDD, and Fourier, region composition, backdoor and treewidth bounds, and the CEGAR loop correction. | Working paper |
 | `PEER_REVIEW.md` | Revisión matemática por pares de los trece documentos certificados / Mathematical peer review of the thirteen certified documents. | Informe |
 | `DISCLAMER.md` | Aviso del autor, alcance, asistencia de IA y perspectiva sobre la IA y la investigación / Author's disclaimer, scope, AI assistance, and perspective on AI and research. | Aviso |
 | `LICENSE.txt` | Licencia / License. | Legal |

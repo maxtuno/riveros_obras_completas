@@ -1,9 +1,9 @@
 # Obras Completas — Oscar Riveros
 ## Complete Works — Oscar Riveros
 
-Este repositorio reúne la obra matemática de Oscar Riveros. Trece documentos ya pasaron por revisión de pares. También incluye un artículo de trabajo en español e inglés y una nota complementaria que todavía está en release candidate. El informe de revisión, el aviso del autor y la licencia están incluidos.
+Este repositorio reúne la obra matemática de Oscar Riveros. Trece documentos ya pasaron por revisión de pares. También incluye un artículo de trabajo y una nota técnica complementaria, ambos en español e inglés. El informe de revisión, el aviso del autor y la licencia están incluidos.
 
-This repository collects Oscar Riveros's mathematical work. Thirteen documents have been peer reviewed. It also includes a working paper in Spanish and English, plus a companion note that is still a release candidate. The peer-review report, the author's disclaimer, and the license are included.
+This repository collects Oscar Riveros's mathematical work. Thirteen documents have been peer reviewed. It also includes a working paper and a companion technical note, both in Spanish and English. The peer-review report, the author's disclaimer, and the license are included.
 
 ---
 
@@ -28,19 +28,23 @@ Es la versión final de un manuscrito de trabajo. Se publica para compartir resu
 
 This is the final version of a working manuscript. It is published to share results as the program develops. It has only had a simple peer review, so adversarial reviews and further checks are left to the reader. It is not part of the certified corpus in `PEER_REVIEW.md`.
 
-### Compilación heterogénea por regiones
+### Complejidad de representaciones para la Ecuación SAT
+**Representation Complexity of the SAT Equation**
 
-*Árboles de regiones y puertas traseras para conteo exacto. Nota técnica complementaria.*
+*cotas superiores, inferiores y compilación híbrida*  
+*upper bounds, lower bounds, and hybrid compilation*
 
-Oscar Riveros — **release candidate**, 28 de octubre de 2026.
+Manuscrito de trabajo, 28 de octubre de 2026.
 
-Descargar: **[PDF](Compilacion_Hibrida_Por_Regiones.pdf)**
+Descargar: **[español](Complejidad_Representaciones_Ecuacion_SAT.pdf)** · **[English](Representation_Complexity_SAT_Equation.pdf)**
 
-La nota retoma donde termina el artículo anterior. En vez de buscar una sola representación que comprima toda la fórmula, propone un árbol de decisión cuyas hojas usen representaciones distintas: cubos, subespacios afines, ZDD, Fourier o un contador. Formaliza el árbol de regiones, el coste híbrido `h(F)`, la puerta trasera heterogénea y un compilador guiado por contraejemplos con certificados. El teorema de composición es sencillo; lo difícil es construir el árbol. La nota también corrige un ejemplo de dos cubos solapados y precisa la normalización de Fourier. No demuestra `P = NP`.
+La nota retoma donde termina el artículo anterior, pero cambia la pregunta. En lugar de preguntar si una representación universal resuelve `P = NP`, estudia qué propiedades estructurales fijan el tamaño mínimo de una representación y el coste de construirla. Reúne un paisaje de DSOP, ADSOP, ZDD y Fourier con inclusiones y separaciones incondicionales; un teorema de composición por regiones y un perfil de anchura híbrida; cotas superiores parametrizadas por puertas traseras y treewidth; y una distinción entre tamaño de representación, tamaño de compilación híbrida y tiempo de compilación uniforme. También corrige el bucle CEGAR: para detectar una asignación falsificadora fuera de la cobertura hay que consultar `¬F ∧ ¬Cov(C)`, no `F ∧ ¬Cov(C)`. No pretende demostrar `P = NP`; su objetivo es un mapa de cotas y una agenda de problemas abiertos.
 
-**Estado.** Es un release candidate, no una versión final: puede cambiar antes de publicarse. De momento solo existe la edición en español. Queda fuera de la auditoría certificada.
+The note picks up where the previous paper ends, but changes the question. Instead of asking whether a universal representation solves `P = NP`, it studies which structural properties determine the minimum size of a representation and the cost of building it. It brings together a landscape of DSOP, ADSOP, ZDD, and Fourier with inclusions and unconditional separations; a region-composition theorem and a hybrid width profile; upper bounds parameterized by backdoors and treewidth; and a distinction between representation size, hybrid compilation size, and uniform compilation time. It also corrects the CEGAR loop: to detect a falsifying assignment outside the cover, one must query `¬F ∧ ¬Cov(C)`, not `F ∧ ¬Cov(C)`. It does not claim to prove `P = NP`; its goal is a map of bounds and an agenda of open problems.
 
-Spanish edition only for now. This is a release candidate and may change before publication. It is outside the certified audit.
+**Estado.** Es un manuscrito de trabajo. Se publica para compartir el mapa de cotas mientras el programa avanza. No forma parte del corpus certificado de `PEER_REVIEW.md`.
+
+This is a working manuscript, published to share the map of bounds as the program develops. It is not part of the certified corpus in `PEER_REVIEW.md`.
 
 ---
 
@@ -50,15 +54,15 @@ Trece documentos tienen revisión por pares certificada. El informe completo, co
 
 Thirteen documents have certified peer review. The full report, including verdicts, findings, and corrections, is in [`PEER_REVIEW.md`](PEER_REVIEW.md).
 
-El artículo sobre consultas a la Ecuación SAT y la nota de compilación heterogénea son trabajos en curso y no forman parte de ese corpus. El resto de las obras del autor, como el volumen compilado y los ejercicios resueltos, sigue en revisión.
+El artículo sobre consultas a la Ecuación SAT y la nota sobre complejidad de representaciones son trabajos en curso y no forman parte de ese corpus. El resto de las obras del autor, como el volumen compilado y los ejercicios resueltos, sigue en revisión.
 
-The paper on queries to the SAT Equation and the heterogeneous-compilation note are works in progress and are not part of that corpus. The rest of the author's work, such as the compiled volume and the solved exercises, is still under review.
+The paper on queries to the SAT Equation and the note on representation complexity are works in progress and are not part of that corpus. The rest of the author's work, such as the compiled volume and the solved exercises, is still under review.
 
 ---
 
 ## Contenido / Contents
 
-*Certificado* = revisado por pares; *Trabajo* / *Working paper* = en curso; *RC* = release candidate.
+*Certificado* = revisado por pares; *Trabajo* / *Working paper* = en curso.
 
 | Archivo / File | Contenido / Contents | Estado / Status |
 |----------------|----------------------|-----------------|
@@ -79,7 +83,8 @@ The paper on queries to the SAT Equation and the heterogeneous-compilation note 
 | `Physical_Observer_Geometry_LaTeX_v2.pdf` | Physical Observer Geometry. Holonomía de protocolo, orden por no-clausura, obstrucciones espectrales y reducción Yang–Mills condicional. | Certificado |
 | `Consultas_Comprimidas_Ecuacion_SAT.pdf` | Consultas comprimidas sobre la Ecuación SAT. Versión final en español del manuscrito de trabajo. | Trabajo |
 | `Compressed_Queries_on_the_SAT_Equation.pdf` | Compressed Queries on the SAT Equation. Final English edition of the working paper. | Working paper |
-| `Compilacion_Hibrida_Por_Regiones.pdf` | Compilación heterogénea por regiones. Nota técnica complementaria, release candidate. | RC |
+| `Complejidad_Representaciones_Ecuacion_SAT.pdf` | Complejidad de representaciones para la Ecuación SAT. Cotas superiores, inferiores y compilación híbrida. | Trabajo |
+| `Representation_Complexity_SAT_Equation.pdf` | Representation Complexity of the SAT Equation. Upper bounds, lower bounds, and hybrid compilation. | Working paper |
 | `PEER_REVIEW.md` | Revisión matemática por pares de los trece documentos certificados / Mathematical peer review of the thirteen certified documents. | Informe |
 | `DISCLAMER.md` | Aviso del autor, alcance, asistencia de IA y perspectiva sobre la IA y la investigación / Author's disclaimer, scope, AI assistance, and perspective on AI and research. | Aviso |
 | `LICENSE.txt` | Licencia / License. | Legal |
@@ -92,9 +97,9 @@ La auditoría de los trece documentos certificados está en [`PEER_REVIEW.md`](P
 
 The audit of the thirteen certified documents is in [`PEER_REVIEW.md`](PEER_REVIEW.md). Every theorem, definition, and proof was reviewed, with independent numerical or symbolic verification and adversarial audits where needed.
 
-Las publicaciones de trabajo quedan fuera de esa auditoría. El artículo bilingüe solo cuenta con una revisión simple; la nota de compilación heterogénea es un release candidate.
+Las publicaciones de trabajo quedan fuera de esa auditoría. El artículo bilingüe solo cuenta con una revisión simple; la nota sobre complejidad de representaciones es un manuscrito de trabajo.
 
-The work-in-progress publications are outside that audit. The bilingual paper has only had a simple review; the heterogeneous-compilation note is a release candidate.
+The work-in-progress publications are outside that audit. The bilingual paper has only had a simple review; the note on representation complexity is a working manuscript.
 
 ---
 

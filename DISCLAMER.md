@@ -61,3 +61,41 @@
 > And unlike an open problem, creating knowledge is something an AI cannot do, where everything it regurgitates are recombinations of the knowledge/axioms of its corpus.
 >
 > Human value still lies in that: in creating, in bringing from the absolute nothing something that is neither recombination nor direct consequence of the already handled, exhausted, and sterile knowledge of the past.
+
+---
+
+## Una perspectiva sobre la IA y la investigación
+
+Cualquier forma de inteligencia artificial puede entenderse como una clausura deductiva sobre un espacio axiomático. Ese espacio no es otro que el corpus de entrenamiento; la clausura, por su parte, es el conjunto de todos los teoremas que de él se derivan, del mismo modo que una teoría matemática se despliega a partir de sus axiomas fundacionales.
+
+Bajo esta luz, la resolución de problemas abiertos se revela como una simple tarea de minería sobre ese espacio clausurado. Se trata, eso sí, de una clausura difusa, nunca exacta; pero no por ello menos inalcanzable desde un prompt aislado. El grado de saturación de ese dominio es, en definitiva, el que dicta su calidad.
+
+Para las matemáticas, la IA viene a ser un nuevo bitcoin, una mina de algún mineral exótico. La matemática tradicional, observada desde este prisma, se reduce a una forma de prospección y extracción. Sin embargo, nuestro oficio como matemáticos no es minar, sino extender esos dominios: se trata de crear conocimiento ortogonal a la clausura, de generar indecidibles, de postular axiomas que sean independientes del corpus primigenio. Dicho de otro modo, debemos emplear los teoremas de Gödel como brújula para la investigación, navegando siempre hacia lo que el sistema actual no puede demostrar por sí mismo.
+
+Cada descubrimiento que logramos engrosa el corpus original; la clausura se agranda, y entonces una nueva IA podrá asomarse a ese territorio expandido.
+
+La curvatura epistémica —que en términos prácticos encarna los teoremas de Gödel, pero extendida a todo ámbito que conjugue sintaxis y semántica— nos otorga una certeza inquebrantable: jamás alcanzaremos una solidez tan perfecta que nos vuelva prescindibles. Siempre habrá algo ahí fuera, agazapado en la periferia del conocimiento actual, esperando ser descubierto.
+
+Porque todo lo que realmente importa vive allí donde la curvatura epistémica no es cero, donde el saber no es derivable de ZFC. La IA es el ariete que nos permite avanzar siglos en cuestión de segundos, explotando una clausura que ya existía, latente, aguardando a ser minada.
+
+Los matemáticos, armados con estas herramientas, estamos llamados a salir de la zona de confort deductivo para conquistar el inconmensurable y vasto territorio de lo que desconocemos, y ni siquiera sabemos que desconocemos.
+
+Bienvenidos al futuro de la exploración intelectual.
+
+## A Perspective on AI and Research
+
+Any form of artificial intelligence can be understood as a deductive closure over an axiomatic space. That space is none other than the training corpus; the closure, in turn, is the set of all theorems derivable from it—just as a mathematical theory unfolds from its foundational axioms.
+
+In this light, solving open problems reveals itself as a mere mining operation within that closed space. It is a fuzzy closure, never exact, yet no less inaccessible from a solitary prompt. The degree of saturation of that domain ultimately dictates its quality.
+
+For mathematics, AI is a new kind of Bitcoin, a vein of some exotic mineral. Traditional mathematics, viewed through this lens, reduces to prospecting and extraction. Yet our craft as mathematicians is not to mine, but to extend those domains: to create knowledge orthogonal to the closure, to generate undecidables, to posit axioms independent of the primal corpus. In other words, we must employ Gödel's theorems as a compass for research, always sailing toward what the current system cannot prove by itself.
+
+Every discovery we achieve enriches the original corpus; the closure expands, and a new AI can then peer into that expanded territory.
+
+Epistemic curvature—which, in practical terms, embodies Gödel's theorems, yet extends to every realm that combines syntax and semantics—grants us an unshakeable certainty: we will never attain such perfect solidity that we become disposable. There will always be something out there, lurking at the periphery of current knowledge, waiting to be uncovered.
+
+Because everything of true importance lives where epistemic curvature is non-zero, where knowledge is not derivable from ZFC. AI is the battering ram that allows us to advance centuries in seconds, exploiting a closure that already existed, latent, awaiting its miner.
+
+Armed with these tools, mathematicians are called to step out of the deductive comfort zone and conquer the immeasurable, vast territory of what we do not know—and do not even know we do not know.
+
+Welcome to the future of intellectual exploration.

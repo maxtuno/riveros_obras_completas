@@ -1,251 +1,103 @@
-# Obras Completas — Oscar Riveros / Complete Works — Oscar Riveros
+# Obras Completas — Oscar Riveros
+## Complete Works — Oscar Riveros
+
+Compilación bilingüe de la investigación matemática de Oscar Riveros: trece documentos con revisión por pares certificada y dos ediciones —español e inglés— de un manuscrito de trabajo sobre consultas a la Ecuación SAT. Incluye la nota unificadora del Vol. I, el informe de revisión por pares, el aviso del autor y la licencia.
+
+Bilingual compilation of Oscar Riveros's mathematical research: thirteen peer-reviewed documents and two editions —Spanish and English— of a working paper on queries to the SAT Equation. Includes the Vol. I unifying note, the peer-review report, the author's disclaimer, and the license.
 
 ---
 
 ## Documento destacado / Featured paper
 
 ### Consultas comprimidas sobre la Ecuación SAT
+### Compressed Queries on the SAT Equation
 
-**bit, rank, select y oráculos de conteo para CNF arbitrarias**
+**bit, rank, select y oráculos de conteo para CNF arbitrarias**  
+**bit, rank, select, and counting oracles for arbitrary CNFs**
 
-Oscar Riveros — Manuscrito de trabajo, 27 de octubre de 2026
+Oscar Riveros — Versión final del manuscrito de trabajo, 28 de octubre de 2026  
+Final working-manuscript version, October 28, 2026
 
-**[Leer el PDF completo / Read the full PDF](Consultas_Comprimidas_Ecuacion_SAT.pdf)**
+| Edición | PDF |
+|---------|-----|
+| Español | **[Consultas_Comprimidas_Ecuacion_SAT.pdf](Consultas_Comprimidas_Ecuacion_SAT.pdf)** |
+| English | **[Compressed_Queries_on_the_SAT_Equation.pdf](Compressed_Queries_on_the_SAT_Equation.pdf)** |
 
-**Español.** Este manuscrito estudia cómo consultar el entero de `2ⁿ` bits `S(F)` de la Ecuación SAT sin materializarlo. Separa la consulta puntual `bit(k) = 1 − F(assign(k))`, de coste `O(m)`, de las consultas agregadas `rank`, `select`, `#SAT` y el muestreo uniforme. Demuestra que una cobertura disjunta de la región prohibida equivale exactamente a una DF-CNF; que una DSOP de tamaño `K` responde `rank` en `O(nK)` y `select` en `O(n²K)` sin construir la tabla de verdad; que `rank` se reduce a conteo exacto de modelos; y combina ambas rutas en un motor híbrido. Analiza además ZDD, Fourier, oráculos estocásticos y coberturas afines (ADSOP), formula la instanciación subexponencial como la hipótesis H-ETH y explica por qué el motor no implica `P = NP`. Incluye un prototipo ADSOP validado para `n ≤ 10` y una evaluación preliminar frente a Kerberos/BASILISK.
+**Español.** El artículo estudia cómo consultar el entero `S(F)` de `2ⁿ` bits de la Ecuación SAT sin materializarlo, y qué parte de esa maquinaria puede acercarse al problema `P` frente a `NP`. Separa la consulta puntual `bit(k) = 1 − F(assign(k))`, de coste `O(m)`, de las consultas agregadas `rank`, `select`, `#SAT` y el muestreo uniforme. Demuestra la equivalencia exacta entre coberturas disjuntas de la región prohibida y DF-CNF; construye un motor `rank`–`select` sobre una DSOP de tamaño `K` con coste `O(nK)` y `O(n²K)` sin materializar la tabla; reduce `rank` a conteo exacto de modelos; y combina ambas rutas en un algoritmo híbrido. Su contribución conceptual es el mapa de barreras: un compilador uniforme polinómico de cualquiera de estas representaciones implicaría `#SAT ∈ FP` y, por Toda, `PH = P`. Corrige el teorema de consultas afines, incorpora el ejemplo de Sasao —discutido por Bernasconi, Ciriani, Luccio y Pagli— que descarta a la DSOP como ruta universal, y formula un programa explícito hacia `P = NP` (cotas para ADSOP, puertas traseras afines, compilación directa a ZDD y Fourier, verificación de certificados). La instanciación subexponencial se mantiene como la hipótesis H-ETH y se demuestra condicionalmente. La evaluación experimental, preliminar, confirma que el compilador —no el motor de consulta— es el cuello de botella.
 
-**English.** This working paper studies how to query the `2ⁿ`-bit integer `S(F)` of the SAT Equation without materializing it. It separates the point query `bit(k) = 1 − F(assign(k))`, costing `O(m)`, from the aggregate queries `rank`, `select`, `#SAT`, and uniform sampling. It proves that a disjoint cover of the forbidden region is exactly equivalent to a DF-CNF; that a size-`K` DSOP answers `rank` in `O(nK)` and `select` in `O(n²K)` without building the truth table; that `rank` reduces to exact model counting; and it combines both routes into a hybrid engine. It also analyzes ZDDs, Fourier spectra, stochastic oracles, and affine covers (ADSOP), states the subexponential instantiation as hypothesis H-ETH, and explains why the engine does not imply `P = NP`. It includes an ADSOP prototype validated for `n ≤ 10` and a preliminary evaluation against Kerberos/BASILISK.
+**English.** The paper studies how to query the `2ⁿ`-bit integer `S(F)` of the SAT Equation without materializing it, and how much of that machinery can be brought to bear on `P` versus `NP`. It separates the point query `bit(k) = 1 − F(assign(k))`, costing `O(m)`, from the aggregate queries `rank`, `select`, `#SAT`, and uniform sampling. It proves the exact equivalence between disjoint covers of the forbidden region and DF-CNFs; builds a `rank`–`select` engine over a size-`K` DSOP with cost `O(nK)` and `O(n²K)` without materializing the truth table; reduces `rank` to exact model counting; and combines both routes into a hybrid algorithm. Its conceptual contribution is the barrier map: a uniform polynomial compiler for any of these representations would imply `#SAT ∈ FP` and, by Toda's theorem, `PH = P`. It corrects the affine-query theorem, incorporates the Sasao example —as discussed by Bernasconi, Ciriani, Luccio, and Pagli— ruling out DSOP as a universal route, and states an explicit research program toward `P = NP` (ADSOP lower bounds, affine backdoors, direct ZDD and Fourier compilation, certificate verification). The subexponential instantiation is kept as hypothesis H-ETH and proved conditionally. The preliminary experimental evaluation confirms that the compiler —not the query engine— is the bottleneck.
 
-> **Estado / Status.** Documento de trabajo en proceso: puede ampliarse y actualizarse. Se publica con el propósito de compartir conocimiento en tiempo real. Solo se garantiza una revisión de pares simple; la revisión adversarial y las revisiones adicionales de este documento corren por cuenta del lector. No debe tratarse como un resultado establecido ni como parte del corpus certificado en `PEER_REVIEW.md`.
+> **Estado / Status.** Versión final de un manuscrito de trabajo, sujeta a futuras actualizaciones. Se publica con el propósito de compartir conocimiento en tiempo real. Solo se garantiza una revisión de pares simple; la revisión adversarial y las revisiones adicionales de este documento corren por cuenta del lector. No forma parte del corpus certificado en `PEER_REVIEW.md`.
 >
-> **English.** Working paper in progress: it may grow and be updated. It is published to share knowledge in real time. Only a simple peer review is guaranteed; adversarial and further reviews of this document are the reader's responsibility. It should not be treated as an established result or as part of the certified corpus in `PEER_REVIEW.md`.
-
----
-
-## Una perspectiva sobre la IA y la investigación
-
-Cualquier forma de inteligencia artificial puede entenderse como una clausura deductiva sobre un espacio axiomático. Ese espacio no es otro que el corpus de entrenamiento; la clausura, por su parte, es el conjunto de todos los teoremas que de él se derivan, del mismo modo que una teoría matemática se despliega a partir de sus axiomas fundacionales.
-
-Bajo esta luz, la resolución de problemas abiertos se revela como una simple tarea de minería sobre ese espacio clausurado. Se trata, eso sí, de una clausura difusa, nunca exacta; pero no por ello menos inalcanzable desde un prompt aislado. El grado de saturación de ese dominio es, en definitiva, el que dicta su calidad.
-
-Para las matemáticas, la IA viene a ser un nuevo bitcoin, una mina de algún mineral exótico. La matemática tradicional, observada desde este prisma, se reduce a una forma de prospección y extracción. Sin embargo, nuestro oficio como matemáticos no es minar, sino extender esos dominios: se trata de crear conocimiento ortogonal a la clausura, de generar indecidibles, de postular axiomas que sean independientes del corpus primigenio. Dicho de otro modo, debemos emplear los teoremas de Gödel como brújula para la investigación, navegando siempre hacia lo que el sistema actual no puede demostrar por sí mismo.
-
-Cada descubrimiento que logramos engrosa el corpus original; la clausura se agranda, y entonces una nueva IA podrá asomarse a ese territorio expandido.
-
-La curvatura epistémica —que en términos prácticos encarna los teoremas de Gödel, pero extendida a todo ámbito que conjugue sintaxis y semántica— nos otorga una certeza inquebrantable: jamás alcanzaremos una solidez tan perfecta que nos vuelva prescindibles. Siempre habrá algo ahí fuera, agazapado en la periferia del conocimiento actual, esperando ser descubierto.
-
-Porque todo lo que realmente importa vive allí donde la curvatura epistémica no es cero, donde el saber no es derivable de ZFC. La IA es el ariete que nos permite avanzar siglos en cuestión de segundos, explotando una clausura que ya existía, latente, aguardando a ser minada.
-
-Los matemáticos, armados con estas herramientas, estamos llamados a salir de la zona de confort deductivo para conquistar el inconmensurable y vasto territorio de lo que desconocemos, y ni siquiera sabemos que desconocemos.
-
-Bienvenidos al futuro de la exploración intelectual.
-
----
-
-## A Perspective on AI and Research
-
-Any form of artificial intelligence can be understood as a deductive closure over an axiomatic space. That space is none other than the training corpus; the closure, in turn, is the set of all theorems derivable from it—just as a mathematical theory unfolds from its foundational axioms.
-
-In this light, solving open problems reveals itself as a mere mining operation within that closed space. It is a fuzzy closure, never exact, yet no less inaccessible from a solitary prompt. The degree of saturation of that domain ultimately dictates its quality.
-
-For mathematics, AI is a new kind of Bitcoin, a vein of some exotic mineral. Traditional mathematics, viewed through this lens, reduces to prospecting and extraction. Yet our craft as mathematicians is not to mine, but to extend those domains: to create knowledge orthogonal to the closure, to generate undecidables, to posit axioms independent of the primal corpus. In other words, we must employ Gödel's theorems as a compass for research, always sailing toward what the current system cannot prove by itself.
-
-Every discovery we achieve enriches the original corpus; the closure expands, and a new AI can then peer into that expanded territory.
-
-Epistemic curvature—which, in practical terms, embodies Gödel's theorems, yet extends to every realm that combines syntax and semantics—grants us an unshakeable certainty: we will never attain such perfect solidity that we become disposable. There will always be something out there, lurking at the periphery of current knowledge, waiting to be uncovered.
-
-Because everything of true importance lives where epistemic curvature is non-zero, where knowledge is not derivable from ZFC. AI is the battering ram that allows us to advance centuries in seconds, exploiting a closure that already existed, latent, awaiting its miner.
-
-Armed with these tools, mathematicians are called to step out of the deductive comfort zone and conquer the immeasurable, vast territory of what we do not know—and do not even know we do not know.
-
-Welcome to the future of intellectual exploration.
-
----
-
-Compilación digital de las investigaciones de Oscar Riveros: doce manuscritos originales, sus ediciones en español, la nota unificadora Conexiones entre el Teorema de la Ecuación SAT y COVERTRACE-SAT, su revisión matemática por pares, el manuscrito de trabajo Consultas comprimidas sobre la Ecuación SAT, la nota «Una perspectiva sobre la IA y la investigación», el aviso del autor y la licencia. Edición compilada — Agosto 2026.
-
-Digital compilation of Oscar Riveros's research: twelve original manuscripts, their Spanish editions, the unifying note Connections between the SAT Equation Theorem and COVERTRACE-SAT, their mathematical peer review, the working paper Compressed Queries on the SAT Equation, the note «A Perspective on AI and Research», the author's disclaimer, and the license. Compiled edition — August 2026.
+> Final version of a working manuscript, subject to future updates. It is published to share knowledge in real time. Only a simple peer review is guaranteed; adversarial and further reviews of this document are the reader's responsibility. It is not part of the certified corpus in `PEER_REVIEW.md`.
 
 ---
 
 ## Estado del repositorio / Repository status
 
-**Español:** Este repositorio contiene, en primer lugar, las obras que ya pasaron la revisión por pares. Once documentos están libres de observaciones pendientes (solo se documentan defectos menores); el octavo (Locality, Soft Causal Cones, and Informational Limits of Agency) está certificado en solidez matemática, condicionado a las correcciones editoriales obligatorias documentadas en `PEER_REVIEW.md`, y el décimo (COVERTRACE-SAT, documento unificado del Vol. I) está certificado en solidez matemática, condicionado a las correcciones obligatorias de citación. La nota unificadora Conexiones entre el Teorema de la Ecuación SAT y COVERTRACE-SAT (undécimo documento) fue aceptada en su segunda ronda de revisión sin observaciones pendientes, y el duodécimo documento (Epistemic Closure Nets) fue certificado en solidez con cuatro correcciones obligatorias (D1–D4), ya aplicadas y re-verificadas — sin correcciones pendientes, y el decimotercero (Physical Observer Geometry, Protocol Holonomy, Order by Non-Closure, and Spectral Obstructions) fue aceptado en su segunda ronda de revisión, matemáticamente correcto y en estado publicable — sin correcciones pendientes. El resto de las obras del autor —el volumen compilado completo, los manuscritos complementarios y los ejercicios resueltos— se encuentra en revisión. El repositorio se irá actualizando a medida que cada obra quede completamente libre de observaciones.
+**Español.**
+- **Trece documentos certificados** con revisión matemática por pares; el informe completo, con veredictos, hallazgos y correcciones, está en [`PEER_REVIEW.md`](PEER_REVIEW.md).
+- **Dos ediciones de un manuscrito de trabajo** (español e inglés) sobre consultas a la Ecuación SAT. Quedan fuera del corpus certificado: solo cuentan con una revisión de pares simple, y sus revisiones adicionales corren por cuenta del lector.
+- El resto de las obras del autor —volumen compilado, manuscritos complementarios y ejercicios resueltos— se encuentra en revisión.
 
-Además se incluye el manuscrito de trabajo **Consultas comprimidas sobre la Ecuación SAT** como documento abierto y en proceso. No forma parte del corpus certificado: solo se garantiza una revisión de pares simple, y sus revisiones adversariales o adicionales corren por cuenta del lector.
-
-**English:** This repository contains, first, the works that have already passed peer review. Eleven documents are free of pending observations (only minor defects are documented); the eighth (Locality, Soft Causal Cones, and Informational Limits of Agency) is certified mathematically sound, conditioned on the mandatory editorial corrections documented in `PEER_REVIEW.md`, and the tenth (COVERTRACE-SAT, unified document of Vol. I) is certified mathematically sound, conditioned on the mandatory citation corrections. The unifying note Connections between the SAT Equation Theorem and COVERTRACE-SAT (eleventh document) was accepted in its second review round with no pending observations, and the twelfth document (Epistemic Closure Nets) was certified sound with four mandatory corrections (D1–D4), already applied and re-verified — with no pending corrections, and the thirteenth (Physical Observer Geometry, Protocol Holonomy, Order by Non-Closure, and Spectral Obstructions) was accepted in its second review round, mathematically correct and in publishable state — with no pending corrections. The rest of the author's works —the full compiled volume, the complementary manuscripts, and the solved exercises— is under review. The repository will be updated as each work becomes completely free of observations.
-
-The working paper **Compressed Queries on the SAT Equation** is also included as an open, in-progress document. It is not part of the certified corpus: only a simple peer review is guaranteed, and adversarial or further reviews of this document are the reader's responsibility.
-
----
-
-## Español
-
-### Contenido del repositorio
-
-| Archivo | Contenido |
-|---------|-----------|
-| `A_Unique_Encoding_of_Satisfying_Assignments.pdf` | A Unique Encoding of Satisfying Assignments for Balanced CNFs |
-| `Autorreferencia Segura - Riveros.pdf` | Autorreferencia Segura en Familias Dinámicas de Estados |
-| `coherent_flow_companion.pdf` | Coherent Flow: A Companion Note to Epistemic Geometry |
-| `continuous_epistemic_geometry.pdf` | Continuous Epistemic Geometry: cGCNF, Disjoint Compilation, and Black-Hole Observables |
-| `Epistemic_Geometry_of_Closure - Riveros.pdf` | Epistemic Geometry of Closure: SCE-IM, Coherent Flow, and Operational Completeness |
-| `epistemic_geometry_riveros.pdf` | Epistemic Geometry: Finite Verification, Curvature, and Structural Obstructions Across Logic, Computation, and Physics |
-| `sat-equation-generalized.pdf` | A Generalization of the SAT Equation Theorem to Arbitrary CNF Formulas via Bitwise OR Encoding |
-| `Locality_Soft_Causal_Cones_and_Informati.pdf` | Locality, Soft Causal Cones, and Informational Limits of Agency |
-| `tcoc_riveros.pdf` | Teoría de Conservación de Óptimos y Complejidad |
-| `COVERTRACE_SAT_Disjoint_Subcube_Unificado.pdf` | COVERTRACE-SAT: compilación de conocimiento por subcubos disjuntos (Vol. I, documento unificado) |
-| `SAT_Equation_ES.pdf` | El Teorema de la Ecuación SAT y su Generalización (edición en español de los manuscritos 1 y 7) |
-| `COVERTRACE_SAT_Disjoint_Subcube_Unificado_ES.pdf` | COVERTRACE-SAT como Compilación de Conocimiento por Subcubos Disjuntos (Vol. I, traducción íntegra al español) |
-| `Conexiones_SAT_Equation_COVERTRACE_ES.pdf` | Conexiones entre el Teorema de la Ecuación SAT y COVERTRACE-SAT (nota unificadora) |
-| `Epistemic_Closure_Net - Riveros.pdf` | Epistemic Closure Nets: Curvature, Holonomy, Certification, and Meta-Closure in an Expansive Network Formalism |
-| `Physical_Observer_Geometry_LaTeX_v2.pdf` | Physical Observer Geometry, Protocol Holonomy, Order by Non-Closure, and Spectral Obstructions |
-| `Consultas_Comprimidas_Ecuacion_SAT.pdf` | Consultas comprimidas sobre la Ecuación SAT: bit, rank, select y oráculos de conteo para CNF arbitrarias (manuscrito de trabajo) |
-| `PEER_REVIEW.md` | Revisión matemática por pares de los trece documentos certificados |
-| `DISCLAMER.md` | Aviso sobre la asistencia de IA (español e inglés) |
-| `LICENSE.txt` | Licencia |
-
-### Los documentos
-
-**1. A Unique Encoding of Satisfying Assignments for Balanced CNFs**
-Teorema de la Ecuación SAT: toda fórmula CNF balanceada sobre `n` variables Booleanas queda caracterizada unívocamente por el número `S = Σ_C 2^{T(C)}`, donde `T(C)` es el número binario del vector de signos de la cláusula `C`. Escrito con al menos `2ⁿ` bits, la expansión binaria de `S` codifica exactamente la tabla de verdad de la fórmula: un `1` marca una asignación que no satisface `F` y un `0` una que sí la satisface.
-
-**2. Autorreferencia Segura en Familias Dinámicas de Estados**
-Teoría axiomática de la autorreferencia segura: velocidad crítica local `ν_c` y su uniformidad, condiciones de divergencia global y alcanzable, invariancia de tubos seguros móviles bajo política ISS, estabilidad práctica exponencial y el criterio de no-retorno mediante conjuntos invariantes disjuntos del captor.
-
-**3. Coherent Flow: A Companion Note to Epistemic Geometry**
-Nota complementaria del programa de Geometría Epistémica: islas coherentes y descenso determinista con terminación finita, balance detallado del kernel Metropolis–Hastings, curvatura epistémica KL con su caso separable `I(A;B)`, identidad exacta de Lyapunov para el flujo coherente y equilibrio único en la hoja de interfaz.
-
-**4. Continuous Epistemic Geometry: cGCNF, Disjoint Compilation, and Black-Hole Observables**
-Semántica continua para fórmulas CNF: apertura de los conjuntos de modelos, estimación Monte Carlo con cotas de Hoeffding, compilación por subcubos disjuntos con su barrera de fragmentación `2ⁿ`, y transferencia por bancos finitos `ε-net` con margen.
-
-**5. Epistemic Geometry of Closure: SCE-IM, Coherent Flow, and Operational Completeness**
-Sistema SCE-IM: curvatura epistémica con estabilidad Lipschitz e invariancia de signo, completitud operacional de zippers, completitud con recursos y estabilidad de la curvatura acotada; cierra el programa con las redes de cierre epistémico.
-
-**6. Epistemic Geometry: Finite Verification, Curvature, and Structural Obstructions Across Logic, Computation, and Physics**
-Marco unificador de la Geometría Epistémica sobre cinco líneas técnicas: física discreta verificable por SAT (GCNF, Gauss–Bonnet discreto, conos causales Booleanos), la ecuación SAT, compilación disjunta COVERTRACE con barrera de paridad y colapso PH condicional, curvatura epistémica con el principio de refinamiento derivacional (DRP) y la obstrucción gödeliana, Espacio Métrico en Capas (LMS), localidad y agencia, y los teoremas de unificación: el trilema de verificación física finita (Teo. 8.7) y la obstrucción unificada (Teo. 8.8).
-
-**7. A Generalization of the SAT Equation Theorem to Arbitrary CNF Formulas via Bitwise OR Encoding**
-Generalización del Teorema de la Ecuación SAT de fórmulas balanceadas a fórmulas CNF arbitrarias: cada cláusula aporta una máscara binaria que pone un `1` en cada posición correspondiente a una asignación que la falsifica, y el OR bit a bit de todas las máscaras produce el entero `S = OR_j OR_{M′⊆MC_j} 2^{B(C_j) + Σ_{i∈M′} 2^{N−i}}`, cuya expansión binaria con `2^N` bits codifica exactamente la tabla de verdad de `F` sin acarreos, aun cuando cláusulas distintas compartan asignaciones falsificantes.
-
-**8. Locality, Soft Causal Cones, and Informational Limits of Agency**
-Esqueleto axiomático (desarrollo no lineal) para control local e indistinguibilidad remota: cota de Lieb–Robinson de doble suma con refinamiento geométrico `K_µ`, identidad de Duhamel a dos tiempos con flujo causal en el tiempo restante `T−s`, supresión exponencial de la influencia y la agencia fuera del cono causal blando, cierre de la capacidad de comunicación vía Holevo y Fannes–Audenaert bajo indistinguibilidad geométrica, y reglas de responsabilidad remota que respetan los límites causales salvo control «efectivamente omnipotente».
-
-**9. Teoría de Conservación de Óptimos y Complejidad**
-Teoría local para estudiar cuándo una representación geométrica o alternativa de una familia de problemas de optimización discreta preserva simultáneamente el óptimo combinatorio y la complejidad temporal polinomial: conservación exacta del conjunto de minimizadores (Thm 5.1), transferencia de complejidad bajo exactitud fuerte (Thm 5.3), transporte de óptimos entre representaciones afínmente equivalentes (Prop. 6.5, Cor. 6.6), criterio lineal necesario y suficiente —no constructivo en general— de existencia de levantamientos exactos de costos (Thm 7.2), cambio de representación correctamente tipado (Thm 8.13) y el esquema suficiente que aísla la cadena completa de hipótesis de representación exacta, fidelidad polinomial, extracción fuerte y puente formal hacia optimización exacta para convertir el programa de los pedigree polytopes en un teorema del tipo `P = NP` (Thm 9.5), con la instanciación en STSP explícitamente abierta.
-
-**10. COVERTRACE-SAT como Compilación de Conocimiento por Subcubos Disjuntos (Documento Unificado, Vol. I)**
-Documento unificado del Vol. I en dos partes: Parte I (inglés), COVERTRACE-SAT as Disjoint-Subcube Knowledge Compilation —fragmentación en el peor caso, colapso condicional de PH y conexiones con GCT—; Parte II (español), Extensiones al Marco de Compilación por Subcubos Disjuntos —fragmentación, resolución arbórea, espectro de Fourier y representaciones poliédricas—. Contenido: compilación COVERTRACE de ¬F en subcubos disjuntos con conteo exacto #SAT y extracción de testigos, cota inferior de paridad `2^{n−1}`, colapso condicional `PH = P` y certificados UNSAT, extensión afín, lema volumétrico, desigualdad `S_part ≤ S_tr` con contraejemplo explícito verificado `6 < 7`, cota espectral de Fourier–Walsh, certificado poliédrico y delimitación honesta del Problema 9.6.
-
-**Ediciones en español.** `SAT_Equation_ES.pdf` — *El Teorema de la Ecuación SAT y su Generalización*: traducción al español de los manuscritos 1 y 7 en un solo volumen. `COVERTRACE_SAT_Disjoint_Subcube_Unificado_ES.pdf` — *COVERTRACE-SAT como Compilación de Conocimiento por Subcubos Disjuntos con sus Extensiones: Fragmentación, Resolución Arbórea, Espectro de Fourier y Representaciones Poliédricas*: traducción íntegra al español del documento unificado del Vol. I.
-
-**11. Conexiones entre el Teorema de la Ecuación SAT y COVERTRACE-SAT (nota unificadora)**
-Nota unificadora del Vol. I: demuestra que el Teorema de la Ecuación SAT (2025) y COVERTRACE-SAT (2026) codifican el mismo objeto, la región prohibida `U(F) ⊆ Ω_n` de una fórmula CNF: el primero como bitmask entera densa de `2ⁿ` bits y el segundo como familia disjunta de subcubos (DSOP de ¬F). Establece la identidad fundamental `popcnt(S(F)) = |U(F)| = Σ vol(u)`, la dualidad acarreo–disyunción, el lema de volteo XOR `t(k⊕2^j) = 1−t(k)`, y demuestra que en el caso extremal de la paridad el entero de la Ecuación SAT es el número de Thue–Morse, con `popcnt(S_n) = 2^(n−1) = χ_⊔(O_n)`, igualando la cota espectral de Fourier–Walsh de la Parte II. Compara las representaciones densa y dispersa y reformula los problemas abiertos del corpus en el lenguaje de la bitmask. Todas las identidades centrales fueron verificadas por computación exacta; la nota fue aceptada en su segunda ronda de revisión por pares.
-
-**12. Epistemic Closure Nets: Curvature, Holonomy, Certification, and Meta-Closure in an Expansive Network Formalism**
-Red expansiva que cierra el programa de Geometría Epistémica: red de clausura tipada sobre sistemas SCE-IM (C1), distinción entre holonomía índice-trivial y holonomía de nivel programa (C2), cociclos de atlas que obstruyen la trivialización global (C3), transferencia de bancos finitos con estimadores auditables (C4), nodos experimentales verificables P1–P5 con cotas de Hoeffding, patrones de falsificación y pre-registro (C5), y el nodo artefacto P1★ reproducible (C6). Certificado en solidez tras revisión multiagente de dos rondas con auditoría adversarial y verificación numérica independiente; las cuatro correcciones obligatorias (D1–D4) fueron aplicadas y re-verificadas (Adenda §7 del informe), sin correcciones pendientes.
-
-**13. Physical Observer Geometry, Protocol Holonomy, Order by Non-Closure, and Spectral Obstructions**
-Geometría del observador físico: holonomía de protocolo como defecto global de transporte (caracterizada exactamente; no trivial en el modelo binario con valor exacto 2), orden por no-clausura, obstrucciones espectrales y vector de obstrucción computado en el modelo binario (no trivialización global en toda escala; cociente con ≥ 2 clases; orden estricto); la reducción de Yang–Mills permanece condicional (Puentes A y B como conjeturas explícitas). Aceptado en su segunda ronda de revisión por pares.
-
-**14. Consultas comprimidas sobre la Ecuación SAT: bit, rank, select y oráculos de conteo para CNF arbitrarias (manuscrito de trabajo)**
-Estudia cómo consultar el entero `S(F)` de `2ⁿ` bits sin materializarlo. La consulta puntual `bit(k) = 1 − F(assign(k))` cuesta `O(m)`; la dificultad está en las consultas agregadas `rank`, `select`, `#SAT` y el muestreo uniforme. Demuestra la equivalencia exacta entre coberturas disjuntas de la región prohibida y DF-CNF; construye un motor `rank`–`select` sobre una DSOP de tamaño `K` con coste `O(nK)` y `O(n²K)`; reduce `rank` a conteo exacto de modelos mediante la restricción de prefijo; y combina ambas rutas en un algoritmo híbrido. Analiza ZDD, el espectro de Walsh–Hadamard, oráculos estocásticos (muestreo directo, hashing XOR y Karp–Luby) y coberturas por subespacios afines (ADSOP), formula la instanciación subexponencial como la hipótesis H-ETH y precisa por qué el motor no implica `P = NP`. Incluye un prototipo ADSOP validado para `n ≤ 10` y una evaluación preliminar frente a Kerberos/BASILISK. **Estado:** manuscrito de trabajo en proceso, sujeto a ampliación y actualización; solo cuenta con una revisión de pares simple, no con la auditoría adversarial del corpus certificado. Se publica para compartir conocimiento en tiempo real y sus revisiones adicionales corren por cuenta del lector.
-
-### Revisión por pares — `PEER_REVIEW.md`
-
-Auditoría matemática exhaustiva de los trece documentos: cada documento fue leído íntegramente y verificado teorema por teorema, definición por definición y prueba por prueba (sobre extracciones `pdftotext -layout -enc UTF-8` de los PDFs originales; la revisión del octavo incluye además verificación numérica independiente y auditoría adversarial, la del noveno verificación simbólica asistida por computadora (SymPy) y auditoría adversarial, la del décimo revisión multiagente, verificación computacional independiente (Python 3.13) y auditorías adversariales, la del undécimo —nota unificadora Conexiones entre el Teorema de la Ecuación SAT y COVERTRACE-SAT— dos rondas de revisión con re-verificación computacional independiente de todas las identidades en aritmética exacta, y la del duodécimo —Epistemic Closure Nets— revisión multiagente en dos rondas con auditoría adversarial, verificación numérica independiente del nodo P1★ (Python 3.13/numpy) y re-verificación post-corrección, y la del decimotercero —Physical Observer Geometry, Protocol Holonomy, Order by Non-Closure, and Spectral Obstructions— segunda ronda de revisión sobre la versión corregida con re-verificación simbólica (SymPy) y auditorías adversariales cláusula por cláusula). Veredicto general: los trece documentos son matemáticamente correctos y rigurosos, sin errores fatales. Once están libres de observaciones pendientes (solo defectos menores documentados); el octavo (Locality, Soft Causal Cones, and Informational Limits of Agency) está certificado en solidez matemática, condicionado a las correcciones editoriales obligatorias de integridad y atribución documentadas en la revisión, el décimo (COVERTRACE-SAT, documento unificado del Vol. I) está certificado en solidez matemática, condicionado a las correcciones obligatorias de citación, la nota unificadora (undécimo documento) fue aceptada en su segunda ronda sin observaciones pendientes, y el duodécimo (Epistemic Closure Nets) está certificado en solidez, con las cuatro correcciones obligatorias (D1–D4) aplicadas y re-verificadas — sin correcciones pendientes, y el decimotercero (Physical Observer Geometry, Protocol Holonomy, Order by Non-Closure, and Spectral Obstructions) fue aceptado en su segunda ronda de revisión, matemáticamente correcto y en estado publicable — sin correcciones pendientes. El manuscrito de trabajo Consultas comprimidas sobre la Ecuación SAT queda fuera de esta auditoría: solo cuenta con una revisión de pares simple, y sus revisiones adicionales corren por cuenta del lector.
-
-### Aviso — `DISCLAMER.md`
-
-Declaración del autor sobre el papel de la IA en la redacción y la revisión de estas obras: la matemática como lenguaje falseable e independiente de la interpretación, la curvatura entre sintaxis y semántica que estudia la Geometría Epistémica, y el valor del conocimiento humano frente a la recombinación del corpus. Disponible en español e inglés.
-
-### Licencia
-
-© 2025–2026 Oscar Riveros. Todos los derechos reservados. Ver [LICENSE.txt](LICENSE.txt).
+**English.**
+- **Thirteen certified documents** with mathematical peer review; the full report, including verdicts, findings, and corrections, is in [`PEER_REVIEW.md`](PEER_REVIEW.md).
+- **Two editions of a working paper** (Spanish and English) on queries to the SAT Equation. They are outside the certified corpus: they have only a simple peer review, and further reviews are the reader's responsibility.
+- The rest of the author's works —compiled volume, complementary manuscripts, and solved exercises— are under review.
 
 ---
 
-## English
+## Contenido del repositorio / Repository contents
 
-### Repository contents
+**Estado / Status:** *Certificado / Certified* = revisado por pares; *Trabajo / Working paper* = manuscrito en proceso, revisión simple.
 
-| File | Contents |
-|------|----------|
-| `A_Unique_Encoding_of_Satisfying_Assignments.pdf` | A Unique Encoding of Satisfying Assignments for Balanced CNFs |
-| `Autorreferencia Segura - Riveros.pdf` | Safe Self-Reference in Dynamic Families of States |
-| `coherent_flow_companion.pdf` | Coherent Flow: A Companion Note to Epistemic Geometry |
-| `continuous_epistemic_geometry.pdf` | Continuous Epistemic Geometry: cGCNF, Disjoint Compilation, and Black-Hole Observables |
-| `Epistemic_Geometry_of_Closure - Riveros.pdf` | Epistemic Geometry of Closure: SCE-IM, Coherent Flow, and Operational Completeness |
-| `epistemic_geometry_riveros.pdf` | Epistemic Geometry: Finite Verification, Curvature, and Structural Obstructions Across Logic, Computation, and Physics |
-| `sat-equation-generalized.pdf` | A Generalization of the SAT Equation Theorem to Arbitrary CNF Formulas via Bitwise OR Encoding |
-| `Locality_Soft_Causal_Cones_and_Informati.pdf` | Locality, Soft Causal Cones, and Informational Limits of Agency |
-| `tcoc_riveros.pdf` | Theory of Conservation of Optima and Complexity |
-| `COVERTRACE_SAT_Disjoint_Subcube_Unificado.pdf` | COVERTRACE-SAT: Disjoint-Subcube Knowledge Compilation (Vol. I, unified document) |
-| `SAT_Equation_ES.pdf` | The SAT Equation Theorem and Its Generalization (Spanish edition of manuscripts 1 and 7) |
-| `COVERTRACE_SAT_Disjoint_Subcube_Unificado_ES.pdf` | COVERTRACE-SAT as Disjoint-Subcube Knowledge Compilation (Vol. I, full Spanish translation) |
-| `Conexiones_SAT_Equation_COVERTRACE_ES.pdf` | Connections between the SAT Equation Theorem and COVERTRACE-SAT (unifying note) |
-| `Epistemic_Closure_Net - Riveros.pdf` | Epistemic Closure Nets: Curvature, Holonomy, Certification, and Meta-Closure in an Expansive Network Formalism |
-| `Physical_Observer_Geometry_LaTeX_v2.pdf` | Physical Observer Geometry, Protocol Holonomy, Order by Non-Closure, and Spectral Obstructions |
-| `Consultas_Comprimidas_Ecuacion_SAT.pdf` | Compressed Queries on the SAT Equation: bit, rank, select, and counting oracles for arbitrary CNFs (working paper) |
-| `PEER_REVIEW.md` | Mathematical peer review of the thirteen certified documents |
-| `DISCLAMER.md` | Disclaimer on AI assistance (Spanish and English) |
-| `LICENSE.txt` | License |
+| Archivo / File | Contenido / Contents | Estado / Status |
+|----------------|----------------------|-----------------|
+| `A_Unique_Encoding_of_Satisfying_Assignments.pdf` | A Unique Encoding of Satisfying Assignments for Balanced CNFs — Teorema de la Ecuación SAT para CNF balanceadas. | Certificado |
+| `Autorreferencia Segura - Riveros.pdf` | Autorreferencia Segura en Familias Dinámicas de Estados — velocidad crítica, divergencia, tubos invariantes y no-retorno. | Certificado |
+| `coherent_flow_companion.pdf` | Coherent Flow: A Companion Note to Epistemic Geometry — islas coherentes, balance detallado, curvatura KL y equilibrio único. | Certificado |
+| `continuous_epistemic_geometry.pdf` | Continuous Epistemic Geometry — semántica continua para CNF, Monte Carlo con Hoeffding, compilación disjunta y transferencia `ε-net`. | Certificado |
+| `Epistemic_Geometry_of_Closure - Riveros.pdf` | Epistemic Geometry of Closure — SCE-IM, curvatura Lipschitz, completitud de zippers y estabilidad con recursos. | Certificado |
+| `epistemic_geometry_riveros.pdf` | Epistemic Geometry: Finite Verification, Curvature, and Structural Obstructions — marco unificador, física discreta verificable y teoremas 8.7–8.8. | Certificado |
+| `sat-equation-generalized.pdf` | A Generalization of the SAT Equation Theorem to Arbitrary CNF Formulas via Bitwise OR Encoding — OR bit a bit sin acarreos. | Certificado |
+| `Locality_Soft_Causal_Cones_and_Informati.pdf` | Locality, Soft Causal Cones, and Informational Limits of Agency — cota Lieb–Robinson, Duhamel, supresión exponencial y límites de agencia. | Certificado |
+| `tcoc_riveros.pdf` | Teoría de Conservación de Óptimos y Complejidad — minimizadores, transferencia de complejidad, levantamientos exactos y esquema condicional `P = NP`. | Certificado |
+| `COVERTRACE_SAT_Disjoint_Subcube_Unificado.pdf` | COVERTRACE-SAT: compilación por subcubos disjuntos (Vol. I, documento unificado) — #SAT, cota de paridad, colapso condicional de PH, Fourier y certificado poliédrico. | Certificado |
+| `SAT_Equation_ES.pdf` | El Teorema de la Ecuación SAT y su Generalización — edición en español de los manuscritos 1 y 7. | Certificado |
+| `COVERTRACE_SAT_Disjoint_Subcube_Unificado_ES.pdf` | COVERTRACE-SAT como Compilación de Conocimiento por Subcubos Disjuntos — traducción íntegra al español del Vol. I. | Certificado |
+| `Conexiones_SAT_Equation_COVERTRACE_ES.pdf` | Conexiones entre el Teorema de la Ecuación SAT y COVERTRACE-SAT — nota unificadora: `popcnt(S(F)) = \|U(F)\| = Σ vol(u)`, dualidad acarreo–disyunción y caso paridad/Thue–Morse. | Certificado |
+| `Epistemic_Closure_Net - Riveros.pdf` | Epistemic Closure Nets — red tipada, holonomía, cociclos, bancos finitos, nodos P1–P5 y artefacto P1★. | Certificado |
+| `Physical_Observer_Geometry_LaTeX_v2.pdf` | Physical Observer Geometry — holonomía de protocolo, orden por no-clausura, obstrucciones espectrales y reducción Yang–Mills condicional. | Certificado |
+| `Consultas_Comprimidas_Ecuacion_SAT.pdf` | Consultas comprimidas sobre la Ecuación SAT — versión final en español del manuscrito de trabajo. | Trabajo |
+| `Compressed_Queries_on_the_SAT_Equation.pdf` | Compressed Queries on the SAT Equation — final English edition of the working paper. | Working paper |
+| `PEER_REVIEW.md` | Revisión matemática por pares de los trece documentos certificados / Mathematical peer review of the thirteen certified documents. | Informe |
+| `DISCLAMER.md` | Aviso del autor, alcance, asistencia de IA y perspectiva sobre la IA y la investigación / Author's disclaimer, scope, AI assistance, and perspective on AI and research. | Aviso |
+| `LICENSE.txt` | Licencia / License. | Legal |
 
-### The documents
+---
 
-**1. A Unique Encoding of Satisfying Assignments for Balanced CNFs**
-The SAT Equation Theorem: every balanced CNF formula over `n` Boolean variables is uniquely characterized by the number `S = Σ_C 2^{T(C)}`, where `T(C)` is the binary number of clause `C`'s sign vector. Written with at least `2ⁿ` digits, the binary expansion of `S` encodes exactly the truth table of the formula: a `1` marks an assignment that does not satisfy `F` and a `0` one that does.
+## Revisión por pares / Peer review
 
-**2. Safe Self-Reference in Dynamic Families of States**
-Axiomatic theory of safe self-reference: local critical velocity `ν_c` and its uniformity, global and reachable divergence conditions, invariance of safe moving tubes under an ISS policy, practical exponential stability, and the no-return criterion via invariant sets disjoint from the captor.
+La auditoría matemática de los trece documentos certificados —teorema por teorema, definición por definición y prueba por prueba— está en [`PEER_REVIEW.md`](PEER_REVIEW.md). Incluye verificación numérica y simbólica independiente, auditorías adversariales y el estado de las correcciones en los casos que las requirieron.
 
-**3. Coherent Flow: A Companion Note to Epistemic Geometry**
-Companion note to the Epistemic Geometry program: coherent islands and deterministic descent with finite termination, detailed balance of the Metropolis–Hastings kernel, KL epistemic curvature with its separable case `I(A;B)`, exact Lyapunov identity for the coherent flow, and unique equilibrium on the interface leaf.
+The mathematical audit of the thirteen certified documents —theorem by theorem, definition by definition, and proof by proof— is in [`PEER_REVIEW.md`](PEER_REVIEW.md). It includes independent numerical and symbolic verification, adversarial audits, and the correction status where applicable.
 
-**4. Continuous Epistemic Geometry: cGCNF, Disjoint Compilation, and Black-Hole Observables**
-Continuous semantics for CNF formulas: openness of model sets, Monte Carlo estimation with Hoeffding bounds, disjoint-subcube compilation with its `2ⁿ` fragmentation barrier, and finite `ε-net` bank transfer with margin.
+Las dos ediciones del manuscrito de trabajo sobre consultas a la Ecuación SAT no forman parte de esa auditoría: solo cuentan con una revisión de pares simple.
 
-**5. Epistemic Geometry of Closure: SCE-IM, Coherent Flow, and Operational Completeness**
-The SCE-IM system: epistemic curvature with Lipschitz stability and sign invariance, operational zipper completeness, completeness with resources, and bounded curvature stability; closes the program with epistemic closure nets.
+The two editions of the working paper on queries to the SAT Equation are not part of that audit: they have only a simple peer review.
 
-**6. Epistemic Geometry: Finite Verification, Curvature, and Structural Obstructions Across Logic, Computation, and Physics**
-Unifying framework of Epistemic Geometry over five technical lines: SAT-verifiable discrete physics (GCNF, discrete Gauss–Bonnet, Boolean causal cones), the SAT equation, disjoint COVERTRACE compilation with parity barrier and conditional PH collapse, epistemic curvature with the derivational refinement principle (DRP) and the Gödelian obstruction, Layered Metric Space (LMS), locality and agency, and the unification theorems: the trilemma of finite physical verification (Thm. 8.7) and the unified obstruction theorem (Thm. 8.8).
+---
 
-**7. A Generalization of the SAT Equation Theorem to Arbitrary CNF Formulas via Bitwise OR Encoding**
-Generalization of the SAT Equation Theorem from balanced formulas to arbitrary CNF formulas: each clause contributes a binary mask that sets a `1` in every position corresponding to an assignment that falsifies it, and the bitwise OR of all masks yields the integer `S = OR_j OR_{M′⊆MC_j} 2^{B(C_j) + Σ_{i∈M′} 2^{N−i}}`, whose binary expansion with `2^N` bits encodes exactly the truth table of `F` without carries, even when distinct clauses share falsifying assignments.
+## Aviso / Disclaimer
 
-**8. Locality, Soft Causal Cones, and Informational Limits of Agency**
-Axiomatic skeleton (nonlinear development) for local control and remote indistinguishability: double-sum Lieb–Robinson bound with geometric refinement `K_µ`, two-time Duhamel identity with causal flow in the remaining time `T−s`, exponential suppression of influence and agency outside the soft causal cone, communication capacity closure via Holevo and Fannes–Audenaert under geometric indistinguishability, and remote responsibility rules respecting the causal limits except under «effectively omnipotent» control.
+El aviso del autor sobre la asistencia de IA, el estatus de la matemática como lenguaje falseable y la perspectiva sobre la IA y la investigación está en [`DISCLAMER.md`](DISCLAMER.md).
 
-**9. Theory of Conservation of Optima and Complexity**
-Local theory for studying when a geometric or alternative representation of a family of discrete optimization problems simultaneously preserves the combinatorial optimum and polynomial time complexity: exact conservation of the minimizer set (Thm 5.1), complexity transfer under strong exactness (Thm 5.3), transport of optima between affinely equivalent representations (Prop. 6.5, Cor. 6.6), a linear necessary-and-sufficient — non-constructive in general — criterion for the existence of exact cost lifts (Thm 7.2), a correctly typed representation change (Thm 8.13), and the sufficient scheme isolating the full chain of exact-representation, polynomial-fidelity, strong-extraction, and formal-bridge-to-exact-optimization hypotheses needed to turn the pedigree polytopes program into a theorem of the type `P = NP` (Thm 9.5), with the STSP instantiation explicitly open.
+The author's disclaimer on AI assistance, the status of mathematics as a falsifiable language, and the perspective on AI and research is in [`DISCLAMER.md`](DISCLAMER.md).
 
-**10. COVERTRACE-SAT as Disjoint-Subcube Knowledge Compilation (Unified Document, Vol. I)**
-Unified document of Vol. I in two parts: Part I (English), COVERTRACE-SAT as Disjoint-Subcube Knowledge Compilation —worst-case fragmentation, conditional PH collapse, and connections to GCT—; Part II (Spanish), Extensions to the Disjoint-Subcube Compilation Framework —fragmentation, tree resolution, Fourier spectrum, and polyhedral representations—. Contents: COVERTRACE compilation of ¬F into disjoint subcubes with exact #SAT counting and witness extraction, parity lower bound `2^{n−1}`, conditional `PH = P` collapse and UNSAT certificates, affine extension, volumetric lemma, `S_part ≤ S_tr` inequality with explicit verified `6 < 7` counterexample, Fourier–Walsh spectral bound, polyhedral certificate, and honest delimitation of Problem 9.6.
+---
 
-**Spanish editions.** `SAT_Equation_ES.pdf` — *The SAT Equation Theorem and Its Generalization*: Spanish translation of manuscripts 1 and 7 in a single volume. `COVERTRACE_SAT_Disjoint_Subcube_Unificado_ES.pdf` — *COVERTRACE-SAT as Disjoint-Subcube Knowledge Compilation with Its Extensions: Fragmentation, Tree Resolution, Fourier Spectrum, and Polyhedral Representations*: full Spanish translation of the unified document of Vol. I.
+## Licencia / License
 
-**11. Connections between the SAT Equation Theorem and COVERTRACE-SAT (unifying note)**
-Unifying note of Vol. I: proves that the SAT Equation Theorem (2025) and COVERTRACE-SAT (2026) encode the same object, the forbidden region `U(F) ⊆ Ω_n` of a CNF formula: the former as a dense integer bitmask of `2ⁿ` bits and the latter as a disjoint family of subcubes (a DSOP of ¬F). Establishes the fundamental identity `popcnt(S(F)) = |U(F)| = Σ vol(u)`, the carry–disjunction duality, the XOR flipping lemma `t(k⊕2^j) = 1−t(k)`, and proves that in the extremal parity case the integer of the SAT Equation is the Thue–Morse number, with `popcnt(S_n) = 2^(n−1) = χ_⊔(O_n)`, also matching the Fourier–Walsh spectral bound of Part II. Compares the dense and sparse representations and reformulates the corpus's open problems in bitmask language. All central identities were verified by exact computation; the note was accepted in its second peer-review round.
+© 2025–2026 Oscar Riveros. Todos los derechos reservados. Ver [`LICENSE.txt`](LICENSE.txt).
 
-**12. Epistemic Closure Nets: Curvature, Holonomy, Certification, and Meta-Closure in an Expansive Network Formalism**
-Expansive network closing the Epistemic Geometry program: typed closure net over SCE-IM systems (C1), the distinction between index-trivial and program-level holonomy (C2), atlas cocycles obstructing global trivialization (C3), finite-bank transfer with auditable estimators (C4), verifiable experimental nodes P1–P5 with Hoeffding bounds, falsification patterns, and pre-registration (C5), and the reproducible artifact node P1★ (C6). Certified sound after a two-round multi-agent review with adversarial auditing and independent numerical verification; the four mandatory corrections (D1–D4) were applied and re-verified (Addendum §7 of the report), with no pending corrections.
-
-**13. Physical Observer Geometry, Protocol Holonomy, Order by Non-Closure, and Spectral Obstructions**
-Physical observer geometry: protocol holonomy as a global transport defect (characterized exactly; non-trivial in the binary model with exact value 2), order by non-closure, spectral obstructions, and the obstruction vector computed in the binary model (no global trivialization at any scale; quotient with ≥ 2 classes; strict order); the Yang–Mills reduction remains conditional (Bridges A and B as explicit conjectures). Accepted in its second peer-review round.
-
-**14. Compressed Queries on the SAT Equation: bit, rank, select, and counting oracles for arbitrary CNFs (working paper)**
-Studies how to query the `2ⁿ`-bit integer `S(F)` without materializing it. The point query `bit(k) = 1 − F(assign(k))` costs `O(m)`; the difficulty lies in the aggregate queries `rank`, `select`, `#SAT`, and uniform sampling. It proves the exact equivalence between disjoint covers of the forbidden region and DF-CNFs; builds a `rank`–`select` engine over a size-`K` DSOP with cost `O(nK)` and `O(n²K)`; reduces `rank` to exact model counting through the prefix restriction; and combines both routes into a hybrid algorithm. It analyzes ZDDs, the Walsh–Hadamard spectrum, stochastic oracles (direct sampling, XOR hashing, and Karp–Luby), and affine-subspace covers (ADSOP), states the subexponential instantiation as hypothesis H-ETH, and explains why the engine does not imply `P = NP`. It includes an ADSOP prototype validated for `n ≤ 10` and a preliminary evaluation against Kerberos/BASILISK. **Status:** working paper in progress, subject to expansion and updates; it has only a simple peer review, not the adversarial audit of the certified corpus. It is published to share knowledge in real time, and further reviews of this document are the reader's responsibility.
-
-### Peer review — `PEER_REVIEW.md`
-
-Exhaustive mathematical audit of the thirteen documents: each document was read in full and verified theorem by theorem, definition by definition, and proof by proof (on `pdftotext -layout -enc UTF-8` extractions of the original PDFs; the review of the eighth also includes independent numerical verification and adversarial auditing, that of the ninth computer-assisted symbolic verification (SymPy) and adversarial auditing, that of the tenth multi-agent review, independent computational verification (Python 3.13), and adversarial audits, that of the eleventh —unifying note Connections between the SAT Equation Theorem and COVERTRACE-SAT— two review rounds with independent computational re-verification of all identities in exact arithmetic, and that of the twelfth —Epistemic Closure Nets— a two-round multi-agent review with adversarial auditing, independent numerical verification of node P1★ (Python 3.13/numpy), and post-correction re-verification, and that of the thirteenth —Physical Observer Geometry, Protocol Holonomy, Order by Non-Closure, and Spectral Obstructions— a second review round of the corrected version with symbolic re-verification (SymPy) and clause-by-clause adversarial audits). Overall verdict: all thirteen documents are mathematically correct and rigorous, without fatal errors. Eleven are free of pending observations (only minor documented defects); the eighth (Locality, Soft Causal Cones, and Informational Limits of Agency) is certified mathematically sound, conditioned on the mandatory integrity and attribution corrections documented in the review, the tenth (COVERTRACE-SAT, unified document of Vol. I) is certified mathematically sound, conditioned on the mandatory citation corrections, the unifying note (eleventh document) was accepted in its second round with no pending observations, and the twelfth (Epistemic Closure Nets) is certified sound, with the four mandatory corrections (D1–D4) applied and re-verified — with no pending corrections, and the thirteenth (Physical Observer Geometry, Protocol Holonomy, Order by Non-Closure, and Spectral Obstructions) was accepted in its second review round, mathematically correct and in publishable state — with no pending corrections. The working paper Compressed Queries on the SAT Equation is outside this audit: it has only a simple peer review, and further reviews of this document are the reader's responsibility.
-
-### Disclaimer — `DISCLAMER.md`
-
-The author's statement on the role of AI in writing and reviewing these works: mathematics as a falsifiable language independent of interpretation, the syntax–semantics curvature studied by Epistemic Geometry, and the value of human knowledge against the recombination of the corpus. Available in Spanish and English.
-
-### License
-
-© 2025–2026 Oscar Riveros. All rights reserved. See [LICENSE.txt](LICENSE.txt).
+© 2025–2026 Oscar Riveros. All rights reserved. See [`LICENSE.txt`](LICENSE.txt).

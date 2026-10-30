@@ -1,9 +1,9 @@
 # Obras Completas — Oscar Riveros
 ## Complete Works — Oscar Riveros
 
-Este repositorio reúne la obra matemática de Oscar Riveros. Trece documentos ya pasaron por revisión de pares. También incluye un artículo de trabajo y una nota técnica complementaria, ambos en español e inglés. El informe de revisión, el aviso del autor y la licencia están incluidos.
+Este repositorio reúne la obra matemática de Oscar Riveros. Trece documentos ya pasaron por revisión de pares. También incluye tres manuscritos de trabajo, en español e inglés. El informe de revisión, el aviso del autor y la licencia están incluidos.
 
-This repository collects Oscar Riveros's mathematical work. Thirteen documents have been peer reviewed. It also includes a working paper and a companion technical note, both in Spanish and English. The peer-review report, the author's disclaimer, and the license are included.
+This repository collects Oscar Riveros's mathematical work. Thirteen documents have been peer reviewed. It also includes three working manuscripts, in Spanish and English. The peer-review report, the author's disclaimer, and the license are included.
 
 ---
 
@@ -46,6 +46,25 @@ The note picks up where the previous paper ends, but changes the question. Inste
 
 This is a working manuscript, published to share the map of bounds as the program develops. It is not part of the certified corpus in `PEER_REVIEW.md`.
 
+### Simetría, rango y compresión de soluciones
+**Symmetry, Rank, and Solution Compression**
+
+*hacia algoritmos estructurales para SAT y HAMPATH*  
+*towards structural algorithms for SAT and HAMPATH*
+
+Versión de trabajo, 30 de octubre de 2026.  
+Working version, October 30, 2026.
+
+Descargar: **[español](Simetria_Rango_Compresion_Soluciones.pdf)** · **[English](Symmetry_Rank_Solution_Compression.pdf)** · **[material reproducible](Simetria_Rango_Compresion_material.zip)**
+
+El manuscrito estudia representaciones comprimidas de familias de soluciones para SAT y HAMPATH. Formaliza el cociente de asignaciones por grupos de automorfismos, extiende el conteo de puntos fijos a simetrías firmadas y muestra que la compresión por órbitas no evita por sí sola evaluar todos los representantes. Expresa HAMPATH como una intersección órbita–subcubo y analiza por qué el isomorfismo exacto a un camino no captura las aristas adicionales. Da una descomposición por bloques del tensor “todos distintos” y del tensor completo de HAMPATH, con rango exacto en términos de perfiles de extremos y submatrices de corte. Presenta la DP de cografos, un álgebra de firmas de frontera y un criterio condicional de compresión, y revisa las codificaciones y los algoritmos subexponenciales de 2026. No afirma `P = NP`; las cifras experimentales quedan como evidencia reproducible pendiente de auditoría independiente.
+
+The manuscript studies compressed representations of solution families for SAT and HAMPATH. It formalizes the quotient of assignments by automorphism groups, extends fixed-point counting to signed symmetries, and shows that compression by orbits does not by itself avoid evaluating every representative. It expresses HAMPATH as an orbit–subcube intersection and analyzes why exact isomorphism to a path does not capture the additional edges. It gives a block decomposition of the “all-different” tensor and of the full HAMPATH tensor, with exact rank in terms of endpoint profiles and cut submatrices. It presents the cograph DP, an algebra of boundary signatures, and a conditional compression criterion, and reviews the encodings and the 2026 subexponential algorithms. It does not claim `P = NP`; the experimental figures remain reproducible evidence pending independent audit.
+
+**Estado.** Manuscrito de trabajo con dos revisiones adversariales internas (español e inglés) y correcciones aplicadas. No forma parte del corpus certificado de `PEER_REVIEW.md`. El material reproducible —scripts, instancias, salidas, revisión y hashes— está en [`Simetria_Rango_Compresion_material.zip`](Simetria_Rango_Compresion_material.zip); no incluye los archivos `.tex`.
+
+This is a working manuscript with two internal adversarial reviews (Spanish and English) and corrections applied. It is not part of the certified corpus in `PEER_REVIEW.md`. The reproducibility material —scripts, instances, outputs, review, and hashes— is in [`Simetria_Rango_Compresion_material.zip`](Simetria_Rango_Compresion_material.zip); it does not include the `.tex` files.
+
 ---
 
 ## Estado del repositorio / Repository status
@@ -54,9 +73,9 @@ Trece documentos tienen revisión por pares certificada. El informe completo, co
 
 Thirteen documents have certified peer review. The full report, including verdicts, findings, and corrections, is in [`PEER_REVIEW.md`](PEER_REVIEW.md).
 
-El artículo sobre consultas a la Ecuación SAT y la nota sobre complejidad de representaciones son trabajos en curso y no forman parte de ese corpus. El resto de las obras del autor, como el volumen compilado y los ejercicios resueltos, sigue en revisión.
+El artículo sobre consultas a la Ecuación SAT, la nota sobre complejidad de representaciones y el manuscrito sobre simetría, rango y compresión son trabajos en curso y no forman parte de ese corpus. El resto de las obras del autor, como el volumen compilado y los ejercicios resueltos, sigue en revisión.
 
-The paper on queries to the SAT Equation and the note on representation complexity are works in progress and are not part of that corpus. The rest of the author's work, such as the compiled volume and the solved exercises, is still under review.
+The paper on queries to the SAT Equation, the note on representation complexity, and the manuscript on symmetry, rank, and compression are works in progress and are not part of that corpus. The rest of the author's work, such as the compiled volume and the solved exercises, is still under review.
 
 ---
 
@@ -85,6 +104,9 @@ The paper on queries to the SAT Equation and the note on representation complexi
 | `Compressed_Queries_on_the_SAT_Equation.pdf` | Compressed Queries on the SAT Equation. Final English edition of the working paper. | Working paper |
 | `Complejidad_Representaciones_Ecuacion_SAT.pdf` | Complejidad de representaciones para la Ecuación SAT. Paisaje de DSOP, ADSOP, ZDD y Fourier, composición por regiones, cotas por puertas traseras y treewidth, y corrección del bucle CEGAR. | Trabajo |
 | `Representation_Complexity_SAT_Equation.pdf` | Representation Complexity of the SAT Equation. Landscape of DSOP, ADSOP, ZDD, and Fourier, region composition, backdoor and treewidth bounds, and the CEGAR loop correction. | Working paper |
+| `Simetria_Rango_Compresion_Soluciones.pdf` | Simetría, rango y compresión de soluciones. Cociente por simetrías, HAMPATH como intersección órbita–subcubo, rango del tensor, cografos, álgebra de firmas y codificaciones. | Trabajo |
+| `Symmetry_Rank_Solution_Compression.pdf` | Symmetry, Rank, and Solution Compression. Symmetry quotient, HAMPATH as an orbit–subcube intersection, tensor rank, cographs, signature algebra, and encodings. | Working paper |
+| `Simetria_Rango_Compresion_material.zip` | Material reproducible del manuscrito: scripts, instancias, salidas, revisión adversarial, README y hashes. No incluye `.tex`. | Material |
 | `PEER_REVIEW.md` | Revisión matemática por pares de los trece documentos certificados / Mathematical peer review of the thirteen certified documents. | Informe |
 | `DISCLAMER.md` | Aviso del autor, alcance, asistencia de IA y perspectiva sobre la IA y la investigación / Author's disclaimer, scope, AI assistance, and perspective on AI and research. | Aviso |
 | `LICENSE.txt` | Licencia / License. | Legal |
@@ -97,9 +119,9 @@ La auditoría de los trece documentos certificados está en [`PEER_REVIEW.md`](P
 
 The audit of the thirteen certified documents is in [`PEER_REVIEW.md`](PEER_REVIEW.md). Every theorem, definition, and proof was reviewed, with independent numerical or symbolic verification and adversarial audits where needed.
 
-Las publicaciones de trabajo quedan fuera de esa auditoría. El artículo bilingüe solo cuenta con una revisión simple; la nota sobre complejidad de representaciones es un manuscrito de trabajo.
+Las publicaciones de trabajo quedan fuera de esa auditoría. El artículo bilingüe solo cuenta con una revisión simple; la nota sobre complejidad de representaciones es un manuscrito de trabajo; el manuscrito sobre simetría, rango y compresión tiene dos revisiones adversariales internas y correcciones, pero no forma parte del corpus certificado.
 
-The work-in-progress publications are outside that audit. The bilingual paper has only had a simple review; the note on representation complexity is a working manuscript.
+The work-in-progress publications are outside that audit. The bilingual paper has only had a simple review; the note on representation complexity is a working manuscript; the manuscript on symmetry, rank, and compression has two internal adversarial reviews and corrections, but it is not part of the certified corpus.
 
 ---
 

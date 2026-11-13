@@ -1,9 +1,9 @@
 # Obras Completas — Oscar Riveros
 ## Complete Works — Oscar Riveros
 
-Este repositorio reúne la obra matemática de Oscar Riveros. Trece documentos ya pasaron por revisión de pares. También incluye tres manuscritos de trabajo, en español e inglés. El informe de revisión, el aviso del autor y la licencia están incluidos.
+Este repositorio reúne la obra matemática de Oscar Riveros. Trece documentos ya pasaron por revisión de pares. También incluye cuatro manuscritos de trabajo, cada uno en español e inglés. El informe de revisión, el aviso del autor y la licencia están incluidos.
 
-This repository collects Oscar Riveros's mathematical work. Thirteen documents have been peer reviewed. It also includes three working manuscripts, in Spanish and English. The peer-review report, the author's disclaimer, and the license are included.
+This repository collects Oscar Riveros's mathematical work. Thirteen documents have been peer reviewed. It also includes four working manuscripts, each in Spanish and English. The peer-review report, the author's disclaimer, and the license are included.
 
 ---
 
@@ -61,9 +61,27 @@ El manuscrito estudia representaciones comprimidas de familias de soluciones par
 
 The manuscript studies compressed representations of solution families for SAT and HAMPATH. It formalizes the quotient of assignments by automorphism groups, extends fixed-point counting to signed symmetries, and shows that compression by orbits does not by itself avoid evaluating every representative. It expresses HAMPATH as an orbit–subcube intersection and analyzes why exact isomorphism to a path does not capture the additional edges. It gives a block decomposition of the “all-different” tensor and of the full HAMPATH tensor, with exact rank in terms of endpoint profiles and cut submatrices. It presents the cograph DP, an algebra of boundary signatures, and a conditional compression criterion, and reviews the encodings and the 2026 subexponential algorithms. It does not claim `P = NP`; the experimental figures remain reproducible evidence pending independent audit.
 
-**Estado.** Manuscrito de trabajo con dos revisiones adversariales internas (español e inglés) y correcciones aplicadas. No forma parte del corpus certificado de `PEER_REVIEW.md`. El material reproducible —scripts, instancias, salidas, revisión y hashes— está en [`Simetria_Rango_Compresion_material.zip`](Simetria_Rango_Compresion_material.zip); no incluye los archivos `.tex`.
+**Estado.** Manuscrito en proceso, con dos revisiones adversariales internas (español e inglés) y correcciones aplicadas. No ha pasado una revisión de pares estricta y no forma parte del corpus certificado de `PEER_REVIEW.md`. El material reproducible —scripts, instancias, salidas, revisión y hashes— está en [`Simetria_Rango_Compresion_material.zip`](Simetria_Rango_Compresion_material.zip); no incluye los archivos `.tex`.
 
-This is a working manuscript with two internal adversarial reviews (Spanish and English) and corrections applied. It is not part of the certified corpus in `PEER_REVIEW.md`. The reproducibility material —scripts, instances, outputs, review, and hashes— is in [`Simetria_Rango_Compresion_material.zip`](Simetria_Rango_Compresion_material.zip); it does not include the `.tex` files.
+This is a working manuscript with two internal adversarial reviews (Spanish and English) and corrections applied. It has not undergone strict peer review and is not part of the certified corpus in `PEER_REVIEW.md`. The reproducibility material —scripts, instances, outputs, review, and hashes— is in [`Simetria_Rango_Compresion_material.zip`](Simetria_Rango_Compresion_material.zip); it does not include the `.tex` files.
+
+### Normalización certificada de fórmulas booleanas
+**Certified Normalization of Boolean Formulas**
+
+*un programa de investigación relacionado con P frente a NP*  
+*a research program related to P versus NP*
+
+Manuscritos de trabajo, 29 de octubre de 2026.
+
+Descargar: **[español](Normalizacion_Certificada_P_vs_NP.pdf)** · **[English](Certified_Normalization_P_vs_NP.pdf)**
+
+El texto propone un marco para decidir SAT mediante una dinámica de normalización certificada: cada transición transforma una representación en otra y aporta un certificado verificable. Distingue equivalencia lógica, equisatisfacibilidad y equivalencia proyectiva, y muestra por qué una CNF plana necesita `2^(n−1)` cláusulas para expresar la paridad. A partir de ahí plantea un normalizador híbrido que combine resolución, eliminación gaussiana, cortes de cardinalidad y cierre afín, con un scheduler determinista y una medida de progreso. También describe un programa de síntesis finita y verificación. El teorema principal es condicional: si existiera un normalizador universal que cumpliera todas las cotas, entonces `P = NP`. El manuscrito no demuestra ese colapso; su veredicto explícito es que se trata de un programa de investigación.
+
+The paper proposes a framework for deciding SAT through a certified normalization dynamics: each transition transforms one representation into another and provides a verifiable certificate. It distinguishes logical equivalence, equisatisfiability, and projective equivalence, and shows why a flat CNF needs `2^(n−1)` clauses to express parity. It then proposes a hybrid normalizer combining resolution, Gaussian elimination, cardinality cuts, and affine closure, with a deterministic scheduler and a progress measure. It also describes a program of finite synthesis and verification. The main theorem is conditional: if a universal normalizer satisfying all the bounds existed, then `P = NP`. The manuscript does not prove that collapse; its explicit verdict is that this is a research program.
+
+**Estado.** Manuscritos en proceso, sin revisión de pares estricta. Se publican para discusión.
+
+**Status.** Working manuscripts, without strict peer review. Published for discussion.
 
 ---
 
@@ -73,15 +91,15 @@ Trece documentos tienen revisión por pares certificada. El informe completo, co
 
 Thirteen documents have certified peer review. The full report, including verdicts, findings, and corrections, is in [`PEER_REVIEW.md`](PEER_REVIEW.md).
 
-El artículo sobre consultas a la Ecuación SAT, la nota sobre complejidad de representaciones y el manuscrito sobre simetría, rango y compresión son trabajos en curso y no forman parte de ese corpus. El resto de las obras del autor, como el volumen compilado y los ejercicios resueltos, sigue en revisión.
+Los manuscritos sobre consultas a la Ecuación SAT, complejidad de representaciones, simetría y compresión, y normalización certificada siguen en curso y no forman parte de ese corpus. El resto de las obras del autor, como el volumen compilado y los ejercicios resueltos, sigue en revisión.
 
-The paper on queries to the SAT Equation, the note on representation complexity, and the manuscript on symmetry, rank, and compression are works in progress and are not part of that corpus. The rest of the author's work, such as the compiled volume and the solved exercises, is still under review.
+The manuscripts on queries to the SAT Equation, representation complexity, symmetry and compression, and certified normalization are works in progress and are not part of that corpus. The rest of the author's work, such as the compiled volume and the solved exercises, is still under review.
 
 ---
 
 ## Contenido / Contents
 
-*Certificado* = revisado por pares; *Trabajo* / *Working paper* = en curso.
+*Certificado* = revisado por pares; *Manuscrito* / *Working manuscript* = en proceso, sin revisión estricta.
 
 | Archivo / File | Contenido / Contents | Estado / Status |
 |----------------|----------------------|-----------------|
@@ -100,13 +118,15 @@ The paper on queries to the SAT Equation, the note on representation complexity,
 | `Conexiones_SAT_Equation_COVERTRACE_ES.pdf` | Conexiones entre el Teorema de la Ecuación SAT y COVERTRACE-SAT. Nota unificadora: `popcnt(S(F)) = \|U(F)\| = Σ vol(u)`, dualidad acarreo–disyunción y caso paridad/Thue–Morse. | Certificado |
 | `Epistemic_Closure_Net - Riveros.pdf` | Epistemic Closure Nets. Red tipada, holonomía, cociclos, bancos finitos, nodos P1–P5 y artefacto P1★. | Certificado |
 | `Physical_Observer_Geometry_LaTeX_v2.pdf` | Physical Observer Geometry. Holonomía de protocolo, orden por no-clausura, obstrucciones espectrales y reducción Yang–Mills condicional. | Certificado |
-| `Consultas_Comprimidas_Ecuacion_SAT.pdf` | Consultas comprimidas sobre la Ecuación SAT. Versión final en español del manuscrito de trabajo. | Trabajo |
-| `Compressed_Queries_on_the_SAT_Equation.pdf` | Compressed Queries on the SAT Equation. Final English edition of the working paper. | Working paper |
-| `Complejidad_Representaciones_Ecuacion_SAT.pdf` | Complejidad de representaciones para la Ecuación SAT. Paisaje de DSOP, ADSOP, ZDD y Fourier, composición por regiones, cotas por puertas traseras y treewidth, y corrección del bucle CEGAR. | Trabajo |
-| `Representation_Complexity_SAT_Equation.pdf` | Representation Complexity of the SAT Equation. Landscape of DSOP, ADSOP, ZDD, and Fourier, region composition, backdoor and treewidth bounds, and the CEGAR loop correction. | Working paper |
-| `Simetria_Rango_Compresion_Soluciones.pdf` | Simetría, rango y compresión de soluciones. Cociente por simetrías, HAMPATH como intersección órbita–subcubo, rango del tensor, cografos, álgebra de firmas y codificaciones. | Trabajo |
-| `Symmetry_Rank_Solution_Compression.pdf` | Symmetry, Rank, and Solution Compression. Symmetry quotient, HAMPATH as an orbit–subcube intersection, tensor rank, cographs, signature algebra, and encodings. | Working paper |
+| `Consultas_Comprimidas_Ecuacion_SAT.pdf` | Consultas comprimidas sobre la Ecuación SAT. Versión final en español del manuscrito de trabajo. | Manuscrito |
+| `Compressed_Queries_on_the_SAT_Equation.pdf` | Compressed Queries on the SAT Equation. Final English edition of the working paper. | Working manuscript |
+| `Complejidad_Representaciones_Ecuacion_SAT.pdf` | Complejidad de representaciones para la Ecuación SAT. Paisaje de DSOP, ADSOP, ZDD y Fourier, composición por regiones, cotas por puertas traseras y treewidth, y corrección del bucle CEGAR. | Manuscrito |
+| `Representation_Complexity_SAT_Equation.pdf` | Representation Complexity of the SAT Equation. Landscape of DSOP, ADSOP, ZDD, and Fourier, region composition, backdoor and treewidth bounds, and the CEGAR loop correction. | Working manuscript |
+| `Simetria_Rango_Compresion_Soluciones.pdf` | Simetría, rango y compresión de soluciones. Cociente por simetrías, HAMPATH como intersección órbita–subcubo, rango del tensor, cografos, álgebra de firmas y codificaciones. | Manuscrito |
+| `Symmetry_Rank_Solution_Compression.pdf` | Symmetry, Rank, and Solution Compression. Symmetry quotient, HAMPATH as an orbit–subcube intersection, tensor rank, cographs, signature algebra, and encodings. | Working manuscript |
 | `Simetria_Rango_Compresion_material.zip` | Material reproducible del manuscrito: scripts, instancias, salidas, revisión adversarial, README y hashes. No incluye `.tex`. | Material |
+| `Normalizacion_Certificada_P_vs_NP.pdf` | Normalización certificada de fórmulas booleanas. Transiciones con certificados, límite de paridad para CNF planas y normalizador híbrido; programa de investigación, no prueba de `P = NP`. | Manuscrito |
+| `Certified_Normalization_P_vs_NP.pdf` | Certified Normalization of Boolean Formulas. Certified transitions, parity limitation for flat CNFs, and a hybrid normalizer; a research program, not a proof of `P = NP`. | Working manuscript |
 | `PEER_REVIEW.md` | Revisión matemática por pares de los trece documentos certificados / Mathematical peer review of the thirteen certified documents. | Informe |
 | `DISCLAMER.md` | Aviso del autor, alcance, asistencia de IA y perspectiva sobre la IA y la investigación / Author's disclaimer, scope, AI assistance, and perspective on AI and research. | Aviso |
 | `LICENSE.txt` | Licencia / License. | Legal |
@@ -119,9 +139,9 @@ La auditoría de los trece documentos certificados está en [`PEER_REVIEW.md`](P
 
 The audit of the thirteen certified documents is in [`PEER_REVIEW.md`](PEER_REVIEW.md). Every theorem, definition, and proof was reviewed, with independent numerical or symbolic verification and adversarial audits where needed.
 
-Las publicaciones de trabajo quedan fuera de esa auditoría. El artículo bilingüe solo cuenta con una revisión simple; la nota sobre complejidad de representaciones es un manuscrito de trabajo; el manuscrito sobre simetría, rango y compresión tiene dos revisiones adversariales internas y correcciones, pero no forma parte del corpus certificado.
+Las publicaciones de trabajo quedan fuera de esa auditoría. El artículo sobre consultas solo cuenta con una revisión simple; la nota sobre complejidad de representaciones es un manuscrito de trabajo; el manuscrito sobre simetría, rango y compresión tiene dos revisiones adversariales internas y correcciones, pero no ha pasado una revisión de pares estricta ni forma parte del corpus certificado; y el manuscrito sobre normalización certificada tampoco ha pasado una revisión de pares estricta. Todos se publican para discusión.
 
-The work-in-progress publications are outside that audit. The bilingual paper has only had a simple review; the note on representation complexity is a working manuscript; the manuscript on symmetry, rank, and compression has two internal adversarial reviews and corrections, but it is not part of the certified corpus.
+The work-in-progress publications are outside that audit. The paper on queries has only had a simple review; the note on representation complexity is a working manuscript; the manuscript on symmetry, rank, and compression has two internal adversarial reviews and corrections, but it has not undergone strict peer review and is not part of the certified corpus; and the certified-normalization manuscript has not undergone strict peer review either. All are published for discussion.
 
 ---
 

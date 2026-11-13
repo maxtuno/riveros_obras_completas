@@ -71,7 +71,8 @@ This is a working manuscript with two internal adversarial reviews (Spanish and 
 *un programa de investigación relacionado con P frente a NP*  
 *a research program related to P versus NP*
 
-Manuscritos de trabajo, 29 de octubre de 2026.
+Manuscritos de trabajo, 13 de noviembre de 2026.  
+Working manuscripts, November 13, 2026.
 
 Descargar: **[español](Normalizacion_Certificada_P_vs_NP.pdf)** · **[English](Certified_Normalization_P_vs_NP.pdf)**
 

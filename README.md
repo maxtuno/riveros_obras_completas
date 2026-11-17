@@ -7,6 +7,25 @@ This repository collects Oscar Riveros's mathematical work. Thirteen documents a
 
 ---
 
+## Libro / Book
+
+### La estructura y sus cabezales
+**The Structure and Its Heads**
+
+*Ensayo sobre clausura, semántica local y los límites del conocimiento*  
+*An Essay on Closure, Local Semantics, and the Limits of Knowledge*
+
+Oscar Riveros — Edición revisada, 2026.  
+Revised edition, 2026.
+
+Descargar / Download: **[PDF español](La_Estructura_y_sus_Cabezales.pdf)** · **[EPUB español](La_Estructura_y_sus_Cabezales.epub)** · **[PDF English](The_Structure_and_Its_Heads.pdf)** · **[EPUB English](The_Structure_and_Its_Heads.epub)**
+
+Este libro condensa, en forma de ensayo, la disciplina que emerge del programa formal del autor. Su tema es la diferencia entre estructura y significado: una estructura puede ser común sin que su lectura sea común. De esa distinción se siguen una teoría de la clausura epistémica, una geometría del coste y de la obstrucción, una lectura causal de la agencia y una crítica semántica de las instituciones. El libro reúne esos hilos en un argumento continuo, escrito para lectores de filosofía, ciencia y derecho, y los sitúa en el centro de la discusión sobre sistemas artificiales que operan sobre formas sin compartir nuestra interpretación. Su publicación en español e inglés, en PDF y EPUB, establece una referencia común para el corpus y para el trabajo que vendrá: la agenda de una filosofía de la estructura que no promete homogeneidad y que, por eso mismo, puede sostener la convivencia de lecturas distintas.
+
+This book condenses, in essay form, the discipline that emerges from the author's formal program. Its subject is the difference between structure and meaning: a structure can be common without its reading being common. That distinction yields a theory of epistemic closure, a geometry of cost and obstruction, a causal account of agency, and a semantic critique of institutions. The book draws those threads into a continuous argument for readers in philosophy, science, and law, and places them at the center of the discussion about artificial systems that operate on forms without sharing our interpretation. Its publication in Spanish and English, in PDF and EPUB, establishes a common reference for the corpus and for the work to come: the agenda of a philosophy of structure that does not promise homogeneity and that, for that very reason, can sustain the coexistence of different readings.
+
+---
+
 ## Documentos con revisión estricta / Strictly peer-reviewed documents
 
 ### El conocimiento finito es SAT

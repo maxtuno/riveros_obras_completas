@@ -1,9 +1,31 @@
 # Obras Completas — Oscar Riveros
 ## Complete Works — Oscar Riveros
 
-Este repositorio reúne la obra matemática de Oscar Riveros. Trece documentos ya pasaron por revisión de pares. También incluye cuatro manuscritos de trabajo, cada uno en español e inglés. El informe de revisión, el aviso del autor y la licencia están incluidos.
+Este repositorio reúne la obra matemática de Oscar Riveros. Trece documentos están auditados en `PEER_REVIEW.md` y dos documentos nuevos tienen revisión de pares estricta, con revisión abierta del lector. También incluye cuatro manuscritos de trabajo, cada uno en español e inglés. El aviso del autor y la licencia están incluidos.
 
-This repository collects Oscar Riveros's mathematical work. Thirteen documents have been peer reviewed. It also includes four working manuscripts, each in Spanish and English. The peer-review report, the author's disclaimer, and the license are included.
+This repository collects Oscar Riveros's mathematical work. Thirteen documents are audited in `PEER_REVIEW.md`, and two new documents have undergone strict peer review, with open reader review. It also includes four working manuscripts, each in Spanish and English. The author's disclaimer and the license are included.
+
+---
+
+## Documentos con revisión estricta / Strictly peer-reviewed documents
+
+### El conocimiento finito es SAT
+**Finite Knowledge is SAT**
+
+*Planificación, certificados y el horizonte de uniformidad*  
+*Planning, certificates, and the horizon of uniformity*
+
+Oscar Riveros — 2026.
+
+Descargar: **[español](Conocimiento_Finito_es_SAT.pdf)** · **[English](Finite_Knowledge_is_SAT.pdf)**
+
+El artículo defiende una tesis finitista: el conocimiento proposicional y repetible es certificación finita. La cadena que desarrolla es explícita: toda verificación finita es una búsqueda finita; toda búsqueda con certificado y horizonte es una instancia de planificación; toda planificación finita se codifica en SAT preservando el plan; y la traza del verificador se codifica en CNF mediante Cook–Levin. Formaliza teoremas de capa finita, planificación, traza y autocodificación, y un teorema de horizonte: cada capa finita admite una codificación SAT, pero la unión puede carecer de una reducción uniforme. No identifica conocimiento con verdad ni pretende resolver `P` frente a `NP`; separa el conocimiento certificado finito de los procesos infinitos, que entran mediante certificados finitos de sus propiedades.
+
+The paper defends a finitist thesis: propositional and repeatable human knowledge is finite certification. The chain it develops is explicit: every finite verification is a finite search; every search with a certificate and a horizon is a planning instance; every finite planning instance is encoded in SAT while preserving the plan; and the verifier's trace is encoded in CNF via Cook–Levin. It formalizes finite-layer, planning, trace, and self-encoding theorems, and a horizon theorem: each finite layer admits a SAT encoding, but the union may lack a uniform reduction. It does not identify knowledge with truth or claim to settle `P` versus `NP`; it separates finite certified knowledge from infinite processes, which enter through finite certificates of their properties.
+
+**Estado.** Revisión de pares estricta completada. La revisión por parte del lector queda abierta: cualquier observación puede reportarse en [Issues](https://github.com/maxtuno/riveros_obras_completas/issues).
+
+**Status.** Strict peer review completed. Reader review remains open: any observation can be reported in [Issues](https://github.com/maxtuno/riveros_obras_completas/issues).
 
 ---
 
@@ -92,6 +114,10 @@ Trece documentos tienen revisión por pares certificada. El informe completo, co
 
 Thirteen documents have certified peer review. The full report, including verdicts, findings, and corrections, is in [`PEER_REVIEW.md`](PEER_REVIEW.md).
 
+*El conocimiento finito es SAT* y su edición inglesa tienen revisión de pares estricta. La revisión por parte del lector queda abierta y las observaciones pueden reportarse en [Issues](https://github.com/maxtuno/riveros_obras_completas/issues).
+
+*El conocimiento finito es SAT* and its English edition have undergone strict peer review. Reader review remains open, and observations can be reported in [Issues](https://github.com/maxtuno/riveros_obras_completas/issues).
+
 Los manuscritos sobre consultas a la Ecuación SAT, complejidad de representaciones, simetría y compresión, y normalización certificada siguen en curso y no forman parte de ese corpus. El resto de las obras del autor, como el volumen compilado y los ejercicios resueltos, sigue en revisión.
 
 The manuscripts on queries to the SAT Equation, representation complexity, symmetry and compression, and certified normalization are works in progress and are not part of that corpus. The rest of the author's work, such as the compiled volume and the solved exercises, is still under review.
@@ -100,7 +126,7 @@ The manuscripts on queries to the SAT Equation, representation complexity, symme
 
 ## Contenido / Contents
 
-*Certificado* = revisado por pares; *Manuscrito* / *Working manuscript* = en proceso, sin revisión estricta.
+*Certificado* = auditado en `PEER_REVIEW.md`; *Revisión estricta* / *Strict review* = revisado por pares, con revisión abierta del lector; *Manuscrito* / *Working manuscript* = en proceso, sin revisión estricta.
 
 | Archivo / File | Contenido / Contents | Estado / Status |
 |----------------|----------------------|-----------------|
@@ -119,6 +145,8 @@ The manuscripts on queries to the SAT Equation, representation complexity, symme
 | `Conexiones_SAT_Equation_COVERTRACE_ES.pdf` | Conexiones entre el Teorema de la Ecuación SAT y COVERTRACE-SAT. Nota unificadora: `popcnt(S(F)) = \|U(F)\| = Σ vol(u)`, dualidad acarreo–disyunción y caso paridad/Thue–Morse. | Certificado |
 | `Epistemic_Closure_Net - Riveros.pdf` | Epistemic Closure Nets. Red tipada, holonomía, cociclos, bancos finitos, nodos P1–P5 y artefacto P1★. | Certificado |
 | `Physical_Observer_Geometry_LaTeX_v2.pdf` | Physical Observer Geometry. Holonomía de protocolo, orden por no-clausura, obstrucciones espectrales y reducción Yang–Mills condicional. | Certificado |
+| `Conocimiento_Finito_es_SAT.pdf` | El conocimiento finito es SAT. Planificación, certificados, traza del verificador y horizonte de uniformidad. | Revisión estricta |
+| `Finite_Knowledge_is_SAT.pdf` | Finite Knowledge is SAT. Planning, certificates, verifier traces, and the horizon of uniformity. | Strict review |
 | `Consultas_Comprimidas_Ecuacion_SAT.pdf` | Consultas comprimidas sobre la Ecuación SAT. Versión final en español del manuscrito de trabajo. | Manuscrito |
 | `Compressed_Queries_on_the_SAT_Equation.pdf` | Compressed Queries on the SAT Equation. Final English edition of the working paper. | Working manuscript |
 | `Complejidad_Representaciones_Ecuacion_SAT.pdf` | Complejidad de representaciones para la Ecuación SAT. Paisaje de DSOP, ADSOP, ZDD y Fourier, composición por regiones, cotas por puertas traseras y treewidth, y corrección del bucle CEGAR. | Manuscrito |
@@ -139,6 +167,10 @@ The manuscripts on queries to the SAT Equation, representation complexity, symme
 La auditoría de los trece documentos certificados está en [`PEER_REVIEW.md`](PEER_REVIEW.md). Se revisó cada teorema, definición y prueba, con verificación numérica o simbólica independiente y auditorías adversariales cuando hacía falta.
 
 The audit of the thirteen certified documents is in [`PEER_REVIEW.md`](PEER_REVIEW.md). Every theorem, definition, and proof was reviewed, with independent numerical or symbolic verification and adversarial audits where needed.
+
+*El conocimiento finito es SAT* y su edición inglesa tienen revisión de pares estricta. La revisión por parte del lector queda abierta: cualquier observación puede reportarse en [Issues](https://github.com/maxtuno/riveros_obras_completas/issues).
+
+*El conocimiento finito es SAT* and its English edition have undergone strict peer review. Reader review remains open: any observation can be reported in [Issues](https://github.com/maxtuno/riveros_obras_completas/issues).
 
 Las publicaciones de trabajo quedan fuera de esa auditoría. El artículo sobre consultas solo cuenta con una revisión simple; la nota sobre complejidad de representaciones es un manuscrito de trabajo; el manuscrito sobre simetría, rango y compresión tiene dos revisiones adversariales internas y correcciones, pero no ha pasado una revisión de pares estricta ni forma parte del corpus certificado; y el manuscrito sobre normalización certificada tampoco ha pasado una revisión de pares estricta. Todos se publican para discusión.
 

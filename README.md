@@ -18,11 +18,66 @@ This repository collects Oscar Riveros's mathematical work. Thirteen documents a
 Oscar Riveros — Edición revisada, 2026.  
 Revised edition, 2026.
 
-Descargar / Download: **[PDF español](La_Estructura_y_sus_Cabezales.pdf)** · **[EPUB español](La_Estructura_y_sus_Cabezales.epub)** · **[PDF English](The_Structure_and_Its_Heads.pdf)** · **[EPUB English](The_Structure_and_Its_Heads.epub)**
+**Próximamente disponible en Amazon — impresión y digital (EPUB).**  
+**Coming soon to Amazon — print and digital (EPUB).**
 
-Este libro condensa, en forma de ensayo, la disciplina que emerge del programa formal del autor. Su tema es la diferencia entre estructura y significado: una estructura puede ser común sin que su lectura sea común. De esa distinción se siguen una teoría de la clausura epistémica, una geometría del coste y de la obstrucción, una lectura causal de la agencia y una crítica semántica de las instituciones. El libro reúne esos hilos en un argumento continuo, escrito para lectores de filosofía, ciencia y derecho, y los sitúa en el centro de la discusión sobre sistemas artificiales que operan sobre formas sin compartir nuestra interpretación. Su publicación en español e inglés, en PDF y EPUB, establece una referencia común para el corpus y para el trabajo que vendrá: la agenda de una filosofía de la estructura que no promete homogeneidad y que, por eso mismo, puede sostener la convivencia de lecturas distintas.
+#### No hablamos de lo mismo cuando hablamos de lo mismo.
 
-This book condenses, in essay form, the discipline that emerges from the author's formal program. Its subject is the difference between structure and meaning: a structure can be common without its reading being common. That distinction yields a theory of epistemic closure, a geometry of cost and obstruction, a causal account of agency, and a semantic critique of institutions. The book draws those threads into a continuous argument for readers in philosophy, science, and law, and places them at the center of the discussion about artificial systems that operate on forms without sharing our interpretation. Its publication in Spanish and English, in PDF and EPUB, establishes a common reference for the corpus and for the work to come: the agenda of a philosophy of structure that does not promise homogeneity and that, for that very reason, can sustain the coexistence of different readings.
+Hay una diferencia entre reconocer una forma y comprender lo que significa. La diferencia parece menor mientras se trata de palabras; se vuelve decisiva cuando se trata de máquinas, instituciones, leyes o de la propia conciencia que interpreta. *Este libro se ocupa de esa diferencia.*
+
+**La estructura y sus cabezales** es un ensayo sobre los límites del conocimiento que propone un cambio de paradigma: una estructura puede ser compartida por dos sistemas sin que compartan su sentido. La misma fórmula matemática, la misma norma jurídica o el mismo gesto pueden ser procesados con precisión por un sistema, mientras otro sistema —humano o artificial— les asigna un significado radicalmente distinto.
+
+Oscar Riveros construye un aparato conceptual original para navegar esta brecha:
+
+- **El cabezal semántico:** la operación por la cual un sistema lee, organiza patrones y produce sentido.
+- **El plasma de semántica inconsistente:** el archipiélago de criterios contradictorios que habitamos al interpretar el mundo.
+- **La clausura epistémica:** el límite operativo que hace posible la ciencia, pero que no debe confundirse con los límites de la realidad.
+- **La geometría del coste:** por qué hay objetivos que son estructuralmente inalcanzables, independientemente de los recursos que se inviertan.
+
+En una época en la que la validación del conocimiento se desplaza aceleradamente desde el juicio humano hacia los certificados formales, las máquinas y las redes de verificación automatizada, este libro plantea una tesis incómoda pero inevitable: **el humano no es la medida de todas las cosas.**
+
+La ciencia y las matemáticas han demostrado que la estructura puede validarse sin un intérprete humano. Sin embargo, el significado —aquello que hace que un hecho cuente como evidencia, daño, deber o libertad— sigue siendo local y disputado. La pluralidad de semánticas no es un defecto que la teoría deba corregir, sino una consecuencia de la arquitectura del conocer.
+
+A lo largo de nueve capítulos y dos apéndices, Riveros aborda la operación formal, la agencia causal, la moral, la ley, la realidad y el límite de toda representación. Con un rigor implacable y una prosa aforística, el autor desmonta la tentación de confundir el mapa con el territorio y demuestra por qué la homogeneización del pensamiento es no solo imposible, sino indeseable.
+
+*La estructura y sus cabezales* no promete eliminar la distancia entre el mundo y sus interpretaciones. Promete algo más severo: reconocer que cada interpretación tiene condiciones, que cada sistema tiene límites, y que ninguna de esas limitaciones desaparece por el simple acto de nombrarla.
+
+**¿A quién está dirigido este libro?**
+
+- A filósofos, epistemólogos y matemáticos interesados en los fundamentos del conocimiento.
+- A científicos de la computación y profesionales de la inteligencia artificial que buscan comprender la brecha entre la sintaxis de los datos y la semántica de la interpretación.
+- A cualquier lector interesado en los debates contemporáneos sobre la verdad, la validación y el descentramiento del sujeto humano.
+
+**Sobre el autor:** Oscar Riveros es un investigador y filósofo cuyo trabajo se centra en la intersección entre la lógica formal, la complejidad computacional y la epistemología de los sistemas. Su obra busca dotar a la filosofía de la disciplina de distinciones necesaria para pensar los límites del conocimiento finito.
+
+#### We are not talking about the same thing when we talk about the same thing.
+
+There is a difference between recognizing a form and understanding what it means. The difference seems minor while it concerns words; it becomes decisive when it concerns machines, institutions, laws, or the consciousness that interprets. *This book is concerned with that difference.*
+
+**The Structure and Its Heads** is an essay on the limits of knowledge that proposes a paradigm shift: a structure can be shared by two systems without their sharing its meaning. The same mathematical formula, the same legal norm, or the same gesture can be processed with precision by one system, while another system —human or artificial— assigns them a radically different meaning.
+
+Oscar Riveros builds an original conceptual apparatus to navigate this gap:
+
+- **The semantic head:** the operation by which a system reads, organizes patterns, and produces meaning.
+- **The plasma of inconsistent semantics:** the archipelago of contradictory criteria we inhabit when interpreting the world.
+- **Epistemic closure:** the operative limit that makes science possible, but which must not be confused with the limits of reality.
+- **The geometry of cost:** why some goals are structurally unreachable, regardless of the resources invested.
+
+In an era in which the validation of knowledge shifts rapidly from human judgment toward formal certificates, machines, and automated verification networks, this book advances an uncomfortable but inevitable thesis: **the human is not the measure of all things.**
+
+Science and mathematics have shown that structure can be validated without a human interpreter. Yet meaning —that which makes a fact count as evidence, harm, duty, or freedom— remains local and disputed. The plurality of semantics is not a defect that theory must correct, but a consequence of the architecture of knowing.
+
+Across nine chapters and two appendices, Riveros addresses formal operation, causal agency, morality, law, reality, and the limit of all representation. With relentless rigor and an aphoristic prose, the author dismantles the temptation to confuse the map with the territory and shows why the homogenization of thought is not only impossible but undesirable.
+
+*The Structure and Its Heads* does not promise to eliminate the distance between the world and its interpretations. It promises something more severe: to recognize that every interpretation has conditions, that every system has limits, and that none of those limitations disappears through the simple act of naming it.
+
+**Who is this book for?**
+
+- Philosophers, epistemologists, and mathematicians interested in the foundations of knowledge.
+- Computer scientists and artificial intelligence professionals seeking to understand the gap between the syntax of data and the semantics of interpretation.
+- Any reader interested in contemporary debates on truth, validation, and the decentering of the human subject.
+
+**About the author:** Oscar Riveros is a researcher and philosopher whose work focuses on the intersection of formal logic, computational complexity, and the epistemology of systems. His work seeks to provide philosophy with the discipline of distinctions necessary to think the limits of finite knowledge.
 
 ---
 

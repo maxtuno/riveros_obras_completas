@@ -12,8 +12,8 @@ This repository collects Oscar Riveros's mathematical work. Thirteen documents a
 ### La estructura y sus cabezales
 **The Structure and Its Heads**
 
-*Ensayo sobre clausura, semántica local y los límites del conocimiento*  
-*An Essay on Closure, Local Semantics, and the Limits of Knowledge*
+*Ensayo sobre los límites del conocimiento*  
+*An Essay on the Limits of Knowledge*
 
 Oscar Riveros — Edición revisada, 2026.  
 Revised edition, 2026.

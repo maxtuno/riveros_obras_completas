@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="340" height="96" viewBox="0 0 340 96" role="img" aria-label="Disponible en Amazon, edicion EPUB">
-  <rect x="0.5" y="0.5" width="339" height="95" rx="14" fill="#131A22" stroke="#FF9900" stroke-opacity="0.35"/>
-  <text x="170" y="42" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">amazon</text>
-  <path d="M112 54 C 140 68, 200 68, 226 54" fill="none" stroke="#FF9900" stroke-width="7" stroke-linecap="round"/>
-  <path d="M231 50 l -15 -3 l 4 12 z" fill="#FF9900"/>
-  <text x="170" y="82" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" letter-spacing="3" fill="#FF9900">EPUB</text>
-</svg>

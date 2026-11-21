@@ -19,11 +19,11 @@ Oscar Riveros — Edición revisada, 2026.
 Revised edition, 2026.
 
 <p align="center">
-  <a href="https://www.amazon.es/dp/B0HSFRG8BQ"><img src="images/amazon_epub.svg" alt="Disponible en Amazon — EPUB" width="220"></a>
+  <a href="https://www.amazon.es/dp/B0HSG2XDBN"><img src="images/la_estructura_y_sus_cabezales_cover.jpg" alt="La estructura y sus cabezales — portada" width="320"></a>
 </p>
 
-**EPUB:** ya disponible en [Amazon](https://www.amazon.es/dp/B0HSFRG8BQ). **Tapa blanda:** próximamente.  
-**EPUB:** now available on [Amazon](https://www.amazon.es/dp/B0HSFRG8BQ). **Paperback:** coming soon.
+**Disponible en Amazon:** [EPUB](https://www.amazon.es/dp/B0HSFRG8BQ) · [Tapa blanda](https://www.amazon.es/dp/B0HSG2XDBN)  
+**Available on Amazon:** [EPUB](https://www.amazon.es/dp/B0HSFRG8BQ) · [Paperback](https://www.amazon.es/dp/B0HSG2XDBN)
 
 #### No hablamos de lo mismo cuando hablamos de lo mismo.
 

@@ -18,8 +18,12 @@ This repository collects Oscar Riveros's mathematical work. Thirteen documents a
 Oscar Riveros — Edición revisada, 2026.  
 Revised edition, 2026.
 
-**Próximamente disponible en Amazon — impresión y digital (EPUB).**  
-**Coming soon to Amazon — print and digital (EPUB).**
+<p align="center">
+  <a href="https://www.amazon.es/dp/B0HSFRG8BQ"><img src="images/amazon_epub.svg" alt="Disponible en Amazon — EPUB" width="220"></a>
+</p>
+
+**EPUB:** ya disponible en [Amazon](https://www.amazon.es/dp/B0HSFRG8BQ). **Tapa blanda:** próximamente.  
+**EPUB:** now available on [Amazon](https://www.amazon.es/dp/B0HSFRG8BQ). **Paperback:** coming soon.
 
 #### No hablamos de lo mismo cuando hablamos de lo mismo.
 
